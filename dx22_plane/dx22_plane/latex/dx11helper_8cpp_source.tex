@@ -1,0 +1,572 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/dx11helper.cpp}
+\hypertarget{dx11helper_8cpp_source}{}\label{dx11helper_8cpp_source}\mbox{\hyperlink{dx11helper_8cpp}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ \ \ \ <vector>}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <string>}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#pragma\ comment(lib,"{}d3dcompiler.lib"{})}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00007}00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00008}00008\ \textcolor{comment}{//\ ÉtÉ@ÉCÉãñºÇéÊìæÇ∑ÇÈ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00009}00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00010}\mbox{\hyperlink{dx11helper_8cpp_a273e01d3c573ea3378ab39b74cf8e74e}{00010}}\ std::string\ \mbox{\hyperlink{dx11helper_8cpp_a273e01d3c573ea3378ab39b74cf8e74e}{ExtractFileName}}(std::string\ fullpath,\ \textcolor{keywordtype}{char}\ split)}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ path\_i\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(fullpath.find\_last\_of(split)\ +\ 1);\textcolor{comment}{//7}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ext\_i\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(fullpath.find\_last\_of(\textcolor{stringliteral}{"{}."{}}));\textcolor{comment}{//10}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00014}00014\ \ \ \ \ std::string\ pathname\ =\ fullpath.substr(0,\ path\_i\ +\ 1);\textcolor{comment}{//0ï∂éöñ⁄Ç©ÇÁÇVï∂éöêÿÇËèoÇ∑\ "{}C:\(\backslash\)\(\backslash\)aaa\(\backslash\)\(\backslash\)"{}}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00015}00015\ \ \ \ \ std::string\ extname\ =\ fullpath.substr(ext\_i,\ fullpath.size()\ -\/\ ext\_i);\ \textcolor{comment}{//\ 10ï∂éöñ⁄Ç©ÇÁÇSï∂éöêÿÇËèoÇ∑\ "{}.txt"{}}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00016}00016\ \ \ \ \ std::string\ filename\ =\ fullpath.substr(path\_i,\ ext\_i\ -\/\ path\_i);\textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{return}\ filename\ +\ extname;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00021}00021\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00022}00022\ \textcolor{comment}{//\ ÉtÉ@ÉCÉãÇÃägí£éqÇéÊìæÇ∑ÇÈ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00023}00023\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00024}\mbox{\hyperlink{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9}{00024}}\ std::string\ \mbox{\hyperlink{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9}{GetFileExt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00025}00025\ \ \ \ \ std::string\ extname;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00027}00027\ \ \ \ \ std::string\ fullpathstr(filename);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ ext\_i\ =\ fullpathstr.find\_last\_of(\textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00029}00029\ \ \ \ \ extname\ =\ fullpathstr.substr(ext\_i+1,\ fullpathstr.size()\ -\/\ ext\_i);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ extname;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00033}00033\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00034}00034\ \textcolor{comment}{//\ ÉRÉìÉpÉCÉãçœÇ›ÉVÉFÅ[É\_Å[ÉtÉ@ÉCÉãÇì«Ç›çûÇﬁ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00035}00035\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00036}\mbox{\hyperlink{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e}{00036}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e}{readShader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ csoName,\ std::vector<unsigned\ char>\&\ byteArray)}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00038}00038\ \ \ \ \ FILE*\ fp;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ ret\ =\ fopen\_s(\&fp,\ csoName,\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (ret\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00043}00043\ \ \ \ \ fseek(fp,\ 0,\ SEEK\_END);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ ftell(fp);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00045}00045\ \ \ \ \ byteArray.resize(size);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00046}00046\ \ \ \ \ fseek(fp,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00048}00048\ \ \ \ \ fread(byteArray.data(),\ byteArray.size(),\ 1,\ fp);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00049}00049\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00054}00054\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00055}00055\ \textcolor{comment}{//\ ÉVÉFÅ[É\_Å[ÇÉtÉ@ÉCÉãägí£éqÇ…çáÇÌÇπÇƒÉRÉìÉpÉCÉã}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00056}00056\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00057}\mbox{\hyperlink{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}{00057}}\ HRESULT\ \mbox{\hyperlink{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}{CompileShader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ LPCSTR\ szEntryPoint,\ LPCSTR\ szShaderModel,\ \textcolor{keywordtype}{void}**\ ShaderObject,\ \textcolor{keywordtype}{size\_t}\&\ ShaderObjectSize,\ ID3DBlob**\ ppBlobOut)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00059}00059\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<unsigned\ char>\ byteArray;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00061}00061\ \ \ \ \ *ppBlobOut\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00063}00063\ \ \ \ \ std::string\ extname\ =\ \mbox{\hyperlink{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9}{GetFileExt}}(szFileName);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (extname\ ==\ \textcolor{stringliteral}{"{}cso"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ \mbox{\hyperlink{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e}{readShader}}(szFileName,\ byteArray);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!sts)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ FILE*\ fp;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ fopen\_s(\&fp,\ \textcolor{stringliteral}{"{}debug.txt"{}},\ \textcolor{stringliteral}{"{}a"{}});}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}file\ open\ error\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ E\_FAIL;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ *ShaderObject\ =\ byteArray.data();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ ShaderObjectSize\ =\ byteArray.size();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ hr\ =\ \mbox{\hyperlink{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71}{CompileShaderFromFile}}(szFileName,\ szEntryPoint,\ szShaderModel,\ ppBlobOut);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*ppBlobOut)(*ppBlobOut)-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ E\_FAIL;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ *ShaderObject\ =\ (*ppBlobOut)-\/>GetBufferPointer();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ ShaderObjectSize\ =\ (*ppBlobOut)-\/>GetBufferSize();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{return}\ S\_OK;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00089}00089\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00090}00090\ \textcolor{comment}{//\ ÉVÉFÅ[É\_Å[ÇÉRÉìÉpÉCÉã}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00091}00091\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00092}\mbox{\hyperlink{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71}{00092}}\ HRESULT\ \mbox{\hyperlink{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71}{CompileShaderFromFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ LPCSTR\ szEntryPoint,\ LPCSTR\ szShaderModel,\ ID3DBlob**\ ppBlobOut)}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00093}00093\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00094}00094\ \ \ \ \ ID3DBlob*\ p1\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00096}00096\ \ \ \ \ HRESULT\ hr\ =\ S\_OK;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00098}00098\ \ \ \ \ WCHAR\ \ \ filename[512];}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ wLen\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordtype}{int}\ err\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ char\ -\/>\ wcharÇ…ïœä∑}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00103}00103\ \ \ \ \ setlocale(LC\_ALL,\ \textcolor{stringliteral}{"{}japanese"{}});}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00104}00104\ \ \ \ \ err\ =\ mbstowcs\_s(\&wLen,\ filename,\ 512,\ szFileName,\ \_TRUNCATE);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00106}00106\ \ \ \ \ DWORD\ dwShaderFlags\ =\ D3DCOMPILE\_ENABLE\_STRICTNESS;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00107}00107\ \textcolor{preprocessor}{\#if\ defined(\ DEBUG\ )\ ||\ defined(\ \_DEBUG\ )}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ D3DCOMPILE\_DEBUG\ flag\ to\ embed\ debug\ information\ in\ the\ shaders.}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//\ Setting\ this\ flag\ improves\ the\ shader\ debugging\ experience,\ but\ still\ allows\ }}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{comment}{//\ the\ shaders\ to\ be\ optimized\ and\ to\ run\ exactly\ the\ way\ they\ will\ run\ in\ }}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{comment}{//\ the\ release\ configuration\ of\ this\ program.}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00112}00112\ \ \ \ \ dwShaderFlags\ |=\ D3DCOMPILE\_DEBUG;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00113}00113\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00115}00115\ \ \ \ \ ID3DBlob*\ pErrorBlob\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00116}00116\ \ \ \ \ hr\ =\ D3DCompileFromFile(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ filename,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ filename\ LPCWST\ pFileName}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ D3D\_SHADER\_MACRO\ *pDefines}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ D3D\_COMPILE\_STANDARD\_FILE\_INCLUDE,\ \ \textcolor{comment}{//\ ID3DInclude\ *pInclude}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ szEntryPoint,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LPCSTR\ pEntrypoint}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ szShaderModel,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LPCSTR\ pTarget}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ dwShaderFlags,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UINT\ Flags1}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UINT\ Flags2}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ ppBlobOut,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ID3DBlob**\ ppCode}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \&pErrorBlob);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ID3DBlob**\ ppErrorMsg\ }}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00127}00127\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pErrorBlob\ !=\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox(NULL,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{char}*)pErrorBlob-\/>GetBufferPointer(),\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pErrorBlob)\ pErrorBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (pErrorBlob)\ pErrorBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{return}\ S\_OK;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00140}00140\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00141}00141\ \textcolor{comment}{//\ í∏ì\_ÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨Ç∑ÇÈ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00142}00142\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00143}\mbox{\hyperlink{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7}{00143}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7}{CreateVertexShader}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00144}00144\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00146}00146\ \ \ \ \ LPCSTR\ szEntryPoint,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00147}00147\ \ \ \ \ LPCSTR\ szShaderModel,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00148}00148\ \ \ \ \ D3D11\_INPUT\_ELEMENT\_DESC*\ layout,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00149}00149\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ numElements,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00150}00150\ \ \ \ \ ID3D11VertexShader**\ ppVertexShader,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00151}00151\ \ \ \ \ ID3D11InputLayout**\ \ ppVertexLayout)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00153}00153\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00155}00155\ \ \ \ \ ID3DBlob*\ pBlob\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{keywordtype}{void}*\ ShaderObject;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00158}00158\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ ShaderObjectSize;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00160}00160\ \ \ \ \ \textcolor{comment}{//\ ÉtÉ@ÉCÉãÇÃägí£éqÇ…çáÇÌÇπÇƒÉRÉìÉpÉCÉã}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00161}00161\ \ \ \ \ hr\ =\ \mbox{\hyperlink{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}{CompileShader}}(szFileName,\ szEntryPoint,\ szShaderModel,\ \&ShaderObject,\ ShaderObjectSize,\ \&pBlob);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00163}00163\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pBlob)pBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00166}00166\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉVÉFÅ[É\_Å[Çê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00169}00169\ \ \ \ \ hr\ =\ device-\/>CreateVertexShader(ShaderObject,\ ShaderObjectSize,\ \textcolor{keyword}{nullptr},\ ppVertexShader);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00171}00171\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pBlob)pBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00176}00176\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^íËã`ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00177}00177\ \ \ \ \ hr\ =\ device-\/>CreateInputLayout(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ layout,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ numElements,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ ShaderObject,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ ShaderObjectSize,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ ppVertexLayout);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00183}00183\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateInputLayout\ error"{}},\ \textcolor{stringliteral}{"{}error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ pBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00189}00189\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00190}00190\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00192}00192\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00193}00193\ \textcolor{comment}{//\ ÉsÉNÉZÉãÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨Ç∑ÇÈ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00194}00194\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00195}\mbox{\hyperlink{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05}{00195}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05}{CreatePixelShader}}(ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00197}00197\ \ \ \ \ LPCSTR\ szEntryPoint,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00198}00198\ \ \ \ \ LPCSTR\ szShaderModel,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00199}00199\ \ \ \ \ ID3D11PixelShader**\ ppPixelShader)\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00201}00201\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00203}00203\ \ \ \ \ ID3DBlob*\ pBlob\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00205}00205\ \ \ \ \ \textcolor{keywordtype}{void}*\ ShaderObject;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00206}00206\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ ShaderObjectSize;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00208}00208\ \ \ \ \ \textcolor{comment}{//\ ÉtÉ@ÉCÉãÇÃägí£éqÇ…çáÇÌÇπÇƒÉRÉìÉpÉCÉã}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00209}00209\ \ \ \ \ hr\ =\ \mbox{\hyperlink{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}{CompileShader}}(szFileName,\ szEntryPoint,\ szShaderModel,\ \&ShaderObject,\ ShaderObjectSize,\ \&pBlob);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00210}00210\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00211}00211\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00213}00213\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00215}00215\ \ \ \ \ \textcolor{comment}{//\ ÉsÉNÉZÉãÉVÉFÅ[É\_Å[Çê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00216}00216\ \ \ \ \ hr\ =\ device-\/>CreatePixelShader(ShaderObject,\ ShaderObjectSize,\ \textcolor{keyword}{nullptr},\ ppPixelShader);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00218}00218\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pBlob)pBlob-\/>Release();}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00221}00221\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00223}00223\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00224}00224\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00227}00227\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00228}00228\ \textcolor{comment}{ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00229}00229\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00230}\mbox{\hyperlink{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219}{00230}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219}{CreateConstantBuffer}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00231}00231\ \ \ \ \ ID3D11Device*\ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉIÉuÉWÉFÉNÉg}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÉTÉCÉY}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00233}00233\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00234}00234\ \ \ \ \ )\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00236}00236\ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00237}00237\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00239}00239\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00240}00240\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DEFAULT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@égópï˚ñ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00241}00241\ \ \ \ \ bd.ByteWidth\ =\ bytesize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00242}00242\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_CONSTANT\_BUFFER;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00243}00243\ \ \ \ \ bd.CPUAccessFlags\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXïsóv}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00245}00245\ \ \ \ \ HRESULT\ hr\ =\ device-\/>CreateBuffer(\&bd,\ \textcolor{keyword}{nullptr},\ pConstantBuffer);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00246}00246\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(constant\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00249}00249\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00252}00252\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00254}00254\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00255}00255\ \textcolor{comment}{ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÇçÏê¨(MAPÇ≈èëÇ´ä∑Ç¶â¬î\(\backslash\))}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00256}00256\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00257}\mbox{\hyperlink{dx11helper_8cpp_a24a9587dc8c80845d3c8b72b3827d092}{00257}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a24a9587dc8c80845d3c8b72b3827d092}{CreateConstantBufferWrite}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00258}00258\ \ \ \ \ ID3D11Device*\ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉIÉuÉWÉFÉNÉg}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00259}00259\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÉTÉCÉY}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00260}00260\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00261}00261\ )\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00263}00263\ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00264}00264\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00266}00266\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00267}00267\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DYNAMIC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@égópï˚ñ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00268}00268\ \ \ \ \ bd.ByteWidth\ =\ bytesize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00269}00269\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_CONSTANT\_BUFFER;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00270}00270\ \ \ \ \ bd.CPUAccessFlags\ =\ D3D11\_CPU\_ACCESS\_WRITE;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXâ¬î\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00271}00271\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00272}00272\ \ \ \ \ HRESULT\ hr\ =\ device-\/>CreateBuffer(\&bd,\ \textcolor{keyword}{nullptr},\ pConstantBuffer);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00273}00273\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(constant\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00276}00276\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00278}00278\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00279}00279\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00281}00281\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00282}00282\ \textcolor{comment}{ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00283}00283\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00284}\mbox{\hyperlink{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b}{00284}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b}{CreateIndexBuffer}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00285}00285\ \ \ \ \ ID3D11Device*\ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉIÉuÉWÉFÉNÉg}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00286}00286\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXêî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00287}00287\ \ \ \ \ \textcolor{keywordtype}{void}*\ indexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00288}00288\ \ \ \ \ ID3D11Buffer**\ pIndexBuffer)\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00290}00290\ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00291}00291\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00292}00292\ \ \ \ \ D3D11\_SUBRESOURCE\_DATA\ InitData;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00294}00294\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00295}00295\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DEFAULT;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@égópï˚}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00296}00296\ \ \ \ \ bd.ByteWidth\ =\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int)\ *\ indexnum;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00297}00297\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_INDEX\_BUFFER;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00298}00298\ \ \ \ \ bd.CPUAccessFlags\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXïsóv}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00300}00300\ \ \ \ \ ZeroMemory(\&InitData,\ \textcolor{keyword}{sizeof}(InitData));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00301}00301\ \ \ \ \ InitData.pSysMem\ =\ indexdata;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00303}00303\ \ \ \ \ HRESULT\ hr\ =\ device-\/>CreateBuffer(\&bd,\ \&InitData,\ pIndexBuffer);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00304}00304\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00305}00305\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(index\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00306}00306\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00307}00307\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00309}00309\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00310}00310\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00312}00312\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00313}00313\ \textcolor{comment}{í∏ì\_ÉoÉbÉtÉ@ÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00314}00314\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00315}\mbox{\hyperlink{dx11helper_8cpp_aace919015b525f2aaae86aee9f7d882d}{00315}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_aace919015b525f2aaae86aee9f7d882d}{CreateVertexBuffer}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00316}00316\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00317}00317\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00318}00318\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00319}00319\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00320}00320\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00321}00321\ \ \ \ \ )\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00323}00323\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00325}00325\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00326}00326\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00327}00327\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00328}00328\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DEFAULT;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@égópï˚ñ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00329}00329\ \ \ \ \ bd.ByteWidth\ =\ stride\ *\ vertexnum;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´Ç≥}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00330}00330\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_VERTEX\_BUFFER;\ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00331}00331\ \ \ \ \ bd.CPUAccessFlags\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXïsóv}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00333}00333\ \ \ \ \ D3D11\_SUBRESOURCE\_DATA\ InitData;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00334}00334\ \ \ \ \ ZeroMemory(\&InitData,\ \textcolor{keyword}{sizeof}(InitData));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00335}00335\ \ \ \ \ InitData.pSysMem\ =\ vertexdata;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃèâä˙íl}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00337}00337\ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \&InitData,\ pVertexBuffer);\ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00338}00338\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00339}00339\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(vertex\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00341}00341\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00343}00343\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00344}00344\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00346}00346\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00347}00347\ \textcolor{comment}{í∏ì\_ÉoÉbÉtÉ@ÇçÏê¨(ÇbÇoÇtèëÇ´çûÇ›â¬î\(\backslash\))}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00348}00348\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00349}\mbox{\hyperlink{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5}{00349}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5}{CreateVertexBufferWrite}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00350}00350\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00351}00351\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00352}00352\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00353}00353\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00354}00354\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00355}00355\ )\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00357}00357\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00359}00359\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00360}00360\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00361}00361\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00362}00362\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DYNAMIC;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@égópï˚ñ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00363}00363\ \ \ \ \ bd.ByteWidth\ =\ stride\ *\ vertexnum;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´Ç≥}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00364}00364\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_VERTEX\_BUFFER;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00365}00365\ \ \ \ \ bd.CPUAccessFlags\ =\ D3D11\_CPU\_ACCESS\_WRITE;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXâ¬î\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00366}00366\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00367}00367\ \ \ \ \ D3D11\_SUBRESOURCE\_DATA\ InitData;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00368}00368\ \ \ \ \ ZeroMemory(\&InitData,\ \textcolor{keyword}{sizeof}(InitData));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00369}00369\ \ \ \ \ InitData.pSysMem\ =\ vertexdata;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃèâä˙íl}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00371}00371\ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \&InitData,\ pVertexBuffer);\ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00372}00372\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\ \{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00373}00373\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(vertex\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00374}00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00375}00375\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00376}00376\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00377}00377\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00378}00378\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00380}00380\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00381}00381\ \textcolor{comment}{í∏ì\_ÉoÉbÉtÉ@(UAV)ÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00382}00382\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00383}\mbox{\hyperlink{dx11helper_8cpp_a35c6e06fbbf5443d2a0d43d375404c1d}{00383}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a35c6e06fbbf5443d2a0d43d375404c1d}{CreateVertexBufferUAV}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00384}00384\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00385}00385\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00386}00386\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00387}00387\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00388}00388\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00389}00389\ \ \ \ \ )\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00391}00391\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00392}00392\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00393}00393\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00394}00394\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00395}00395\ \ \ \ \ bd.ByteWidth\ =\ stride\ *\ vertexnum;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´Ç≥}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00396}00396\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_DEFAULT;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00397}00397\ \ \ \ \ bd.BindFlags\ =}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00398}00398\ \ \ \ \ \ \ \ \ D3D11\_BIND\_VERTEX\_BUFFER\ |}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00399}00399\ \ \ \ \ \ \ \ \ D3D11\_BIND\_SHADER\_RESOURCE\ |}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00400}00400\ \ \ \ \ \ \ \ \ D3D11\_BIND\_UNORDERED\_ACCESS;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00401}00401\ \ \ \ \ bd.CPUAccessFlags\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00402}00402\ \ \ \ \ bd.MiscFlags\ =\ D3D11\_RESOURCE\_MISC\_BUFFER\_ALLOW\_RAW\_VIEWS;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00403}00403\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00404}00404\ \ \ \ \ D3D11\_SUBRESOURCE\_DATA\ InitData;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00405}00405\ \ \ \ \ ZeroMemory(\&InitData,\ \textcolor{keyword}{sizeof}(InitData));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00406}00406\ \ \ \ \ InitData.pSysMem\ =\ vertexdata;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃèâä˙íl}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00407}00407\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00408}00408\ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \&InitData,\ pVertexBuffer);\ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00409}00409\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00410}00410\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(vertex\ buffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00411}00411\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00412}00412\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00413}00413\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00414}00414\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00415}00415\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00416}00416\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00417}00417\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00418}00418\ \textcolor{comment}{\ StructuredÉoÉbÉtÉ@ÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00419}00419\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00420}\mbox{\hyperlink{dx11helper_8cpp_a72ead3bd43ce7bb0cf7a86175f70c1e0}{00420}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a72ead3bd43ce7bb0cf7a86175f70c1e0}{CreateStructuredBuffer}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00421}00421\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00422}00422\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉXÉgÉâÉCÉhÉoÉCÉgêî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00423}00423\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ å¬êî}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00424}00424\ \ \ \ \ \textcolor{keywordtype}{void}*\ data,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00425}00425\ \ \ \ \ ID3D11Buffer**\ pStructuredBuffer\ \ \ \ \textcolor{comment}{//\ RWStructuredBuffer}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00426}00426\ \ \ \ \ )\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00428}00428\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00429}00429\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00430}00430\ \ \ \ \ \textcolor{comment}{//\ StructuredÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00431}00431\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00432}00432\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00433}00433\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00434}00434\ \ \ \ \ bd.BindFlags\ =\ D3D11\_BIND\_UNORDERED\_ACCESS\ |\ D3D11\_BIND\_SHADER\_RESOURCE;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ UAÉoÉbÉtÉ@}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00435}00435\ \ \ \ \ bd.ByteWidth\ =\ stride\ *\ num;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃëÂÇ´Ç≥}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00436}00436\ \ \ \ \ bd.MiscFlags\ =\ D3D11\_RESOURCE\_MISC\_BUFFER\_STRUCTURED;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RWStructuredBuffer}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00437}00437\ \ \ \ \ bd.StructureByteStride\ =\ stride;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ç\(\backslash\)ë¢âªÉoÉbÉtÉ@ÉTÉCÉY}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00438}00438\ \ \ \ \ bd.CPUAccessFlags\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CPUÉAÉNÉZÉXïsóv}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00440}00440\ \ \ \ \ \textcolor{keywordflow}{if}\ (data\ !=\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00441}00441\ \ \ \ \ \ \ \ \ D3D11\_SUBRESOURCE\_DATA\ InitData;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00442}00442\ \ \ \ \ \ \ \ \ ZeroMemory(\&InitData,\ \textcolor{keyword}{sizeof}(InitData));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00443}00443\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00444}00444\ \ \ \ \ \ \ \ \ InitData.pSysMem\ =\ data;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ÇÃèâä˙íl}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00446}00446\ \ \ \ \ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \&InitData,\ pStructuredBuffer);\ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00447}00447\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00448}00448\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00449}00449\ \ \ \ \ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \textcolor{keyword}{nullptr},\ pStructuredBuffer);\ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00450}00450\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00451}00451\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00452}00452\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateBuffer(StructuredBuffer)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00453}00453\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00454}00454\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00456}00456\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00457}00457\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00458}00458\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00459}00459\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00460}00460\ \textcolor{comment}{STAGINGÉoÉbÉtÉ@ÇçÏê¨ÇµÉRÉsÅ[Ç∑ÇÈ}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00461}00461\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00462}\mbox{\hyperlink{dx11helper_8cpp_afec5a1a4664e27a164d30cc9a12f5b17}{00462}}\ ID3D11Buffer*\ \mbox{\hyperlink{dx11helper_8cpp_afec5a1a4664e27a164d30cc9a12f5b17}{CreateAndCopyToBuffer}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00463}00463\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00464}00464\ \ \ \ \ ID3D11DeviceContext*\ devicecontext,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00465}00465\ \ \ \ \ ID3D11Buffer*\ pBuffer\ \ \ \textcolor{comment}{//\ RWStructuredBuffer}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00466}00466\ \ \ \ \ )\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00467}00467\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00468}00468\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00469}00469\ \ \ \ \ ID3D11Buffer*\ CloneBuffer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00470}00470\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00471}00471\ \ \ \ \ \textcolor{comment}{//\ StructuredÉoÉbÉtÉ@ê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00472}00472\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00473}00473\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00474}00474\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00475}00475\ \ \ \ \ pBuffer-\/>GetDesc(\&bd);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00476}00476\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00477}00477\ \ \ \ \ bd.CPUAccessFlags\ =\ D3D11\_CPU\_ACCESS\_READ;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00478}00478\ \ \ \ \ bd.Usage\ =\ D3D11\_USAGE\_STAGING;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00479}00479\ \ \ \ \ bd.BindFlags\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00480}00480\ \ \ \ \ bd.MiscFlags\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00481}00481\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00482}00482\ \ \ \ \ hr\ =\ device-\/>CreateBuffer(\&bd,\ \textcolor{keyword}{nullptr},\ \&CloneBuffer);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00483}00483\ \ \ \ \ \textcolor{keywordflow}{if}\ (SUCCEEDED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00484}00484\ \ \ \ \ \ \ \ \ devicecontext-\/>CopyResource(CloneBuffer,\ pBuffer);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00485}00485\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00486}00486\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00487}00487\ \ \ \ \ \textcolor{keywordflow}{return}\ CloneBuffer;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00488}00488\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00489}00489\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00490}00490\ \textcolor{comment}{ShaderResourceViewÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00491}00491\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00492}\mbox{\hyperlink{dx11helper_8cpp_af2e589eba237f625b906774e8eb199ff}{00492}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_af2e589eba237f625b906774e8eb199ff}{CreateShaderResourceView}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00493}00493\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00494}00494\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \textcolor{comment}{//\ Buffer}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00495}00495\ \ \ \ \ ID3D11ShaderResourceView**\ ppSRV)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00497}00497\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00498}00498\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00499}00499\ \ \ \ \ pBuffer-\/>GetDesc(\&bd);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00501}00501\ \ \ \ \ D3D11\_SHADER\_RESOURCE\_VIEW\_DESC\ \ srvDesc;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00502}00502\ \ \ \ \ ZeroMemory(\&srvDesc,\ \textcolor{keyword}{sizeof}(srvDesc));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00503}00503\ \ \ \ \ srvDesc.ViewDimension\ =\ D3D11\_SRV\_DIMENSION\_BUFFEREX;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00504}00504\ \ \ \ \ srvDesc.BufferEx.FirstElement\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00505}00505\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00506}00506\ \ \ \ \ \textcolor{keywordflow}{if}\ (bd.MiscFlags\ \&\ D3D11\_RESOURCE\_MISC\_BUFFER\_ALLOW\_RAW\_VIEWS)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00507}00507\ \ \ \ \ \ \ \ \ srvDesc.Format\ =\ DXGI\_FORMAT\_R32\_TYPELESS;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00508}00508\ \ \ \ \ \ \ \ \ srvDesc.BufferEx.Flags\ =\ D3D11\_BUFFEREX\_SRV\_FLAG\_RAW;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00509}00509\ \ \ \ \ \ \ \ \ srvDesc.BufferEx.NumElements\ =\ bd.ByteWidth\ /\ 4;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00510}00510\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00511}00511\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bd.MiscFlags\ \&\ D3D11\_RESOURCE\_MISC\_BUFFER\_STRUCTURED)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00512}00512\ \ \ \ \ \ \ \ \ srvDesc.Format\ =\ DXGI\_FORMAT\_UNKNOWN;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00513}00513\ \ \ \ \ \ \ \ \ srvDesc.BufferEx.NumElements\ =\ bd.ByteWidth\ /\ bd.StructureByteStride;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00514}00514\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00515}00515\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00516}00516\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00517}00517\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00518}00518\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00519}00519\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00520}00520\ \ \ \ \ hr\ =\ device-\/>CreateShaderResourceView(pBuffer,\ \&srvDesc,\ ppSRV);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00521}00521\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00522}00522\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateShaderResourceView\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00523}00523\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00524}00524\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00525}00525\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00526}00526\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00527}00527\ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00529}00529\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00530}00530\ \textcolor{comment}{UnOrderedAccessViewÇçÏê¨}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00531}00531\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00532}\mbox{\hyperlink{dx11helper_8cpp_a3da83001edc9b8ae56cc2d1d1252f2f6}{00532}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8cpp_a3da83001edc9b8ae56cc2d1d1252f2f6}{CreateUnOrderAccessView}}(}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00533}00533\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00534}00534\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \textcolor{comment}{//\ Buffer}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00535}00535\ \ \ \ \ ID3D11UnorderedAccessView**\ ppUAV)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00536}00536\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00537}00537\ \ \ \ \ D3D11\_BUFFER\_DESC\ bd;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00538}00538\ \ \ \ \ ZeroMemory(\&bd,\ \textcolor{keyword}{sizeof}(bd));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00539}00539\ \ \ \ \ pBuffer-\/>GetDesc(\&bd);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00540}00540\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00541}00541\ \ \ \ \ D3D11\_UNORDERED\_ACCESS\_VIEW\_DESC\ \ uavDesc;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00542}00542\ \ \ \ \ ZeroMemory(\&uavDesc,\ \textcolor{keyword}{sizeof}(uavDesc));}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00543}00543\ \ \ \ \ uavDesc.ViewDimension\ =\ D3D11\_UAV\_DIMENSION\_BUFFER;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00544}00544\ \ \ \ \ uavDesc.Buffer.FirstElement\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00545}00545\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00546}00546\ \ \ \ \ \textcolor{keywordflow}{if}\ (bd.MiscFlags\ \&\ D3D11\_RESOURCE\_MISC\_BUFFER\_ALLOW\_RAW\_VIEWS)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00547}00547\ \ \ \ \ \ \ \ \ uavDesc.Format\ =\ DXGI\_FORMAT\_R32\_TYPELESS;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00548}00548\ \ \ \ \ \ \ \ \ uavDesc.Buffer.Flags\ =\ D3D11\_BUFFER\_UAV\_FLAG\_RAW;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00549}00549\ \ \ \ \ \ \ \ \ uavDesc.Buffer.NumElements\ =\ bd.ByteWidth\ /\ 4;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00550}00550\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00551}00551\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bd.MiscFlags\ \&\ D3D11\_RESOURCE\_MISC\_BUFFER\_STRUCTURED)\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00552}00552\ \ \ \ \ \ \ \ \ uavDesc.Format\ =\ DXGI\_FORMAT\_UNKNOWN;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00553}00553\ \ \ \ \ \ \ \ \ uavDesc.Buffer.NumElements\ =\ bd.ByteWidth\ /\ bd.StructureByteStride;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00554}00554\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00555}00555\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00556}00556\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00557}00557\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00558}00558\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00559}00559\ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00560}00560\ \ \ \ \ hr\ =\ device-\/>CreateUnorderedAccessView(pBuffer,\ \&uavDesc,\ ppUAV);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00561}00561\ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\{}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00562}00562\ \ \ \ \ \ \ \ \ MessageBox(\textcolor{keyword}{nullptr},\ \textcolor{stringliteral}{"{}CreateUnorderedAccessView\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00563}00563\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00564}00564\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00565}00565\ }
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00566}00566\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dx11helper_8cpp_source_l00567}00567\ \}}
+
+\end{DoxyCode}

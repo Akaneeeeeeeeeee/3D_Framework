@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: C:/Users/caram/Desktop/HAL/DX/DX22/æˆæ¥­å†…ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ/dx22_plane/dx22_plane/Camera.cpp ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- æ§‹ç¯‰: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','æ¤œç´¢',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">èª­ã¿å–ã‚Šä¸­â€¦</div>
+<div class="SRStatus" id="Searching">æ¤œç´¢ä¸­â€¦</div>
+<div class="SRStatus" id="NoMatches">ä¸€è‡´ã™ã‚‹æ–‡å­—åˆ—ã‚’è¦‹ã¤ã‘ã‚‰ã‚Œã¾ã›ã‚“</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Users/caram/Desktop/HAL/DX/DX22/æˆæ¥­å†…ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ/dx22_plane/dx22_plane/Camera.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_8cpp.html">[è©³è§£]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_renderer_8h.html">Renderer.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_application_8h.html">Application.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span>DirectX::SimpleMath;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//=======================================</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//‰Šú‰»ˆ—</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//=======================================</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_camera.html#a1543c3415858fa4773f8a69ef903366c">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_camera.html#a1543c3415858fa4773f8a69ef903366c">Camera::Init</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    m_Position = Vector3(0.0f, 20.0f, -50.0f);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    m_Target = Vector3(0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//=======================================</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//XVˆ—</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//=======================================</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera::Update</a>()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//=======================================</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//•`‰æˆ—</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//=======================================</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_camera.html#a0d80a44404b91bc03be2c117d1f8185b">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_camera.html#a0d80a44404b91bc03be2c117d1f8185b">Camera::Draw</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// ƒrƒ…[•ÏŠ·Œã—ñì¬</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    Vector3 up = Vector3(0.0f, 1.0f, 0.0f);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//                                          ˆÊ’u     ‚Ç‚±Œü‚¢‚Ä‚éH      ƒQ[ƒ€‰æ–Ê‚Ì•ûŒü</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    m_ViewMatrix = DirectX::XMMatrixLookAtLH(m_Position, m_Target, up); <span class="comment">// ¶èŒn‚É‚µ‚½@20230511 by suzuki.tomoki</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// DIRECTXTK‚Ìƒƒ\ƒbƒh‚Í‰EèŒn@20230511 by suzuki.tomoki</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// ‰EèŒn‚É‚·‚é‚Æ‚RŠpŒ`’¸“_‚ª”½Œv‰ñ‚è‚É‚È‚é‚Ì‚Å•`‰æ‚³‚ê‚È‚­‚È‚é‚Ì‚Å’ˆÓ</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// ‚±‚ÌƒR[ƒh‚ÍŠm”FƒeƒXƒg‚Ì‚½‚ß‚Éc‚·</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// m_ViewMatrix = m_ViewMatrix.CreateLookAt(m_Position, m_Target, up);                  </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_renderer.html#a4f539cc63a6bed2694490af38806ec9a">Renderer::SetViewMatrix</a>(&amp;m_ViewMatrix);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">//ƒvƒƒWƒFƒNƒVƒ‡ƒ“s—ñ‚Ì¶¬</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">constexpr</span> <span class="keywordtype">float</span> fieldOfView = DirectX::XMConvertToRadians(45.0f);    <span class="comment">// ‹–ìŠp</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">float</span> aspectRatio = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="class_application.html#a4a3e0701ad5b9a555517b4837d343fda">Application::GetWidth</a>()) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="class_application.html#a2d023977e1078daa3f74f9d03860c14f">Application::GetHeight</a>()); <span class="comment">// ƒAƒXƒyƒNƒg”ä	</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// •`‰æ‹——£i1.0f‚©‚ç1000.0f‚Ü‚Å‚Ì‹——£‚É‚ ‚é‹–ìŠp“à‚Ì‚à‚Ì‚ğ‰f‚·j</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">float</span> nearPlane = 1.0f;         <span class="comment">// ƒjƒAƒNƒŠƒbƒviÅ‚à‹ß‚­j</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">float</span> farPlane = 1000.0f;       <span class="comment">// ƒtƒ@[ƒNƒŠƒbƒviÅ‚à‰“‚­j</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//ƒvƒƒWƒFƒNƒVƒ‡ƒ“s—ñ‚Ì¶¬</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Matrix projectionMatrix;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    projectionMatrix =  DirectX::XMMatrixPerspectiveFovLH( fieldOfView,  aspectRatio,  nearPlane,  farPlane);   <span class="comment">// ¶èŒn‚É‚µ‚½@20230511 by suzuki.tomoki</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// DIRECTXTK‚Ìƒƒ\ƒbƒh‚Í‰EèŒn@20230511 by suzuki.tomoki</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// ‰EèŒn‚É‚·‚é‚Æ‚RŠpŒ`’¸“_‚ª”½Œv‰ñ‚è‚É‚È‚é‚Ì‚Å•`‰æ‚³‚ê‚È‚­‚È‚é‚Ì‚Å’ˆÓ</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// ‚±‚ÌƒR[ƒh‚ÍŠm”FƒeƒXƒg‚Ì‚½‚ß‚Éc‚·</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// projectionMatrix = DirectX::SimpleMath::Matrix::CreatePerspectiveFieldOfView(fieldOfView, aspectRatio, nearPlane, farPlane);</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="class_renderer.html#ad69c19abd3719199a7412972f40391bf">Renderer::SetProjectionMatrix</a>(&amp;projectionMatrix);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//=======================================</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//I—¹ˆ—</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//=======================================</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_camera.html#a8b3337b3e560ea6a780d646bc8c509d7">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_camera.html#a8b3337b3e560ea6a780d646bc8c509d7">Camera::Uninit</a>()</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="ttc" id="a_application_8h_html"><div class="ttname"><a href="_application_8h.html">Application.h</a></div></div>
+<div class="ttc" id="a_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
+<div class="ttc" id="a_renderer_8h_html"><div class="ttname"><a href="_renderer_8h.html">Renderer.h</a></div></div>
+<div class="ttc" id="aclass_application_html_a2d023977e1078daa3f74f9d03860c14f"><div class="ttname"><a href="class_application.html#a2d023977e1078daa3f74f9d03860c14f">Application::GetHeight</a></div><div class="ttdeci">static uint32_t GetHeight()</div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00022">Application.h:22</a></div></div>
+<div class="ttc" id="aclass_application_html_a4a3e0701ad5b9a555517b4837d343fda"><div class="ttname"><a href="class_application.html#a4a3e0701ad5b9a555517b4837d343fda">Application::GetWidth</a></div><div class="ttdeci">static uint32_t GetWidth()</div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00017">Application.h:17</a></div></div>
+<div class="ttc" id="aclass_camera_html_a0d80a44404b91bc03be2c117d1f8185b"><div class="ttname"><a href="class_camera.html#a0d80a44404b91bc03be2c117d1f8185b">Camera::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Camera.cpp:28</a></div></div>
+<div class="ttc" id="aclass_camera_html_a1543c3415858fa4773f8a69ef903366c"><div class="ttname"><a href="class_camera.html#a1543c3415858fa4773f8a69ef903366c">Camera::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition</b> <a href="#l00010">Camera.cpp:10</a></div></div>
+<div class="ttc" id="aclass_camera_html_a4a596a3ea1fdc7d244ba4268031a360b"><div class="ttname"><a href="class_camera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Camera.cpp:20</a></div></div>
+<div class="ttc" id="aclass_camera_html_a8b3337b3e560ea6a780d646bc8c509d7"><div class="ttname"><a href="class_camera.html#a8b3337b3e560ea6a780d646bc8c509d7">Camera::Uninit</a></div><div class="ttdeci">void Uninit()</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Camera.cpp:64</a></div></div>
+<div class="ttc" id="aclass_renderer_html_a4f539cc63a6bed2694490af38806ec9a"><div class="ttname"><a href="class_renderer.html#a4f539cc63a6bed2694490af38806ec9a">Renderer::SetViewMatrix</a></div><div class="ttdeci">static void SetViewMatrix(DirectX::SimpleMath::Matrix *ViewMatrix)</div><div class="ttdef"><b>Definition</b> <a href="_renderer_8cpp_source.html#l00350">Renderer.cpp:350</a></div></div>
+<div class="ttc" id="aclass_renderer_html_ad69c19abd3719199a7412972f40391bf"><div class="ttname"><a href="class_renderer.html#ad69c19abd3719199a7412972f40391bf">Renderer::SetProjectionMatrix</a></div><div class="ttdeci">static void SetProjectionMatrix(DirectX::SimpleMath::Matrix *ProjectionMatrix)</div><div class="ttdef"><b>Definition</b> <a href="_renderer_8cpp_source.html#l00362">Renderer.cpp:362</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+æ§‹ç¯‰:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: StaticMesh クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_static_mesh-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">StaticMesh クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> StaticMesh の継承関係図</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh__inherit__graph.png" border="0" usemap="#a_static_mesh_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_static_mesh_inherit__map" id="a_static_mesh_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,93,107"/>
+<area shape="rect" href="class_mesh.html" title=" " alt="" coords="22,5,76,32"/>
+<area shape="poly" title=" " alt="" coords="52,48,52,80,46,80,46,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> StaticMesh 連携図</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh__coll__graph.png" border="0" usemap="#a_static_mesh_coll__map" alt="Collaboration graph"/></div>
+<map name="a_static_mesh_coll__map" id="a_static_mesh_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,93,107"/>
+<area shape="rect" href="class_mesh.html" title=" " alt="" coords="22,5,76,32"/>
+<area shape="poly" title=" " alt="" coords="52,48,52,80,46,80,46,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a666f5b10dcd38ed322477444bb3f702f" id="r_a666f5b10dcd38ed322477444bb3f702f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a666f5b10dcd38ed322477444bb3f702f">Load</a> (std::string filename, std::string texturedirectory=&quot;&quot;)</td></tr>
+<tr class="separator:a666f5b10dcd38ed322477444bb3f702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e217176173fb0ffbcea0717cab7076" id="r_a57e217176173fb0ffbcea0717cab7076"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_m_a_t_e_r_i_a_l.html">MATERIAL</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e217176173fb0ffbcea0717cab7076">GetMaterials</a> ()</td></tr>
+<tr class="separator:a57e217176173fb0ffbcea0717cab7076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad429505c5cd3b575c83d833f07e8ada7" id="r_ad429505c5cd3b575c83d833f07e8ada7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_s_u_b_s_e_t.html">SUBSET</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad429505c5cd3b575c83d833f07e8ada7">GetSubsets</a> ()</td></tr>
+<tr class="separator:ad429505c5cd3b575c83d833f07e8ada7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f4e5e72da8132c5d9091ae3dc62fef" id="r_a89f4e5e72da8132c5d9091ae3dc62fef"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89f4e5e72da8132c5d9091ae3dc62fef">GetTextureNames</a> ()</td></tr>
+<tr class="separator:a89f4e5e72da8132c5d9091ae3dc62fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1be91629a0e4edf8c874d365d4f87b" id="r_abc1be91629a0e4edf8c874d365d4f87b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1be91629a0e4edf8c874d365d4f87b">GetTextures</a> ()</td></tr>
+<tr class="separator:abc1be91629a0e4edf8c874d365d4f87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_mesh"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_mesh')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_mesh.html">Mesh</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a1ccfd5a62e7a0944c6308c367f036e06 inherit pub_methods_class_mesh" id="r_a1ccfd5a62e7a0944c6308c367f036e06"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_v_e_r_t_e_x__3_d.html">VERTEX_3D</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh.html#a1ccfd5a62e7a0944c6308c367f036e06">GetVertices</a> ()</td></tr>
+<tr class="separator:a1ccfd5a62e7a0944c6308c367f036e06 inherit pub_methods_class_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44151c8da47eaee149acc4b3ba96249f inherit pub_methods_class_mesh" id="r_a44151c8da47eaee149acc4b3ba96249f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh.html#a44151c8da47eaee149acc4b3ba96249f">GetIndices</a> ()</td></tr>
+<tr class="separator:a44151c8da47eaee149acc4b3ba96249f inherit pub_methods_class_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_mesh"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_mesh')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_mesh.html">Mesh</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a9916edf79cbe3da4c4a0781c533ace76 inherit pro_attribs_class_mesh" id="r_a9916edf79cbe3da4c4a0781c533ace76"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_v_e_r_t_e_x__3_d.html">VERTEX_3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh.html#a9916edf79cbe3da4c4a0781c533ace76">m_vertices</a></td></tr>
+<tr class="separator:a9916edf79cbe3da4c4a0781c533ace76 inherit pro_attribs_class_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152e304fac07170530ce0a707a61bd80 inherit pro_attribs_class_mesh" id="r_a152e304fac07170530ce0a707a61bd80"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mesh.html#a152e304fac07170530ce0a707a61bd80">m_indices</a></td></tr>
+<tr class="separator:a152e304fac07170530ce0a707a61bd80 inherit pro_attribs_class_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a> の <a class="el" href="_static_mesh_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a57e217176173fb0ffbcea0717cab7076" name="a57e217176173fb0ffbcea0717cab7076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e217176173fb0ffbcea0717cab7076">&#9670;&#160;</a></span>GetMaterials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_m_a_t_e_r_i_a_l.html">MATERIAL</a> &gt; &amp; StaticMesh::GetMaterials </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a> の <a class="el" href="_static_mesh_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh_a57e217176173fb0ffbcea0717cab7076_icgraph.png" border="0" usemap="#aclass_static_mesh_a57e217176173fb0ffbcea0717cab7076_icgraph" alt=""/></div>
+<map name="aclass_static_mesh_a57e217176173fb0ffbcea0717cab7076_icgraph" id="aclass_static_mesh_a57e217176173fb0ffbcea0717cab7076_icgraph">
+<area shape="rect" title=" " alt="" coords="161,31,330,57"/>
+<area shape="rect" href="class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5" title=" " alt="" coords="12,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="145,33,106,28,107,22,146,28"/>
+<area shape="rect" href="class_test_model.html#a7e1de57e00664a32a5045e496f996b31" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="145,60,113,65,113,59,145,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad429505c5cd3b575c83d833f07e8ada7" name="ad429505c5cd3b575c83d833f07e8ada7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad429505c5cd3b575c83d833f07e8ada7">&#9670;&#160;</a></span>GetSubsets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_s_u_b_s_e_t.html">SUBSET</a> &gt; &amp; StaticMesh::GetSubsets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a> の <a class="el" href="_static_mesh_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7_icgraph.png" border="0" usemap="#aclass_static_mesh_ad429505c5cd3b575c83d833f07e8ada7_icgraph" alt=""/></div>
+<map name="aclass_static_mesh_ad429505c5cd3b575c83d833f07e8ada7_icgraph" id="aclass_static_mesh_ad429505c5cd3b575c83d833f07e8ada7_icgraph">
+<area shape="rect" title=" " alt="" coords="161,31,325,57"/>
+<area shape="rect" href="class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5" title=" " alt="" coords="12,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="145,33,106,28,106,22,146,28"/>
+<area shape="rect" href="class_test_model.html#a7e1de57e00664a32a5045e496f996b31" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="146,60,114,65,113,59,145,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89f4e5e72da8132c5d9091ae3dc62fef" name="a89f4e5e72da8132c5d9091ae3dc62fef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f4e5e72da8132c5d9091ae3dc62fef">&#9670;&#160;</a></span>GetTextureNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; &amp; StaticMesh::GetTextureNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a> の <a class="el" href="_static_mesh_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abc1be91629a0e4edf8c874d365d4f87b" name="abc1be91629a0e4edf8c874d365d4f87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1be91629a0e4edf8c874d365d4f87b">&#9670;&#160;</a></span>GetTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt; &gt; StaticMesh::GetTextures </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a> の <a class="el" href="_static_mesh_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b_icgraph.png" border="0" usemap="#aclass_static_mesh_abc1be91629a0e4edf8c874d365d4f87b_icgraph" alt=""/></div>
+<map name="aclass_static_mesh_abc1be91629a0e4edf8c874d365d4f87b_icgraph" id="aclass_static_mesh_abc1be91629a0e4edf8c874d365d4f87b_icgraph">
+<area shape="rect" title=" " alt="" coords="161,31,327,57"/>
+<area shape="rect" href="class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5" title=" " alt="" coords="12,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="145,33,106,28,106,22,146,28"/>
+<area shape="rect" href="class_test_model.html#a7e1de57e00664a32a5045e496f996b31" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="146,60,114,65,113,59,145,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a666f5b10dcd38ed322477444bb3f702f" name="a666f5b10dcd38ed322477444bb3f702f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666f5b10dcd38ed322477444bb3f702f">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StaticMesh::Load </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>texturedirectory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_static_mesh_8cpp_source.html">StaticMesh.cpp</a> の <a class="el" href="_static_mesh_8cpp_source.html#l00004">4</a> 行目に定義があります。</p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 呼び出し関係図:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh_a666f5b10dcd38ed322477444bb3f702f_cgraph.png" border="0" usemap="#aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_cgraph" alt=""/></div>
+<map name="aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_cgraph" id="aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,129,159"/>
+<area shape="rect" href="namespace_assimp_perse.html#a50cf42c61e28ffcfd30d90764560c00b" title=" " alt="" coords="187,5,358,32"/>
+<area shape="poly" title=" " alt="" coords="77,130,117,86,145,62,175,42,187,36,190,41,178,46,148,66,121,90,81,133"/>
+<area shape="rect" href="namespace_assimp_perse.html#a72c507bfd18d72bac3462abe0e27fc50" title=" " alt="" coords="182,56,363,83"/>
+<area shape="poly" title=" " alt="" coords="93,129,176,92,198,85,199,90,178,97,96,134"/>
+<area shape="rect" href="namespace_assimp_perse.html#a3238f76c2d1e93ffa81136a2f87e9171" title=" " alt="" coords="177,107,368,133"/>
+<area shape="poly" title=" " alt="" coords="129,135,161,131,161,136,129,140"/>
+<area shape="rect" href="namespace_assimp_perse.html#a0610f13164ef6a63549b680057e7043c" title=" " alt="" coords="184,157,360,184"/>
+<area shape="poly" title=" " alt="" coords="129,150,169,155,168,160,129,156"/>
+<area shape="rect" href="namespace_assimp_perse.html#a7112cfe61431f25cc9e7a21842bfd9b9" title=" " alt="" coords="183,208,362,235"/>
+<area shape="poly" title=" " alt="" coords="96,157,178,194,199,201,198,206,176,198,93,162"/>
+<area shape="rect" href="namespace_assimp_perse.html#a11bad62214443ed63cac60768b27900b" title=" " alt="" coords="185,259,360,285"/>
+<area shape="poly" title=" " alt="" coords="81,157,121,200,148,224,178,244,190,250,187,255,175,249,145,228,117,204,77,161"/>
+<area shape="rect" href="namespace_assimp_perse.html#a3b772901dacdd733c02d8b90aba9e5d6" title=" " alt="" coords="416,107,618,133"/>
+<area shape="poly" title=" " alt="" coords="368,117,400,117,400,123,368,123"/>
+</map>
+</div>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_static_mesh_a666f5b10dcd38ed322477444bb3f702f_icgraph.png" border="0" usemap="#aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_icgraph" alt=""/></div>
+<map name="aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_icgraph" id="aclass_static_mesh_a666f5b10dcd38ed322477444bb3f702f_icgraph">
+<area shape="rect" title=" " alt="" coords="161,31,284,57"/>
+<area shape="rect" href="class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5" title=" " alt="" coords="12,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="145,35,106,29,107,23,146,29"/>
+<area shape="rect" href="class_test_model.html#a7e1de57e00664a32a5045e496f996b31" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="146,59,114,64,113,58,145,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22_plane/dx22_plane/<a class="el" href="_static_mesh_8h_source.html">StaticMesh.h</a></li>
+<li>C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22_plane/dx22_plane/<a class="el" href="_static_mesh_8cpp_source.html">StaticMesh.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

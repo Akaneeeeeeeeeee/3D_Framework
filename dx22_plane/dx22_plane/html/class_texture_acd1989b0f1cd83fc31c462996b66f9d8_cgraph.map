@@ -1,0 +1,9 @@
+<map id="Texture::LoadFromFemory" name="Texture::LoadFromFemory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,180,83"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#a8a4db5c7c4741070e75fe73fbd5a97fc" title=" " alt="" coords="236,5,380,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,53,233,34,234,39,153,58"/>
+<area shape="rect" id="Node000003" href="$stb__image_8h.html#ad3e11bb44412a7ba348acfbad09caacb" title=" " alt="" coords="251,56,364,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,67,235,67,235,72,180,72"/>
+<area shape="rect" id="Node000004" href="$stb__image_8h.html#a5bf9d78a27dc1cb216005798fb704bdf" title=" " alt="" coords="228,107,388,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,81,234,100,233,105,152,86"/>
+</map>

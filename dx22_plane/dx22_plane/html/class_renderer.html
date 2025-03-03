@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Renderer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_renderer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Renderer クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a919dd3310b2427abe522ee40719dc37a" id="r_a919dd3310b2427abe522ee40719dc37a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a919dd3310b2427abe522ee40719dc37a">Init</a> ()</td></tr>
+<tr class="separator:a919dd3310b2427abe522ee40719dc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae865246d6a04d467ac22458f6f5f69d4" id="r_ae865246d6a04d467ac22458f6f5f69d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae865246d6a04d467ac22458f6f5f69d4">Uninit</a> ()</td></tr>
+<tr class="separator:ae865246d6a04d467ac22458f6f5f69d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9917266f1a9d4ef41eaa3bafc589fefc" id="r_a9917266f1a9d4ef41eaa3bafc589fefc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9917266f1a9d4ef41eaa3bafc589fefc">Begin</a> ()</td></tr>
+<tr class="separator:a9917266f1a9d4ef41eaa3bafc589fefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461d6f05d979b22d5dcba447c525b4b0" id="r_a461d6f05d979b22d5dcba447c525b4b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a461d6f05d979b22d5dcba447c525b4b0">End</a> ()</td></tr>
+<tr class="separator:a461d6f05d979b22d5dcba447c525b4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e50ae298b4cfbbe7df0e138eca9ce1" id="r_a60e50ae298b4cfbbe7df0e138eca9ce1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60e50ae298b4cfbbe7df0e138eca9ce1">SetDepthEnable</a> (bool Enable)</td></tr>
+<tr class="separator:a60e50ae298b4cfbbe7df0e138eca9ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8fb2187b774d9451af8e5a100960d9" id="r_a1c8fb2187b774d9451af8e5a100960d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c8fb2187b774d9451af8e5a100960d9">SetATCEnable</a> (bool Enable)</td></tr>
+<tr class="separator:a1c8fb2187b774d9451af8e5a100960d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92044b276e11eb2d15b33bca4932fdcb" id="r_a92044b276e11eb2d15b33bca4932fdcb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92044b276e11eb2d15b33bca4932fdcb">SetWorldViewProjection2D</a> ()</td></tr>
+<tr class="separator:a92044b276e11eb2d15b33bca4932fdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1db215718af048709c7f0ed9412b81" id="r_a9c1db215718af048709c7f0ed9412b81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c1db215718af048709c7f0ed9412b81">SetWorldMatrix</a> (DirectX::SimpleMath::Matrix *WorldMatrix)</td></tr>
+<tr class="separator:a9c1db215718af048709c7f0ed9412b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f539cc63a6bed2694490af38806ec9a" id="r_a4f539cc63a6bed2694490af38806ec9a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f539cc63a6bed2694490af38806ec9a">SetViewMatrix</a> (DirectX::SimpleMath::Matrix *ViewMatrix)</td></tr>
+<tr class="separator:a4f539cc63a6bed2694490af38806ec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69c19abd3719199a7412972f40391bf" id="r_ad69c19abd3719199a7412972f40391bf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad69c19abd3719199a7412972f40391bf">SetProjectionMatrix</a> (DirectX::SimpleMath::Matrix *ProjectionMatrix)</td></tr>
+<tr class="separator:ad69c19abd3719199a7412972f40391bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4db5c7c4741070e75fe73fbd5a97fc" id="r_a8a4db5c7c4741070e75fe73fbd5a97fc"><td class="memItemLeft" align="right" valign="top">static ID3D11Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4db5c7c4741070e75fe73fbd5a97fc">GetDevice</a> (void)</td></tr>
+<tr class="separator:a8a4db5c7c4741070e75fe73fbd5a97fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac642f0314dfa500d60c0fe6eae9ef4ef" id="r_ac642f0314dfa500d60c0fe6eae9ef4ef"><td class="memItemLeft" align="right" valign="top">static ID3D11DeviceContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac642f0314dfa500d60c0fe6eae9ef4ef">GetDeviceContext</a> (void)</td></tr>
+<tr class="separator:ac642f0314dfa500d60c0fe6eae9ef4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666f866cd6fa6c32b9e70406be8bd10c" id="r_a666f866cd6fa6c32b9e70406be8bd10c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a666f866cd6fa6c32b9e70406be8bd10c">CreateVertexShader</a> (ID3D11VertexShader **VertexShader, ID3D11InputLayout **VertexLayout, const char *FileName)</td></tr>
+<tr class="separator:a666f866cd6fa6c32b9e70406be8bd10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08eee6ff7e96f132296b59b36510b658" id="r_a08eee6ff7e96f132296b59b36510b658"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08eee6ff7e96f132296b59b36510b658">CreatePixelShader</a> (ID3D11PixelShader **PixelShader, const char *FileName)</td></tr>
+<tr class="separator:a08eee6ff7e96f132296b59b36510b658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5280947836485d67cab32e71ce274296" id="r_a5280947836485d67cab32e71ce274296"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5280947836485d67cab32e71ce274296">SetLight</a> (<a class="el" href="struct_l_i_g_h_t.html">LIGHT</a> Light)</td></tr>
+<tr class="separator:a5280947836485d67cab32e71ce274296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31420e0b83fe3ae5106c68c00a7bc1a7" id="r_a31420e0b83fe3ae5106c68c00a7bc1a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31420e0b83fe3ae5106c68c00a7bc1a7">SetMaterial</a> (<a class="el" href="struct_m_a_t_e_r_i_a_l.html">MATERIAL</a> <a class="el" href="class_material.html">Material</a>)</td></tr>
+<tr class="separator:a31420e0b83fe3ae5106c68c00a7bc1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a55ca9228eedabce25a18fef247276" id="r_a91a55ca9228eedabce25a18fef247276"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a55ca9228eedabce25a18fef247276">SetBlendState</a> (int nBlendState)</td></tr>
+<tr class="separator:a91a55ca9228eedabce25a18fef247276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00066">66</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a9917266f1a9d4ef41eaa3bafc589fefc" name="a9917266f1a9d4ef41eaa3bafc589fefc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9917266f1a9d4ef41eaa3bafc589fefc">&#9670;&#160;</a></span>Begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00254">254</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a08eee6ff7e96f132296b59b36510b658" name="a08eee6ff7e96f132296b59b36510b658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08eee6ff7e96f132296b59b36510b658">&#9670;&#160;</a></span>CreatePixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::CreatePixelShader </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11PixelShader **</td>          <td class="paramname"><span class="paramname"><em>PixelShader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>FileName</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00428">428</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a666f866cd6fa6c32b9e70406be8bd10c" name="a666f866cd6fa6c32b9e70406be8bd10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666f866cd6fa6c32b9e70406be8bd10c">&#9670;&#160;</a></span>CreateVertexShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::CreateVertexShader </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11VertexShader **</td>          <td class="paramname"><span class="paramname"><em>VertexShader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D11InputLayout **</td>          <td class="paramname"><span class="paramname"><em>VertexLayout</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>FileName</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00390">390</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a461d6f05d979b22d5dcba447c525b4b0" name="a461d6f05d979b22d5dcba447c525b4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461d6f05d979b22d5dcba447c525b4b0">&#9670;&#160;</a></span>End()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::End </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00265">265</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8a4db5c7c4741070e75fe73fbd5a97fc" name="a8a4db5c7c4741070e75fe73fbd5a97fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4db5c7c4741070e75fe73fbd5a97fc">&#9670;&#160;</a></span>GetDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ID3D11Device * Renderer::GetDevice </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00112">112</a> 行目に定義があります。</p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc_icgraph.png" border="0" usemap="#aclass_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc_icgraph" alt=""/></div>
+<map name="aclass_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc_icgraph" id="aclass_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc_icgraph">
+<area shape="rect" title=" " alt="" coords="563,183,708,209"/>
+<area shape="rect" href="class_index_buffer.html#ae1c175e71e9d683fc50f7ed49940619c" title=" " alt="" coords="361,56,495,83"/>
+<area shape="poly" title=" " alt="" coords="609,173,567,134,514,97,487,86,490,81,517,92,571,130,613,169"/>
+<area shape="rect" href="class_material.html#a2be31dc5e88124a50e410cc058cdc2e4" title=" " alt="" coords="371,259,485,285"/>
+<area shape="poly" title=" " alt="" coords="592,219,516,249,481,261,479,256,514,244,589,214"/>
+<area shape="rect" href="class_shader.html#aa9c0b85d800c697d60873b7eafe79267" title=" " alt="" coords="374,208,483,235"/>
+<area shape="poly" title=" " alt="" coords="548,209,483,217,483,212,548,204"/>
+<area shape="rect" href="class_vertex_buffer.html#a33585f350baef4547f9359848dd28625" title=" " alt="" coords="358,107,498,133"/>
+<area shape="poly" title=" " alt="" coords="589,178,514,148,479,136,481,131,516,143,592,173"/>
+<area shape="rect" href="class_texture.html#a4488b6c55e4a1d4aa0c1e5b296e33854" title=" " alt="" coords="378,157,478,184"/>
+<area shape="poly" title=" " alt="" coords="548,188,478,179,479,174,548,183"/>
+<area shape="rect" href="class_texture.html#acd1989b0f1cd83fc31c462996b66f9d8" title=" " alt="" coords="341,309,515,336"/>
+<area shape="poly" title=" " alt="" coords="613,223,571,262,517,300,490,311,487,306,514,295,567,258,609,219"/>
+<area shape="rect" href="class_ground.html#a387a4f0f1d006a606e83f24bedf9550e" title=" " alt="" coords="182,56,272,83"/>
+<area shape="poly" title=" " alt="" coords="345,72,272,72,272,67,345,67"/>
+<area shape="rect" href="class_mesh_renderer.html#aa3476f8b7457ff0e5b86662c69b09984" title=" " alt="" coords="161,5,293,32"/>
+<area shape="poly" title=" " alt="" coords="357,54,282,35,283,30,358,49"/>
+<area shape="rect" href="class_test_cube.html#a3979f3a1407a0c8a58bf8800bf697c35" title=" " alt="" coords="175,107,278,133"/>
+<area shape="poly" title=" " alt="" coords="358,90,280,110,278,104,357,84"/>
+<area shape="rect" href="class_test_plane.html#a11b7249c2c5f093451c2fdc1087dddaf" title=" " alt="" coords="174,157,280,184"/>
+<area shape="poly" title=" " alt="" coords="352,91,342,97,328,109,319,121,310,134,295,148,273,159,270,154,291,143,306,131,315,118,324,105,340,92,350,87"/>
+<area shape="rect" href="class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5" title=" " alt="" coords="12,208,106,235"/>
+<area shape="poly" title=" " alt="" coords="167,42,162,46,126,86,99,132,79,176,67,209,62,207,74,174,94,130,122,83,159,42,164,38"/>
+<area shape="rect" href="class_test_model.html#a7e1de57e00664a32a5045e496f996b31" title=" " alt="" coords="5,56,113,83"/>
+<area shape="poly" title=" " alt="" coords="166,40,107,58,105,53,165,35"/>
+<area shape="rect" href="class_material.html#a6eb1d1e57ee26abc2b9380f3d662e0fc" title=" " alt="" coords="166,309,288,336"/>
+<area shape="poly" title=" " alt="" coords="358,292,283,311,282,306,357,287"/>
+<area shape="poly" title=" " alt="" coords="358,210,339,198,327,185,320,172,314,147,308,121,302,109,291,97,271,83,273,79,295,93,306,106,313,119,319,145,325,170,332,182,343,194,361,205"/>
+<area shape="poly" title=" " alt="" coords="358,235,293,243,227,246,160,243,106,234,106,229,161,237,227,241,293,237,358,230"/>
+<area shape="poly" title=" " alt="" coords="358,232,312,233,261,229,208,218,159,198,126,173,98,141,64,84,69,82,103,138,129,169,162,194,210,213,261,223,312,227,358,226"/>
+<area shape="poly" title=" " alt="" coords="358,207,340,198,324,186,315,173,306,160,291,148,270,136,273,132,295,143,310,156,319,170,328,182,342,194,360,203"/>
+<area shape="poly" title=" " alt="" coords="358,206,279,186,281,181,359,201"/>
+<area shape="poly" title=" " alt="" coords="357,105,271,83,273,78,358,100"/>
+<area shape="poly" title=" " alt="" coords="350,103,340,97,324,84,315,71,306,59,291,46,270,35,273,30,295,42,310,55,319,68,328,81,342,92,352,98"/>
+<area shape="poly" title=" " alt="" coords="343,123,279,123,279,117,343,117"/>
+<area shape="poly" title=" " alt="" coords="358,140,281,160,279,155,357,135"/>
+<area shape="poly" title=" " alt="" coords="362,159,340,148,324,135,315,122,306,109,291,97,270,86,273,81,295,92,310,106,319,119,328,131,342,143,365,154"/>
+<area shape="poly" title=" " alt="" coords="362,157,278,136,280,130,364,152"/>
+<area shape="poly" title=" " alt="" coords="362,173,280,173,280,168,362,168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac642f0314dfa500d60c0fe6eae9ef4ef" name="ac642f0314dfa500d60c0fe6eae9ef4ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac642f0314dfa500d60c0fe6eae9ef4ef">&#9670;&#160;</a></span>GetDeviceContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ID3D11DeviceContext * Renderer::GetDeviceContext </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00113">113</a> 行目に定義があります。</p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef_icgraph.png" border="0" usemap="#aclass_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef_icgraph" alt=""/></div>
+<map name="aclass_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef_icgraph" id="aclass_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef_icgraph">
+<area shape="rect" title=" " alt="" coords="630,301,821,328"/>
+<area shape="rect" href="class_mesh_renderer.html#ae286a90ae654b01b56420dc3a819b314" title=" " alt="" coords="200,124,384,151"/>
+<area shape="poly" title=" " alt="" coords="714,287,698,240,671,183,632,128,608,104,581,85,547,72,510,67,473,69,435,76,368,100,317,126,315,121,365,95,434,71,472,63,510,61,548,66,584,80,612,100,636,124,676,180,703,238,719,285"/>
+<area shape="rect" href="class_mesh_renderer.html#a9013b56c1b4d52152677c5317d4274b2" title=" " alt="" coords="5,48,151,75"/>
+<area shape="poly" title=" " alt="" coords="716,287,702,235,676,170,658,137,636,106,611,79,581,57,522,30,459,15,394,9,330,10,267,17,210,27,121,50,120,45,209,22,267,11,329,5,394,3,460,10,524,25,584,52,614,75,640,103,662,134,680,168,707,233,721,286"/>
+<area shape="rect" href="class_ground.html#a2370ec120536f0831d1a4fe59cae804f" title=" " alt="" coords="241,175,343,201"/>
+<area shape="poly" title=" " alt="" coords="712,288,694,246,666,197,629,150,606,130,581,114,542,98,508,93,474,99,434,114,419,125,411,138,402,152,386,165,344,182,342,177,384,161,398,148,406,135,415,121,432,110,473,94,508,88,543,93,584,110,609,126,632,147,671,194,699,244,717,286"/>
+<area shape="rect" href="class_test_cube.html#a9f98cf35cd30f59b226a4a3fff746b63" title=" " alt="" coords="234,225,350,252"/>
+<area shape="poly" title=" " alt="" coords="678,298,632,281,582,267,521,256,458,249,350,242,350,237,459,243,521,251,583,262,634,276,680,293"/>
+<area shape="rect" href="class_test_plane.html#a3911aded8e7c6e66a0ae477de7ac13ae" title=" " alt="" coords="233,327,351,353"/>
+<area shape="poly" title=" " alt="" coords="711,343,690,374,662,410,626,444,583,469,543,484,508,488,473,483,432,469,389,446,351,414,321,382,301,356,305,352,325,378,355,410,392,441,434,464,475,478,508,483,541,479,581,464,622,439,658,406,686,371,707,340"/>
+<area shape="rect" href="class_mesh_renderer.html#ab7cebe997ca3a7ad354f44e85946c276" title=" " alt="" coords="199,479,385,505"/>
+<area shape="poly" title=" " alt="" coords="714,343,695,379,666,422,629,462,607,479,584,493,555,505,525,512,463,518,404,516,352,509,353,503,404,511,463,513,524,507,553,499,581,488,604,475,625,458,662,418,690,376,710,340"/>
+<area shape="rect" href="class_vertex_buffer.html#af820a0b31c6e694afebc61f6631c49c5" title=" " alt="" coords="438,276,577,303"/>
+<area shape="poly" title=" " alt="" coords="615,305,577,300,578,295,615,299"/>
+<area shape="rect" href="class_index_buffer.html#acb896224d5f0828f4d99bbf699771aa9" title=" " alt="" coords="436,124,580,151"/>
+<area shape="poly" title=" " alt="" coords="704,290,653,228,619,194,581,165,559,154,561,149,584,161,622,190,657,224,708,287"/>
+<area shape="rect" href="class_material.html#a7b0803f8bfd73f4fb54da4ab697eaf8b" title=" " alt="" coords="446,377,570,404"/>
+<area shape="poly" title=" " alt="" coords="672,336,583,368,551,379,549,374,581,363,671,331"/>
+<area shape="rect" href="class_shader.html#a811382542f994084a86f29606d5255ed" title=" " alt="" coords="448,428,567,455"/>
+<area shape="poly" title=" " alt="" coords="698,340,646,380,584,418,557,430,555,425,581,414,643,375,695,336"/>
+<area shape="rect" href="class_texture.html#a4a650974063d09a0d8b759994e8bc85a" title=" " alt="" coords="447,327,568,353"/>
+<area shape="poly" title=" " alt="" coords="615,330,569,336,568,330,614,325"/>
+<area shape="rect" href="class_vertex_buffer.html#a5cce227e623555879628165b9855c614" title=" " alt="" coords="433,175,582,201"/>
+<area shape="poly" title=" " alt="" coords="692,294,641,259,581,222,543,204,545,200,584,218,644,254,695,290"/>
+<area shape="rect" href="class_material.html#a9da08daeabc17958465476ad6470c18b" title=" " alt="" coords="437,580,578,607"/>
+<area shape="poly" title=" " alt="" coords="717,344,699,390,670,449,632,509,584,563,555,582,552,577,581,559,628,506,666,446,694,388,712,342"/>
+<area shape="rect" href="class_material.html#a29194f54f95adb35452acd85066b3b7d" title=" " alt="" coords="449,631,566,657"/>
+<area shape="poly" title=" " alt="" coords="721,344,706,402,680,476,640,553,614,589,584,621,566,632,563,628,581,617,610,586,635,550,675,474,701,400,716,343"/>
+<area shape="rect" href="class_golf_ball.html#a5386af8ca0ebcd61f8c9889f511bfa2b" title=" " alt="" coords="25,377,131,404"/>
+<area shape="poly" title=" " alt="" coords="206,161,200,165,175,189,153,217,119,278,97,336,85,378,80,376,92,334,114,276,149,214,171,185,197,161,203,157"/>
+<area shape="poly" title=" " alt="" coords="237,121,117,78,119,73,239,116"/>
+<area shape="rect" href="class_test_model.html#a18bc7f4a5f9d405af758572b7bd55258" title=" " alt="" coords="18,428,138,455"/>
+<area shape="poly" title=" " alt="" coords="203,162,201,164,180,195,172,226,172,257,176,288,181,320,181,352,173,385,153,418,138,430,135,425,149,414,168,383,176,351,175,320,171,289,166,257,166,225,175,193,197,161,199,158"/>
+<area shape="poly" title=" " alt="" coords="254,473,150,419,121,407,123,402,152,414,256,468"/>
+<area shape="poly" title=" " alt="" coords="217,477,137,458,138,453,218,472"/>
+<area shape="poly" title=" " alt="" coords="420,140,384,140,384,135,420,135"/>
+<area shape="poly" title=" " alt="" coords="434,157,344,179,343,174,432,152"/>
+<area shape="poly" title=" " alt="" coords="443,160,435,165,420,177,411,190,402,203,386,216,352,231,349,226,384,211,398,199,407,187,416,174,431,161,440,155"/>
+<area shape="poly" title=" " alt="" coords="439,161,435,165,417,188,409,212,403,237,387,266,352,302,316,328,313,324,348,298,383,263,398,235,404,210,412,186,431,161,436,157"/>
+<area shape="poly" title=" " alt="" coords="433,432,385,425,131,398,132,393,385,420,433,427"/>
+<area shape="poly" title=" " alt="" coords="432,444,139,444,139,439,432,439"/>
+<area shape="poly" title=" " alt="" coords="434,420,431,418,413,392,406,365,405,339,407,314,409,289,408,264,401,240,383,215,365,202,343,195,344,190,367,198,387,212,405,237,413,263,415,289,412,314,410,339,411,364,418,389,435,414,437,417"/>
+<area shape="poly" title=" " alt="" coords="436,422,431,418,412,393,404,368,398,344,383,316,348,281,313,255,316,250,352,277,387,313,403,342,409,367,417,391,435,414,439,418"/>
+<area shape="poly" title=" " alt="" coords="442,424,432,418,417,407,407,396,398,385,384,374,344,356,346,352,386,370,401,381,411,392,420,403,434,414,444,419"/>
+<area shape="poly" title=" " alt="" coords="436,321,431,317,420,304,413,290,407,264,401,239,394,227,383,216,364,204,343,196,344,191,367,199,387,211,399,224,406,237,412,263,418,289,424,301,435,313,439,316"/>
+<area shape="poly" title=" " alt="" coords="447,323,432,317,367,285,315,255,317,250,370,280,434,312,449,318"/>
+<area shape="poly" title=" " alt="" coords="431,343,352,343,352,337,431,337"/>
+<area shape="poly" title=" " alt="" coords="432,173,351,154,352,149,433,168"/>
+<area shape="poly" title=" " alt="" coords="417,191,344,191,344,185,417,185"/>
+<area shape="poly" title=" " alt="" coords="434,208,351,228,350,223,432,203"/>
+<area shape="poly" title=" " alt="" coords="476,213,314,329,311,324,473,208"/>
+<area shape="rect" href="class_material.html#a2be31dc5e88124a50e410cc058cdc2e4" title=" " alt="" coords="235,631,349,657"/>
+<area shape="poly" title=" " alt="" coords="433,647,349,647,349,641,433,641"/>
+<area shape="rect" href="class_material.html#a6eb1d1e57ee26abc2b9380f3d662e0fc" title=" " alt="" coords="17,631,139,657"/>
+<area shape="poly" title=" " alt="" coords="219,647,139,647,139,641,219,641"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a919dd3310b2427abe522ee40719dc37a" name="a919dd3310b2427abe522ee40719dc37a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919dd3310b2427abe522ee40719dc37a">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 呼び出し関係図:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a919dd3310b2427abe522ee40719dc37a_cgraph.png" border="0" usemap="#aclass_renderer_a919dd3310b2427abe522ee40719dc37a_cgraph" alt=""/></div>
+<map name="aclass_renderer_a919dd3310b2427abe522ee40719dc37a_cgraph" id="aclass_renderer_a919dd3310b2427abe522ee40719dc37a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,106,159"/>
+<area shape="rect" href="class_application.html#a2d023977e1078daa3f74f9d03860c14f" title=" " alt="" coords="161,5,313,32"/>
+<area shape="poly" title=" " alt="" coords="64,130,100,87,124,63,152,42,162,36,165,41,155,46,128,67,104,90,69,133"/>
+<area shape="rect" href="class_application.html#a4a3e0701ad5b9a555517b4837d343fda" title=" " alt="" coords="163,56,311,83"/>
+<area shape="poly" title=" " alt="" coords="79,129,153,92,170,86,172,91,155,97,82,134"/>
+<area shape="rect" href="class_application.html#a7f377b70e2789b3254c12af666c572f2" title=" " alt="" coords="156,107,318,133"/>
+<area shape="poly" title=" " alt="" coords="106,136,140,131,141,136,107,141"/>
+<area shape="rect" href="class_renderer.html#a91a55ca9228eedabce25a18fef247276" title=" " alt="" coords="154,157,320,184"/>
+<area shape="poly" title=" " alt="" coords="107,150,138,154,138,159,106,155"/>
+<area shape="rect" href="class_renderer.html#a5280947836485d67cab32e71ce274296" title=" " alt="" coords="172,208,302,235"/>
+<area shape="poly" title=" " alt="" coords="82,157,155,194,172,200,170,205,153,198,79,162"/>
+<area shape="rect" href="class_renderer.html#a31420e0b83fe3ae5106c68c00a7bc1a7" title=" " alt="" coords="163,259,311,285"/>
+<area shape="poly" title=" " alt="" coords="69,158,104,201,128,224,155,244,165,250,162,255,152,249,124,228,100,204,64,161"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c8fb2187b774d9451af8e5a100960d9" name="a1c8fb2187b774d9451af8e5a100960d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8fb2187b774d9451af8e5a100960d9">&#9670;&#160;</a></span>SetATCEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetATCEnable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>Enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00291">291</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a91a55ca9228eedabce25a18fef247276" name="a91a55ca9228eedabce25a18fef247276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a55ca9228eedabce25a18fef247276">&#9670;&#160;</a></span>SetBlendState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Renderer::SetBlendState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nBlendState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8h_source.html">Renderer.h</a> の <a class="el" href="_renderer_8h_source.html#l00124">124</a> 行目に定義があります。</p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a91a55ca9228eedabce25a18fef247276_icgraph.png" border="0" usemap="#aclass_renderer_a91a55ca9228eedabce25a18fef247276_icgraph" alt=""/></div>
+<map name="aclass_renderer_a91a55ca9228eedabce25a18fef247276_icgraph" id="aclass_renderer_a91a55ca9228eedabce25a18fef247276_icgraph">
+<area shape="rect" title=" " alt="" coords="154,5,320,32"/>
+<area shape="rect" href="class_renderer.html#a919dd3310b2427abe522ee40719dc37a" title=" " alt="" coords="5,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60e50ae298b4cfbbe7df0e138eca9ce1" name="a60e50ae298b4cfbbe7df0e138eca9ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e50ae298b4cfbbe7df0e138eca9ce1">&#9670;&#160;</a></span>SetDepthEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetDepthEnable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>Enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00274">274</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5280947836485d67cab32e71ce274296" name="a5280947836485d67cab32e71ce274296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5280947836485d67cab32e71ce274296">&#9670;&#160;</a></span>SetLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetLight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_l_i_g_h_t.html">LIGHT</a></td>          <td class="paramname"><span class="paramname"><em>Light</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00374">374</a> 行目に定義があります。</p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a5280947836485d67cab32e71ce274296_icgraph.png" border="0" usemap="#aclass_renderer_a5280947836485d67cab32e71ce274296_icgraph" alt=""/></div>
+<map name="aclass_renderer_a5280947836485d67cab32e71ce274296_icgraph" id="aclass_renderer_a5280947836485d67cab32e71ce274296_icgraph">
+<area shape="rect" title=" " alt="" coords="154,5,284,32"/>
+<area shape="rect" href="class_renderer.html#a919dd3310b2427abe522ee40719dc37a" title=" " alt="" coords="5,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31420e0b83fe3ae5106c68c00a7bc1a7" name="a31420e0b83fe3ae5106c68c00a7bc1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31420e0b83fe3ae5106c68c00a7bc1a7">&#9670;&#160;</a></span>SetMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetMaterial </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_m_a_t_e_r_i_a_l.html">MATERIAL</a></td>          <td class="paramname"><span class="paramname"><em>Material</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00382">382</a> 行目に定義があります。</p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a31420e0b83fe3ae5106c68c00a7bc1a7_icgraph.png" border="0" usemap="#aclass_renderer_a31420e0b83fe3ae5106c68c00a7bc1a7_icgraph" alt=""/></div>
+<map name="aclass_renderer_a31420e0b83fe3ae5106c68c00a7bc1a7_icgraph" id="aclass_renderer_a31420e0b83fe3ae5106c68c00a7bc1a7_icgraph">
+<area shape="rect" title=" " alt="" coords="154,5,302,32"/>
+<area shape="rect" href="class_renderer.html#a919dd3310b2427abe522ee40719dc37a" title=" " alt="" coords="5,5,106,32"/>
+<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad69c19abd3719199a7412972f40391bf" name="ad69c19abd3719199a7412972f40391bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69c19abd3719199a7412972f40391bf">&#9670;&#160;</a></span>SetProjectionMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetProjectionMatrix </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::SimpleMath::Matrix *</td>          <td class="paramname"><span class="paramname"><em>ProjectionMatrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00362">362</a> 行目に定義があります。</p>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_ad69c19abd3719199a7412972f40391bf_icgraph.png" border="0" usemap="#aclass_renderer_ad69c19abd3719199a7412972f40391bf_icgraph" alt=""/></div>
+<map name="aclass_renderer_ad69c19abd3719199a7412972f40391bf_icgraph" id="aclass_renderer_ad69c19abd3719199a7412972f40391bf_icgraph">
+<area shape="rect" title=" " alt="" coords="160,5,356,32"/>
+<area shape="rect" href="class_camera.html#a0d80a44404b91bc03be2c117d1f8185b" title=" " alt="" coords="5,5,112,32"/>
+<area shape="poly" title=" " alt="" coords="144,21,112,21,112,16,144,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f539cc63a6bed2694490af38806ec9a" name="a4f539cc63a6bed2694490af38806ec9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f539cc63a6bed2694490af38806ec9a">&#9670;&#160;</a></span>SetViewMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetViewMatrix </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::SimpleMath::Matrix *</td>          <td class="paramname"><span class="paramname"><em>ViewMatrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00350">350</a> 行目に定義があります。</p>
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a4f539cc63a6bed2694490af38806ec9a_icgraph.png" border="0" usemap="#aclass_renderer_a4f539cc63a6bed2694490af38806ec9a_icgraph" alt=""/></div>
+<map name="aclass_renderer_a4f539cc63a6bed2694490af38806ec9a_icgraph" id="aclass_renderer_a4f539cc63a6bed2694490af38806ec9a_icgraph">
+<area shape="rect" title=" " alt="" coords="160,5,327,32"/>
+<area shape="rect" href="class_camera.html#a0d80a44404b91bc03be2c117d1f8185b" title=" " alt="" coords="5,5,112,32"/>
+<area shape="poly" title=" " alt="" coords="144,21,112,21,112,16,144,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c1db215718af048709c7f0ed9412b81" name="a9c1db215718af048709c7f0ed9412b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1db215718af048709c7f0ed9412b81">&#9670;&#160;</a></span>SetWorldMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetWorldMatrix </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::SimpleMath::Matrix *</td>          <td class="paramname"><span class="paramname"><em>WorldMatrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00338">338</a> 行目に定義があります。</p>
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 被呼び出し関係図:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a9c1db215718af048709c7f0ed9412b81_icgraph.png" border="0" usemap="#aclass_renderer_a9c1db215718af048709c7f0ed9412b81_icgraph" alt=""/></div>
+<map name="aclass_renderer_a9c1db215718af048709c7f0ed9412b81_icgraph" id="aclass_renderer_a9c1db215718af048709c7f0ed9412b81_icgraph">
+<area shape="rect" title=" " alt="" coords="174,107,345,133"/>
+<area shape="rect" href="class_golf_ball.html#a5386af8ca0ebcd61f8c9889f511bfa2b" title=" " alt="" coords="12,5,119,32"/>
+<area shape="poly" title=" " alt="" coords="221,100,124,46,100,35,102,30,127,42,224,96"/>
+<area shape="rect" href="class_ground.html#a2370ec120536f0831d1a4fe59cae804f" title=" " alt="" coords="14,56,117,83"/>
+<area shape="poly" title=" " alt="" coords="190,105,116,85,117,80,191,100"/>
+<area shape="rect" href="class_test_cube.html#a9f98cf35cd30f59b226a4a3fff746b63" title=" " alt="" coords="7,107,124,133"/>
+<area shape="poly" title=" " alt="" coords="158,123,124,123,124,117,158,117"/>
+<area shape="rect" href="class_test_model.html#a18bc7f4a5f9d405af758572b7bd55258" title=" " alt="" coords="5,157,126,184"/>
+<area shape="poly" title=" " alt="" coords="192,140,120,159,119,154,190,135"/>
+<area shape="rect" href="class_test_plane.html#a3911aded8e7c6e66a0ae477de7ac13ae" title=" " alt="" coords="6,208,125,235"/>
+<area shape="poly" title=" " alt="" coords="224,144,127,198,102,210,100,205,124,194,221,140"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a92044b276e11eb2d15b33bca4932fdcb" name="a92044b276e11eb2d15b33bca4932fdcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92044b276e11eb2d15b33bca4932fdcb">&#9670;&#160;</a></span>SetWorldViewProjection2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::SetWorldViewProjection2D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00311">311</a> 行目に定義があります。</p>
+<div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> 呼び出し関係図:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a92044b276e11eb2d15b33bca4932fdcb_cgraph.png" border="0" usemap="#aclass_renderer_a92044b276e11eb2d15b33bca4932fdcb_cgraph" alt=""/></div>
+<map name="aclass_renderer_a92044b276e11eb2d15b33bca4932fdcb_cgraph" id="aclass_renderer_a92044b276e11eb2d15b33bca4932fdcb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,245,57"/>
+<area shape="rect" href="class_application.html#a2d023977e1078daa3f74f9d03860c14f" title=" " alt="" coords="293,5,445,32"/>
+<area shape="poly" title=" " alt="" coords="245,29,277,25,277,31,245,34"/>
+<area shape="rect" href="class_application.html#a4a3e0701ad5b9a555517b4837d343fda" title=" " alt="" coords="295,56,443,83"/>
+<area shape="poly" title=" " alt="" coords="245,54,280,57,279,63,245,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae865246d6a04d467ac22458f6f5f69d4" name="ae865246d6a04d467ac22458f6f5f69d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae865246d6a04d467ac22458f6f5f69d4">&#9670;&#160;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::Uninit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a> の <a class="el" href="_renderer_8cpp_source.html#l00234">234</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22_plane/dx22_plane/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
+<li>C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22_plane/dx22_plane/<a class="el" href="_renderer_8cpp_source.html">Renderer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+<map id="Camera::Draw" name="Camera::Draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,112,108"/>
+<area shape="rect" id="Node000002" href="$class_application.html#a2d023977e1078daa3f74f9d03860c14f" title=" " alt="" coords="182,5,334,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,78,159,42,180,34,181,39,161,46,85,83"/>
+<area shape="rect" id="Node000003" href="$class_application.html#a4a3e0701ad5b9a555517b4837d343fda" title=" " alt="" coords="184,56,332,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,85,168,78,168,83,112,91"/>
+<area shape="rect" id="Node000004" href="$class_renderer.html#ad69c19abd3719199a7412972f40391bf" title=" " alt="" coords="160,107,356,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,99,144,103,144,108,112,104"/>
+<area shape="rect" id="Node000005" href="$class_renderer.html#a4f539cc63a6bed2694490af38806ec9a" title=" " alt="" coords="174,157,342,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="85,106,161,143,181,150,180,155,159,148,83,111"/>
+</map>

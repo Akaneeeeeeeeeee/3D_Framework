@@ -1,0 +1,9 @@
+<map id="Texture::Load" name="Texture::Load">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,106,83"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#a8a4db5c7c4741070e75fe73fbd5a97fc" title=" " alt="" coords="154,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,53,163,34,165,39,104,58"/>
+<area shape="rect" id="Node000003" href="$stb__image_8h.html#ad3e11bb44412a7ba348acfbad09caacb" title=" " alt="" coords="169,56,282,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,67,154,67,154,72,106,72"/>
+<area shape="rect" id="Node000004" href="$stb__image_8h.html#ad3fc296ba0778df0a8094e20da82deab" title=" " alt="" coords="189,107,262,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,81,176,102,174,108,102,86"/>
+</map>

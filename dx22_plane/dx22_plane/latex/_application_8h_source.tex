@@ -1,0 +1,49 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\+Application.h}
+\hypertarget{_application_8h_source}{}\label{_application_8h_source}\mbox{\hyperlink{_application_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00006}00006\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00007}00007\ \textcolor{comment}{//\ Applicationクラス}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00008}00008\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00009}\mbox{\hyperlink{class_application}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_application}{Application}}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00011}00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_application_ae07ad6703fb64d0e9f505a8bec02e2fa}{Application}}(uint32\_t\ width,\ uint32\_t\ height);}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_application_a748bca84fefb9c12661cfaa2f623748d}{\string~Application}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_aaf09cd6cb412086dc039e28cdb059f0d}{Run}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ 幅を取得}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00017}\mbox{\hyperlink{class_application_a4a3e0701ad5b9a555517b4837d343fda}{00017}}\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{class_application_a4a3e0701ad5b9a555517b4837d343fda}{GetWidth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Width;}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ 高さを取得}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00022}\mbox{\hyperlink{class_application_a2d023977e1078daa3f74f9d03860c14f}{00022}}\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{class_application_a2d023977e1078daa3f74f9d03860c14f}{GetHeight}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Height;}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ ウインドウハンドルを返す}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00027}\mbox{\hyperlink{class_application_a7f377b70e2789b3254c12af666c572f2}{00027}}\ \ \ \ \ \textcolor{keyword}{static}\ HWND\ \mbox{\hyperlink{class_application_a7f377b70e2789b3254c12af666c572f2}{GetWindow}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_hWnd;}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00031}00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{static}\ HINSTANCE\ \ \ m\_hInst;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ インスタンスハンドル}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{static}\ HWND\ \ \ \ \ \ \ \ m\_hWnd;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウハンドル}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \ \ \ m\_Width;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウの横幅}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \ \ \ m\_Height;\ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウの縦幅}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ InitApp();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ TermApp();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ InitWnd();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ TermWnd();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MainLoop();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{static}\ LRESULT\ CALLBACK\ WndProc(HWND\ hWnd,\ UINT\ msg,\ WPARAM\ wp,\ LPARAM\ lp);}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00044}00044\ \};}
+
+\end{DoxyCode}

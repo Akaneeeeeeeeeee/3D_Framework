@@ -1,0 +1,81 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/utility.cpp}
+\hypertarget{utility_8cpp_source}{}\label{utility_8cpp_source}\mbox{\hyperlink{utility_8cpp}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ \ \ \ <filesystem>}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <string>}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <Windows.h>}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00005}\mbox{\hyperlink{namespaceutility}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutility}{utility}}\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ std::string\ ópÇÃÉfÉBÉåÉNÉgÉäéÊìæä÷êî}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00007}\mbox{\hyperlink{namespaceutility_ae8974cad9091993145ed9e1e2e94635e}{00007}}\ \ \ \ \ std::filesystem::path\ \mbox{\hyperlink{namespaceutility_ae8974cad9091993145ed9e1e2e94635e}{get\_directory}}(\textcolor{keyword}{const}\ std::string\&\ path)\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::filesystem::path(path).parent\_path();}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00009}00009\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//\ std::u8string\ ópÇÃÉfÉBÉåÉNÉgÉäéÊìæä÷êî}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00012}\mbox{\hyperlink{namespaceutility_a12b220815a29946f81253027d6af54e0}{00012}}\ \ \ \ \ std::filesystem::path\ \mbox{\hyperlink{namespaceutility_ae8974cad9091993145ed9e1e2e94635e}{get\_directory}}(\textcolor{keyword}{const}\ std::u8string\&\ path)\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::filesystem::path(path).parent\_path();}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ std::wstring\ ópÇÃÉfÉBÉåÉNÉgÉäéÊìæä÷êî}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00017}\mbox{\hyperlink{namespaceutility_a20eca751e03a746f33a640ef755c0a00}{00017}}\ \ \ \ \ std::filesystem::path\ \mbox{\hyperlink{namespaceutility_ae8974cad9091993145ed9e1e2e94635e}{get\_directory}}(\textcolor{keyword}{const}\ std::wstring\&\ path)\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::filesystem::path(path).parent\_path();}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ ÉèÉCÉhï∂éö(utf16)ÇÇìÅ|ÇäÇâÇìÇ…}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00022}\mbox{\hyperlink{namespaceutility_a50f8999cc0e9f7d5b0f9d56ab346c00b}{00022}}\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceutility_a50f8999cc0e9f7d5b0f9d56ab346c00b}{wide\_to\_multi\_winapi}}(std::wstring\ \textcolor{keyword}{const}\&\ src)}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ dest\_size\ =\ ::WideCharToMultiByte(}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ CP\_ACP,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ 0U,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ src.data(),}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ -\/1,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ std::vector<char>\ dest(dest\_size,\ \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (::WideCharToMultiByte(}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ CP\_ACP,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ 0U,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ src.data(),}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ -\/1,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ dest.data(),}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(dest.size()),}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::system\_error\{\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(::GetLastError()),\ std::system\_category()\ \};}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ dest.resize(std::char\_traits<char>::length(dest.data()));}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ dest.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::string(dest.begin(),\ dest.end());}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ utf-\/8ÇÉèÉCÉhï∂éö(utf-\/16)Ç…}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00051}\mbox{\hyperlink{namespaceutility_a637dae77dc82e2d8016b8de5bd1002ac}{00051}}\ \ \ \ \ std::wstring\ \mbox{\hyperlink{namespaceutility_a637dae77dc82e2d8016b8de5bd1002ac}{utf8\_to\_wide\_winapi}}(std::string\ \textcolor{keyword}{const}\&\ src)}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ dest\_size\ =\ ::MultiByteToWideChar(}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ CP\_UTF8,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ É\(\backslash\)Å[ÉXë§Ç™UTF-\/8}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ 0U,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ src.data(),}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ -\/1,}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ 0U);}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ std::vector<wchar\_t>\ dest(dest\_size,\ L\textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (::MultiByteToWideChar(CP\_UTF8,\ 0U,\ src.data(),\ -\/1,\ dest.data(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(dest.size()))\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::system\_error\{\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(::GetLastError()),\ std::system\_category()\ \};}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ dest.resize(std::char\_traits<wchar\_t>::length(dest.data()));}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ dest.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::wstring(dest.begin(),\ dest.end());}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ utf8ÇS-\/JISÇ…}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00070}\mbox{\hyperlink{namespaceutility_a3425fc302572aa88a00f7c4e9e2713a7}{00070}}\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceutility_a3425fc302572aa88a00f7c4e9e2713a7}{utf8\_to\_multi\_winapi}}(std::string\ \textcolor{keyword}{const}\&\ src)}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ wide\ =\ \mbox{\hyperlink{namespaceutility_a637dae77dc82e2d8016b8de5bd1002ac}{utf8\_to\_wide\_winapi}}(src);}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceutility_a50f8999cc0e9f7d5b0f9d56ab346c00b}{wide\_to\_multi\_winapi}}(wide);}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{utility_8cpp_source_l00076}00076\ }
+
+\end{DoxyCode}

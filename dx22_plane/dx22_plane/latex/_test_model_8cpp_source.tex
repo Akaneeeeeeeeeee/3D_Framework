@@ -1,0 +1,103 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/\+Test\+Model.cpp}
+\hypertarget{_test_model_8cpp_source}{}\label{_test_model_8cpp_source}\mbox{\hyperlink{_test_model_8cpp}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ \ \ \ <SimpleMath.h>}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <memory>}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_test_model_8h}{TestModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_mesh_renderer_8h}{MeshRenderer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_shader_8h}{Shader.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_texture_8h}{Texture.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_static_mesh_8h}{StaticMesh.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00010}00010\ \textcolor{keyword}{using\ namespace\ }DirectX::SimpleMath;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00012}\mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{TestModel::Init}}()}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ ÉÅÉbÉVÉÖì«Ç›çûÇ›}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_static_mesh}{StaticMesh}}\ staticmesh;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//3DÉÇÉfÉãÉfÅ[É\string^}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00018}00018\ \ \ \ \ std::u8string\ modelFile\ =\ u8\textcolor{stringliteral}{"{}assets/model/JACKéÆÉsÉsî¸\_v1.0/JACKéÆÉsÉsî¸1.0.pmx"{}};}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//ÉeÉNÉXÉ`ÉÉÉfÉBÉåÉNÉgÉä}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00021}00021\ \ \ \ \ std::string\ texDirectory\ =\ \textcolor{stringliteral}{"{}assets/model/JACKéÆÉsÉsî¸\_v1.0"{}};}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//MeshÇì«Ç›çûÇﬁ}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00024}00024\ \ \ \ \ std::string\ tmpStr1(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(modelFile.c\_str()),\ modelFile.size());}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00025}00025\ \ \ \ \ staticmesh.\mbox{\hyperlink{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f}{Load}}(tmpStr1,\ texDirectory);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00027}00027\ \ \ \ \ m\_MeshRenderer.\mbox{\hyperlink{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984}{Init}}(staticmesh);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ ÉVÉFÅ[É\_ÉIÉuÉWÉFÉNÉgê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_object_a759d3d097234eb30e36045a652e5b1e9}{m\_Shader}}.\mbox{\hyperlink{class_shader_aa9c0b85d800c697d60873b7eafe79267}{Create}}(\textcolor{stringliteral}{"{}shader/litTextureVS.hlsl"{}},\ \textcolor{stringliteral}{"{}shader/litTexturePS.hlsl"{}});}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ ÉTÉuÉZÉbÉgèÓïÒéÊìæ}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00033}00033\ \ \ \ \ m\_subsets\ =\ staticmesh.\mbox{\hyperlink{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7}{GetSubsets}}();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ ÉeÉNÉXÉ`ÉÉèÓïÒéÊìæ}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00036}00036\ \ \ \ \ m\_Textures\ =\ staticmesh.\mbox{\hyperlink{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b}{GetTextures}}();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãèÓïÒéÊìæ}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00039}00039\ \ \ \ \ std::vector<MATERIAL>\ materials\ =\ staticmesh.\mbox{\hyperlink{class_static_mesh_a57e217176173fb0ffbcea0717cab7076}{GetMaterials}}();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãêîï™ÉãÅ[Év}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ materials.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãÉIÉuÉWÉFÉNÉgÇê∂ê¨}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ std::unique\_ptr<Material>\ m\ =\ std::make\_unique<Material>();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãèÓïÒÇÉZÉbÉg}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ m-\/>Create(materials[i]);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãÉIÉuÉWÉFÉNÉgÇîzóÒÇ…í«â¡}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ m\_Materials.push\_back(std::move(m));}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00054}\mbox{\hyperlink{class_test_model_a794f0eb5bb913ddd6b705b7168b50cb8}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a794f0eb5bb913ddd6b705b7168b50cb8}{TestModel::Update}}()}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\_Rotation}}.y\ +=\ -\/0.01f;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.x\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.y\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.z\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00062}\mbox{\hyperlink{class_test_model_a18bc7f4a5f9d405af758572b7bd55258}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a18bc7f4a5f9d405af758572b7bd55258}{TestModel::Draw}}()}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ SRTèÓïÒçÏê¨}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00065}00065\ \ \ \ \ Matrix\ r\ =\ Matrix::CreateFromYawPitchRoll(\mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\_Rotation}}.y,\ \mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\_Rotation}}.x,\ \mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\_Rotation}}.z);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00066}00066\ \ \ \ \ Matrix\ t\ =\ Matrix::CreateTranslation(\mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{m\_Position}}.x,\ \mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{m\_Position}}.y,\ \mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{m\_Position}}.z);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00067}00067\ \ \ \ \ Matrix\ s\ =\ Matrix::CreateScale(\mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.x,\ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.y,\ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}.z);}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00069}00069\ \ \ \ \ Matrix\ worldmtx;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00070}00070\ \ \ \ \ worldmtx\ =\ s\ *\ r\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{class_renderer_a9c1db215718af048709c7f0ed9412b81}{Renderer::SetWorldMatrix}}(\&worldmtx);\ \textcolor{comment}{//\ GPUÇ…ÉZÉbÉg}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{class_object_a759d3d097234eb30e36045a652e5b1e9}{m\_Shader}}.\mbox{\hyperlink{class_shader_a811382542f994084a86f29606d5255ed}{SetGPU}}();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÅEí∏ì\_ÉoÉbÉtÉ@ÇÉZÉbÉg}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00076}00076\ \ \ \ \ m\_MeshRenderer.\mbox{\hyperlink{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314}{BeforeDraw}}();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//É\}ÉeÉäÉAÉãêîï™ÉãÅ[Év\ }}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ m\_subsets.size();\ i++)}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ É\}ÉeÉäÉAÉãÇÉZÉbÉgÅiÉTÉuÉZÉbÉgèÓïÒÇÃíÜÇ…Ç†ÇÈÉ\}ÉeÉäÉAÉãÉCÉìÉfÉbÉNÉXÇégópÅj}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ m\_Materials[m\_subsets[i].MaterialIdx]-\/>SetGPU();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_Materials[m\_subsets[i].MaterialIdx]-\/>isTextureEnable())\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Textures[m\_subsets[i].MaterialIdx]-\/>SetGPU();}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ m\_MeshRenderer.\mbox{\hyperlink{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276}{DrawSubset}}(}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ m\_subsets[i].IndexNum,\ \ \ \ \textcolor{comment}{//\ ï`âÊÇ∑ÇÈÉCÉìÉfÉbÉNÉXêî}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ m\_subsets[i].IndexBase,\ \ \ \textcolor{comment}{//\ ç≈èâÇÃÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÇÃà íu}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ m\_subsets[i].VertexBase);\ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ÇÃç≈èâÇ©ÇÁégóp}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00095}\mbox{\hyperlink{class_test_model_abf8157852ca941d4f4bbc83d15ec1f03}{00095}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_abf8157852ca941d4f4bbc83d15ec1f03}{TestModel::Uninit}}()}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_test_model_8cpp_source_l00098}00098\ \}}
+
+\end{DoxyCode}

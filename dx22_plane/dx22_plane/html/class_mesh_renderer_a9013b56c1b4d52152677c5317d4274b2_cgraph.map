@@ -1,0 +1,14 @@
+<map id="MeshRenderer::Draw" name="MeshRenderer::Draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,102,151,129"/>
+<area shape="rect" id="Node000002" href="$class_mesh_renderer.html#ae286a90ae654b01b56420dc3a819b314" title=" " alt="" coords="199,51,382,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,99,216,80,217,85,138,104"/>
+<area shape="rect" id="Node000003" href="$class_renderer.html#ac642f0314dfa500d60c0fe6eae9ef4ef" title=" " alt="" coords="627,51,818,78"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="151,120,238,126,345,129,462,126,579,113,630,99,677,82,679,87,632,105,580,118,463,131,345,135,238,132,151,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,48,370,28,429,11,505,3,580,11,632,25,679,42,677,47,630,30,579,17,505,8,431,17,372,33,322,53"/>
+<area shape="rect" id="Node000004" href="$class_index_buffer.html#acb896224d5f0828f4d99bbf699771aa9" title=" " alt="" coords="432,26,577,53"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="382,51,417,47,417,52,383,56"/>
+<area shape="rect" id="Node000005" href="$class_vertex_buffer.html#a5cce227e623555879628165b9855c614" title=" " alt="" coords="430,77,579,103"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="383,73,415,77,414,82,382,78"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="577,45,612,49,612,54,577,50"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="579,79,612,75,612,80,580,84"/>
+</map>

@@ -1,0 +1,306 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/dx11helper.cpp ファイル}
+\hypertarget{dx11helper_8cpp}{}\label{dx11helper_8cpp}\index{C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22\_plane/dx22\_plane/dx11helper.cpp@{C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22\_plane/dx22\_plane/dx11helper.cpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}dx11helper.\+h"{}}\newline
+dx11helper.\+cpp の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{dx11helper_8cpp_a273e01d3c573ea3378ab39b74cf8e74e}{Extract\+File\+Name}} (std\+::string fullpath, char split)
+\item 
+std\+::string \mbox{\hyperlink{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9}{Get\+File\+Ext}} (const char \texorpdfstring{$\ast$}{*}filename)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e}{read\+Shader}} (const char \texorpdfstring{$\ast$}{*}cso\+Name, std\+::vector$<$ unsigned char $>$ \&byte\+Array)
+\item 
+HRESULT \mbox{\hyperlink{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}{Compile\+Shader}} (const char \texorpdfstring{$\ast$}{*}sz\+File\+Name, LPCSTR sz\+Entry\+Point, LPCSTR sz\+Shader\+Model, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}Shader\+Object, size\+\_\+t \&Shader\+Object\+Size, ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Blob\+Out)
+\item 
+HRESULT \mbox{\hyperlink{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71}{Compile\+Shader\+From\+File}} (const char \texorpdfstring{$\ast$}{*}sz\+File\+Name, LPCSTR sz\+Entry\+Point, LPCSTR sz\+Shader\+Model, ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Blob\+Out)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7}{Create\+Vertex\+Shader}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, const char \texorpdfstring{$\ast$}{*}sz\+File\+Name, LPCSTR sz\+Entry\+Point, LPCSTR sz\+Shader\+Model, D3\+D11\+\_\+\+INPUT\+\_\+\+ELEMENT\+\_\+\+DESC \texorpdfstring{$\ast$}{*}layout, unsigned int num\+Elements, ID3\+D11\+Vertex\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Vertex\+Shader, ID3\+D11\+Input\+Layout \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Vertex\+Layout)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05}{Create\+Pixel\+Shader}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, const char \texorpdfstring{$\ast$}{*}sz\+File\+Name, LPCSTR sz\+Entry\+Point, LPCSTR sz\+Shader\+Model, ID3\+D11\+Pixel\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Pixel\+Shader)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219}{Create\+Constant\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int bytesize, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Constant\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a24a9587dc8c80845d3c8b72b3827d092}{Create\+Constant\+Buffer\+Write}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int bytesize, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Constant\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b}{Create\+Index\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int indexnum, void \texorpdfstring{$\ast$}{*}indexdata, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Index\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_aace919015b525f2aaae86aee9f7d882d}{Create\+Vertex\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int stride, unsigned int vertexnum, void \texorpdfstring{$\ast$}{*}vertexdata, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5}{Create\+Vertex\+Buffer\+Write}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int stride, unsigned int vertexnum, void \texorpdfstring{$\ast$}{*}vertexdata, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a35c6e06fbbf5443d2a0d43d375404c1d}{Create\+Vertex\+Buffer\+UAV}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int stride, unsigned int vertexnum, void \texorpdfstring{$\ast$}{*}vertexdata, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Vertex\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a72ead3bd43ce7bb0cf7a86175f70c1e0}{Create\+Structured\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int stride, unsigned int num, void \texorpdfstring{$\ast$}{*}data, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+Structured\+Buffer)
+\item 
+ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dx11helper_8cpp_afec5a1a4664e27a164d30cc9a12f5b17}{Create\+And\+Copy\+To\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, ID3\+D11\+Device\+Context \texorpdfstring{$\ast$}{*}devicecontext, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}p\+Buffer)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_af2e589eba237f625b906774e8eb199ff}{Create\+Shader\+Resource\+View}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}p\+Buffer, ID3\+D11\+Shader\+Resource\+View \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+SRV)
+\item 
+bool \mbox{\hyperlink{dx11helper_8cpp_a3da83001edc9b8ae56cc2d1d1252f2f6}{Create\+Un\+Order\+Access\+View}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}p\+Buffer, ID3\+D11\+Unordered\+Access\+View \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+UAV)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e}\index{dx11helper.cpp@{dx11helper.cpp}!CompileShader@{CompileShader}}
+\index{CompileShader@{CompileShader}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CompileShader()}{CompileShader()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e} 
+HRESULT Compile\+Shader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{sz\+File\+Name}{, }\item[{LPCSTR}]{sz\+Entry\+Point}{, }\item[{LPCSTR}]{sz\+Shader\+Model}{, }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Shader\+Object}{, }\item[{size\+\_\+t \&}]{Shader\+Object\+Size}{, }\item[{ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+Blob\+Out}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00057}{57}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_ad25b2bdaa1dd7872c556ccc8fea3122e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71}\index{dx11helper.cpp@{dx11helper.cpp}!CompileShaderFromFile@{CompileShaderFromFile}}
+\index{CompileShaderFromFile@{CompileShaderFromFile}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CompileShaderFromFile()}{CompileShaderFromFile()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71} 
+HRESULT Compile\+Shader\+From\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{sz\+File\+Name}{, }\item[{LPCSTR}]{sz\+Entry\+Point}{, }\item[{LPCSTR}]{sz\+Shader\+Model}{, }\item[{ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+Blob\+Out}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00092}{92}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_a957c5097d8616850cb70f67fe1635a71_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_afec5a1a4664e27a164d30cc9a12f5b17}\index{dx11helper.cpp@{dx11helper.cpp}!CreateAndCopyToBuffer@{CreateAndCopyToBuffer}}
+\index{CreateAndCopyToBuffer@{CreateAndCopyToBuffer}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateAndCopyToBuffer()}{CreateAndCopyToBuffer()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_afec5a1a4664e27a164d30cc9a12f5b17} 
+ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} Create\+And\+Copy\+To\+Buffer (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{ID3\+D11\+Device\+Context \texorpdfstring{$\ast$}{*}}]{devicecontext}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}}]{p\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00462}{462}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219}\index{dx11helper.cpp@{dx11helper.cpp}!CreateConstantBuffer@{CreateConstantBuffer}}
+\index{CreateConstantBuffer@{CreateConstantBuffer}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateConstantBuffer()}{CreateConstantBuffer()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219} 
+bool Create\+Constant\+Buffer (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{bytesize}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Constant\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00230}{230}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_a24a9587dc8c80845d3c8b72b3827d092}\index{dx11helper.cpp@{dx11helper.cpp}!CreateConstantBufferWrite@{CreateConstantBufferWrite}}
+\index{CreateConstantBufferWrite@{CreateConstantBufferWrite}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateConstantBufferWrite()}{CreateConstantBufferWrite()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a24a9587dc8c80845d3c8b72b3827d092} 
+bool Create\+Constant\+Buffer\+Write (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{bytesize}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Constant\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00257}{257}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b}\index{dx11helper.cpp@{dx11helper.cpp}!CreateIndexBuffer@{CreateIndexBuffer}}
+\index{CreateIndexBuffer@{CreateIndexBuffer}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateIndexBuffer()}{CreateIndexBuffer()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b} 
+bool Create\+Index\+Buffer (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{indexnum}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{indexdata}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Index\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00284}{284}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05}\index{dx11helper.cpp@{dx11helper.cpp}!CreatePixelShader@{CreatePixelShader}}
+\index{CreatePixelShader@{CreatePixelShader}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreatePixelShader()}{CreatePixelShader()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05} 
+bool Create\+Pixel\+Shader (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{sz\+File\+Name}{, }\item[{LPCSTR}]{sz\+Entry\+Point}{, }\item[{LPCSTR}]{sz\+Shader\+Model}{, }\item[{ID3\+D11\+Pixel\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+Pixel\+Shader}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00195}{195}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_ae8ec19eab7e615ced445d3ccbbe86f05_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_af2e589eba237f625b906774e8eb199ff}\index{dx11helper.cpp@{dx11helper.cpp}!CreateShaderResourceView@{CreateShaderResourceView}}
+\index{CreateShaderResourceView@{CreateShaderResourceView}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateShaderResourceView()}{CreateShaderResourceView()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_af2e589eba237f625b906774e8eb199ff} 
+bool Create\+Shader\+Resource\+View (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}}]{p\+Buffer}{, }\item[{ID3\+D11\+Shader\+Resource\+View \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+SRV}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00492}{492}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_a72ead3bd43ce7bb0cf7a86175f70c1e0}\index{dx11helper.cpp@{dx11helper.cpp}!CreateStructuredBuffer@{CreateStructuredBuffer}}
+\index{CreateStructuredBuffer@{CreateStructuredBuffer}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateStructuredBuffer()}{CreateStructuredBuffer()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a72ead3bd43ce7bb0cf7a86175f70c1e0} 
+bool Create\+Structured\+Buffer (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{stride}{, }\item[{unsigned int}]{num}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Structured\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00420}{420}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_a3da83001edc9b8ae56cc2d1d1252f2f6}\index{dx11helper.cpp@{dx11helper.cpp}!CreateUnOrderAccessView@{CreateUnOrderAccessView}}
+\index{CreateUnOrderAccessView@{CreateUnOrderAccessView}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateUnOrderAccessView()}{CreateUnOrderAccessView()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a3da83001edc9b8ae56cc2d1d1252f2f6} 
+bool Create\+Un\+Order\+Access\+View (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}}]{p\+Buffer}{, }\item[{ID3\+D11\+Unordered\+Access\+View \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+UAV}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00532}{532}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_aace919015b525f2aaae86aee9f7d882d}\index{dx11helper.cpp@{dx11helper.cpp}!CreateVertexBuffer@{CreateVertexBuffer}}
+\index{CreateVertexBuffer@{CreateVertexBuffer}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBuffer()}{CreateVertexBuffer()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_aace919015b525f2aaae86aee9f7d882d} 
+bool Create\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{stride}{, }\item[{unsigned int}]{vertexnum}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{vertexdata}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Vertex\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00315}{315}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_a35c6e06fbbf5443d2a0d43d375404c1d}\index{dx11helper.cpp@{dx11helper.cpp}!CreateVertexBufferUAV@{CreateVertexBufferUAV}}
+\index{CreateVertexBufferUAV@{CreateVertexBufferUAV}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBufferUAV()}{CreateVertexBufferUAV()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a35c6e06fbbf5443d2a0d43d375404c1d} 
+bool Create\+Vertex\+Buffer\+UAV (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{stride}{, }\item[{unsigned int}]{vertexnum}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{vertexdata}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Vertex\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00383}{383}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5}\index{dx11helper.cpp@{dx11helper.cpp}!CreateVertexBufferWrite@{CreateVertexBufferWrite}}
+\index{CreateVertexBufferWrite@{CreateVertexBufferWrite}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateVertexBufferWrite()}{CreateVertexBufferWrite()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5} 
+bool Create\+Vertex\+Buffer\+Write (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{unsigned int}]{stride}{, }\item[{unsigned int}]{vertexnum}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{vertexdata}{, }\item[{ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Vertex\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00349}{349}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7}\index{dx11helper.cpp@{dx11helper.cpp}!CreateVertexShader@{CreateVertexShader}}
+\index{CreateVertexShader@{CreateVertexShader}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateVertexShader()}{CreateVertexShader()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7} 
+bool Create\+Vertex\+Shader (\begin{DoxyParamCaption}\item[{ID3\+D11\+Device \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{sz\+File\+Name}{, }\item[{LPCSTR}]{sz\+Entry\+Point}{, }\item[{LPCSTR}]{sz\+Shader\+Model}{, }\item[{D3\+D11\+\_\+\+INPUT\+\_\+\+ELEMENT\+\_\+\+DESC \texorpdfstring{$\ast$}{*}}]{layout}{, }\item[{unsigned int}]{num\+Elements}{, }\item[{ID3\+D11\+Vertex\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+Vertex\+Shader}{, }\item[{ID3\+D11\+Input\+Layout \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+Vertex\+Layout}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00143}{143}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_a4dfbddd06ed9936bbaa62063c5cbeea7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_a273e01d3c573ea3378ab39b74cf8e74e}\index{dx11helper.cpp@{dx11helper.cpp}!ExtractFileName@{ExtractFileName}}
+\index{ExtractFileName@{ExtractFileName}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{ExtractFileName()}{ExtractFileName()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_a273e01d3c573ea3378ab39b74cf8e74e} 
+std\+::string Extract\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{fullpath}{, }\item[{char}]{split}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00010}{10}} 行目に定義があります。
+
+\Hypertarget{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9}\index{dx11helper.cpp@{dx11helper.cpp}!GetFileExt@{GetFileExt}}
+\index{GetFileExt@{GetFileExt}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{GetFileExt()}{GetFileExt()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9} 
+std\+::string Get\+File\+Ext (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00024}{24}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_afe2aab602993aa0b2a3fc81a95858aa9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e}\index{dx11helper.cpp@{dx11helper.cpp}!readShader@{readShader}}
+\index{readShader@{readShader}!dx11helper.cpp@{dx11helper.cpp}}
+\doxysubsubsection{\texorpdfstring{readShader()}{readShader()}}
+{\footnotesize\ttfamily \label{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e} 
+bool read\+Shader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{cso\+Name}{, }\item[{std\+::vector$<$ unsigned char $>$ \&}]{byte\+Array}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{dx11helper_8cpp_source}{dx11helper.\+cpp}} の \mbox{\hyperlink{dx11helper_8cpp_source_l00036}{36}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dx11helper_8cpp_ac1d0844e7f486f0f36d1180efd4ab44e_icgraph}
+\end{center}
+\end{figure}

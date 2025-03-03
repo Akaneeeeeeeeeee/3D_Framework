@@ -1,0 +1,223 @@
+\doxysection{Assimp\+Perse 名前空間}
+\hypertarget{namespace_assimp_perse}{}\label{namespace_assimp_perse}\index{AssimpPerse@{AssimpPerse}}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_assimp_perse_1_1_m_a_t_e_r_i_a_l}{MATERIAL}}
+\item 
+struct \mbox{\hyperlink{struct_assimp_perse_1_1_s_u_b_s_e_t}{SUBSET}}
+\item 
+struct \mbox{\hyperlink{struct_assimp_perse_1_1_v_e_r_t_e_x}{VERTEX}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_a7112cfe61431f25cc9e7a21842bfd9b9}{Get\+Textures}} ()
+\item 
+void \mbox{\hyperlink{namespace_assimp_perse_a3b772901dacdd733c02d8b90aba9e5d6}{Get\+Material\+Data}} (const ai\+Scene \texorpdfstring{$\ast$}{*}p\+Scene, std\+::string texturedirectory)
+\item 
+void \mbox{\hyperlink{namespace_assimp_perse_a3238f76c2d1e93ffa81136a2f87e9171}{Get\+Model\+Data}} (std\+::string filename, std\+::string texturedirectory)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_s_u_b_s_e_t}{SUBSET}} $>$ \mbox{\hyperlink{namespace_assimp_perse_a0610f13164ef6a63549b680057e7043c}{Get\+Subsets}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_v_e_r_t_e_x}{VERTEX}} $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_a11bad62214443ed63cac60768b27900b}{Get\+Vertices}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_a50cf42c61e28ffcfd30d90764560c00b}{Get\+Indices}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \mbox{\hyperlink{namespace_assimp_perse_a72c507bfd18d72bac3462abe0e27fc50}{Get\+Materials}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_v_e_r_t_e_x}{VERTEX}} $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_a5dc9d43b3ef2b9a72b56b5e9dbf32508}{g\+\_\+vertices}} \{\}
+\item 
+std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_a57073d2778871e4ece716f541161d74c}{g\+\_\+indices}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_s_u_b_s_e_t}{SUBSET}} $>$ \mbox{\hyperlink{namespace_assimp_perse_ade45e3db1edeff3268b11500a8287e2a}{g\+\_\+subsets}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \mbox{\hyperlink{namespace_assimp_perse_a7a8abd94ba7e0b9e92382123737e660b}{g\+\_\+materials}} \{\}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{namespace_assimp_perse_accdddfd6701c17e4f8c1ecd928561715}{g\+\_\+textures}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{namespace_assimp_perse_a50cf42c61e28ffcfd30d90764560c00b}\index{AssimpPerse@{AssimpPerse}!GetIndices@{GetIndices}}
+\index{GetIndices@{GetIndices}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetIndices()}{GetIndices()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a50cf42c61e28ffcfd30d90764560c00b} 
+std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ Assimp\+Perse\+::\+Get\+Indices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00307}{307}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a50cf42c61e28ffcfd30d90764560c00b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a3b772901dacdd733c02d8b90aba9e5d6}\index{AssimpPerse@{AssimpPerse}!GetMaterialData@{GetMaterialData}}
+\index{GetMaterialData@{GetMaterialData}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetMaterialData()}{GetMaterialData()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a3b772901dacdd733c02d8b90aba9e5d6} 
+void Assimp\+Perse\+::\+Get\+Material\+Data (\begin{DoxyParamCaption}\item[{const ai\+Scene \texorpdfstring{$\ast$}{*}}]{p\+Scene}{, }\item[{std\+::string}]{texturedirectory}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00025}{25}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a3b772901dacdd733c02d8b90aba9e5d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a72c507bfd18d72bac3462abe0e27fc50}\index{AssimpPerse@{AssimpPerse}!GetMaterials@{GetMaterials}}
+\index{GetMaterials@{GetMaterials}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetMaterials()}{GetMaterials()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a72c507bfd18d72bac3462abe0e27fc50} 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ Assimp\+Perse\+::\+Get\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00312}{312}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a72c507bfd18d72bac3462abe0e27fc50_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a3238f76c2d1e93ffa81136a2f87e9171}\index{AssimpPerse@{AssimpPerse}!GetModelData@{GetModelData}}
+\index{GetModelData@{GetModelData}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetModelData()}{GetModelData()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a3238f76c2d1e93ffa81136a2f87e9171} 
+void Assimp\+Perse\+::\+Get\+Model\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{filename}{, }\item[{std\+::string}]{texturedirectory}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00156}{156}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a3238f76c2d1e93ffa81136a2f87e9171_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a3238f76c2d1e93ffa81136a2f87e9171_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a0610f13164ef6a63549b680057e7043c}\index{AssimpPerse@{AssimpPerse}!GetSubsets@{GetSubsets}}
+\index{GetSubsets@{GetSubsets}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetSubsets()}{GetSubsets()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a0610f13164ef6a63549b680057e7043c} 
+std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_s_u_b_s_e_t}{SUBSET}} $>$ Assimp\+Perse\+::\+Get\+Subsets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00297}{297}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a0610f13164ef6a63549b680057e7043c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a7112cfe61431f25cc9e7a21842bfd9b9}\index{AssimpPerse@{AssimpPerse}!GetTextures@{GetTextures}}
+\index{GetTextures@{GetTextures}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetTextures()}{GetTextures()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a7112cfe61431f25cc9e7a21842bfd9b9} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ Assimp\+Perse\+::\+Get\+Textures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00019}{19}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a7112cfe61431f25cc9e7a21842bfd9b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_assimp_perse_a11bad62214443ed63cac60768b27900b}\index{AssimpPerse@{AssimpPerse}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{GetVertices()}{GetVertices()}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a11bad62214443ed63cac60768b27900b} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_assimp_perse_1_1_v_e_r_t_e_x}{VERTEX}} $>$ $>$ Assimp\+Perse\+::\+Get\+Vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00302}{302}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_assimp_perse_a11bad62214443ed63cac60768b27900b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{変数詳解}
+\Hypertarget{namespace_assimp_perse_a57073d2778871e4ece716f541161d74c}\index{AssimpPerse@{AssimpPerse}!g\_indices@{g\_indices}}
+\index{g\_indices@{g\_indices}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{g\_indices}{g\_indices}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a57073d2778871e4ece716f541161d74c} 
+std\+::vector$<$std\+::vector$<$unsigned int$>$ $>$ Assimp\+Perse\+::g\+\_\+indices \{\}}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00013}{13}} 行目に定義があります。
+
+\Hypertarget{namespace_assimp_perse_a7a8abd94ba7e0b9e92382123737e660b}\index{AssimpPerse@{AssimpPerse}!g\_materials@{g\_materials}}
+\index{g\_materials@{g\_materials}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{g\_materials}{g\_materials}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a7a8abd94ba7e0b9e92382123737e660b} 
+std\+::vector$<$\mbox{\hyperlink{struct_assimp_perse_1_1_m_a_t_e_r_i_a_l}{MATERIAL}}$>$ Assimp\+Perse\+::g\+\_\+materials \{\}}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00015}{15}} 行目に定義があります。
+
+\Hypertarget{namespace_assimp_perse_ade45e3db1edeff3268b11500a8287e2a}\index{AssimpPerse@{AssimpPerse}!g\_subsets@{g\_subsets}}
+\index{g\_subsets@{g\_subsets}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{g\_subsets}{g\_subsets}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_ade45e3db1edeff3268b11500a8287e2a} 
+std\+::vector$<$\mbox{\hyperlink{struct_assimp_perse_1_1_s_u_b_s_e_t}{SUBSET}}$>$ Assimp\+Perse\+::g\+\_\+subsets \{\}}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00014}{14}} 行目に定義があります。
+
+\Hypertarget{namespace_assimp_perse_accdddfd6701c17e4f8c1ecd928561715}\index{AssimpPerse@{AssimpPerse}!g\_textures@{g\_textures}}
+\index{g\_textures@{g\_textures}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{g\_textures}{g\_textures}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_accdddfd6701c17e4f8c1ecd928561715} 
+std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_texture}{Texture}}$>$ $>$ Assimp\+Perse\+::g\+\_\+textures}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00016}{16}} 行目に定義があります。
+
+\Hypertarget{namespace_assimp_perse_a5dc9d43b3ef2b9a72b56b5e9dbf32508}\index{AssimpPerse@{AssimpPerse}!g\_vertices@{g\_vertices}}
+\index{g\_vertices@{g\_vertices}!AssimpPerse@{AssimpPerse}}
+\doxysubsubsection{\texorpdfstring{g\_vertices}{g\_vertices}}
+{\footnotesize\ttfamily \label{namespace_assimp_perse_a5dc9d43b3ef2b9a72b56b5e9dbf32508} 
+std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_assimp_perse_1_1_v_e_r_t_e_x}{VERTEX}}$>$ $>$ Assimp\+Perse\+::g\+\_\+vertices \{\}}
+
+
+
+ \mbox{\hyperlink{_assimp_perse_8cpp_source}{Assimp\+Perse.\+cpp}} の \mbox{\hyperlink{_assimp_perse_8cpp_source_l00012}{12}} 行目に定義があります。
+

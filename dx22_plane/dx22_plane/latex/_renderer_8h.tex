@@ -1,0 +1,82 @@
+\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\+Renderer.h ファイル}
+\hypertarget{_renderer_8h}{}\label{_renderer_8h}\index{C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22\_plane/dx22\_plane/Renderer.h@{C:/Users/caram/Desktop/HAL/DX/DX22/授業内プロジェクト/dx22\_plane/dx22\_plane/Renderer.h}}
+{\ttfamily \#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+XMath.\+h$>$}\newline
+{\ttfamily \#include $<$Simple\+Math.\+h$>$}\newline
+{\ttfamily \#include $<$io.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Renderer.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_renderer_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_renderer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}}
+\item 
+struct \mbox{\hyperlink{struct_l_i_g_h_t}{LIGHT}}
+\item 
+struct \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}}
+\item 
+struct \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}
+\item 
+class \mbox{\hyperlink{class_renderer}{Renderer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2}{EBlend\+State}} \{ \newline
+\mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a2d12b87b8f786ee643522fd75a569ee9}{BS\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a4652560626321baf86b007ea6cf19d1b}{BS\+\_\+\+ALPHABLEND}}
+, \mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a4b3aed63826d12e954d4f8916d7d7ee3}{BS\+\_\+\+ADDITIVE}}
+, \mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a696619a00213b38ff53c718615609ac9}{BS\+\_\+\+SUBTRACTION}}
+, \newline
+\mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a2dd3f4c2cf1b7fa074bc5126ce663ba4}{MAX\+\_\+\+BLENDSTATE}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型詳解}
+\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2}\index{Renderer.h@{Renderer.h}!EBlendState@{EBlendState}}
+\index{EBlendState@{EBlendState}!Renderer.h@{Renderer.h}}
+\doxysubsubsection{\texorpdfstring{EBlendState}{EBlendState}}
+{\footnotesize\ttfamily \label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+enum \mbox{\hyperlink{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2}{EBlend\+State}}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BS\_NONE@{BS\_NONE}!Renderer.h@{Renderer.h}}\index{Renderer.h@{Renderer.h}!BS\_NONE@{BS\_NONE}}}\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a2d12b87b8f786ee643522fd75a569ee9}\label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+BS\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BS\_ALPHABLEND@{BS\_ALPHABLEND}!Renderer.h@{Renderer.h}}\index{Renderer.h@{Renderer.h}!BS\_ALPHABLEND@{BS\_ALPHABLEND}}}\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a4652560626321baf86b007ea6cf19d1b}\label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+BS\+\_\+\+ALPHABLEND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BS\_ADDITIVE@{BS\_ADDITIVE}!Renderer.h@{Renderer.h}}\index{Renderer.h@{Renderer.h}!BS\_ADDITIVE@{BS\_ADDITIVE}}}\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a4b3aed63826d12e954d4f8916d7d7ee3}\label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+BS\+\_\+\+ADDITIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BS\_SUBTRACTION@{BS\_SUBTRACTION}!Renderer.h@{Renderer.h}}\index{Renderer.h@{Renderer.h}!BS\_SUBTRACTION@{BS\_SUBTRACTION}}}\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a696619a00213b38ff53c718615609ac9}\label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+BS\+\_\+\+SUBTRACTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_BLENDSTATE@{MAX\_BLENDSTATE}!Renderer.h@{Renderer.h}}\index{Renderer.h@{Renderer.h}!MAX\_BLENDSTATE@{MAX\_BLENDSTATE}}}\Hypertarget{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2a2dd3f4c2cf1b7fa074bc5126ce663ba4}\label{_renderer_8h_a3e447a94ef1b4376d3cbf363802bb5f2} 
+MAX\+\_\+\+BLENDSTATE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ \mbox{\hyperlink{_renderer_8h_source}{Renderer.\+h}} の \mbox{\hyperlink{_renderer_8h_source_l00024}{24}} 行目に定義があります。
+

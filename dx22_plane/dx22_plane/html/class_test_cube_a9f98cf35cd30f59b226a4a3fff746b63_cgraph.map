@@ -1,0 +1,19 @@
+<map id="TestCube::Draw" name="TestCube::Draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,122,138"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#ac642f0314dfa500d60c0fe6eae9ef4ef" title=" " alt="" coords="389,86,579,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,109,109,63,137,39,169,21,215,6,254,3,294,9,342,21,373,31,403,45,453,75,451,80,400,50,371,36,340,26,292,14,254,9,216,12,171,26,140,44,113,67,76,113"/>
+<area shape="rect" id="Node000003" href="$class_index_buffer.html#acb896224d5f0828f4d99bbf699771aa9" title=" " alt="" coords="183,36,328,62"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,109,169,72,187,65,189,70,171,77,92,113"/>
+<area shape="rect" id="Node000004" href="$class_shader.html#a811382542f994084a86f29606d5255ed" title=" " alt="" coords="196,86,315,113"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="122,115,180,107,181,112,122,120"/>
+<area shape="rect" id="Node000005" href="$class_texture.html#a4a650974063d09a0d8b759994e8bc85a" title=" " alt="" coords="195,137,316,164"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="122,130,180,138,179,143,122,135"/>
+<area shape="rect" id="Node000006" href="$class_vertex_buffer.html#a5cce227e623555879628165b9855c614" title=" " alt="" coords="181,188,330,214"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="92,136,171,173,189,180,187,185,169,178,89,141"/>
+<area shape="rect" id="Node000007" href="$class_renderer.html#a9c1db215718af048709c7f0ed9412b81" title=" " alt="" coords="170,238,341,265"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="77,137,116,180,142,204,171,224,182,230,179,234,168,229,139,208,112,184,74,141"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="320,60,406,80,405,85,318,66"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="315,97,373,97,373,102,315,102"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="316,134,405,114,406,119,317,140"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="308,185,340,173,396,146,446,119,449,124,399,151,342,178,310,190"/>
+</map>

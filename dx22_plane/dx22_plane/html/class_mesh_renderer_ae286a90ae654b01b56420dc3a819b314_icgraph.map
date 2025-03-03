@@ -1,0 +1,9 @@
+<map id="MeshRenderer::BeforeDraw" name="MeshRenderer::BeforeDraw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,56,382,83"/>
+<area shape="rect" id="Node000002" href="$class_golf_ball.html#a5386af8ca0ebcd61f8c9889f511bfa2b" title=" " alt="" coords="25,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,54,131,34,132,29,217,49"/>
+<area shape="rect" id="Node000003" href="$class_mesh_renderer.html#a9013b56c1b4d52152677c5317d4274b2" title=" " alt="" coords="5,56,151,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,72,151,72,151,67,183,67"/>
+<area shape="rect" id="Node000004" href="$class_test_model.html#a18bc7f4a5f9d405af758572b7bd55258" title=" " alt="" coords="18,107,138,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,90,138,109,136,103,216,84"/>
+</map>
