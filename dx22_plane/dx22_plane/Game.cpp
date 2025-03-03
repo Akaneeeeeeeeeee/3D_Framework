@@ -2,6 +2,7 @@
 #include "Renderer.h"
 #include "Texture2D.h"
 #include "FadeAnimation.h"
+#include "ImGui/DebugUI/DebugUI.h"
 
 Game* Game::m_Instance;
 
@@ -118,6 +119,8 @@ void Game::Draw()
 		
 	}*/
 	
+	//! デバッグUIの描画
+	DebugUI::Render();
 
 	// カメラ描画
 	m_Instance->m_Camera->Draw();

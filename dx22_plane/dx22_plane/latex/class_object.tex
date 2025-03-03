@@ -1,59 +1,81 @@
-\doxysection{Object クラス}
+\doxysection{Object Class Reference}
 \hypertarget{class_object}{}\label{class_object}\index{Object@{Object}}
-
-
-{\ttfamily \#include $<$Object.\+h$>$}
-
-
-
-Object の継承関係図\nopagebreak
-\begin{figure}[H]
+Inheritance diagram for Object\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_object__inherit__graph}
+\includegraphics[height=9.000000cm]{class_object}
 \end{center}
 \end{figure}
-
-
-Object 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=151pt]{class_object__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{公開メンバ関数}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_object_af90d3ee9cbd625a34994b0eb264c3275}{Object}} (\mbox{\hyperlink{class_camera}{Camera}} \texorpdfstring{$\ast$}{*}cam)
+\begin{DoxyCompactList}\small\item\em �\+R���\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em �\+R���\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em �f�\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_object_a5ee5c17a09981cbd7c469370e210b4ff}{Update}} ()=0
 \item 
 virtual void \mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Draw}} ()=0
 \item 
 virtual void \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Uninit}} ()=0
+\item 
+\Hypertarget{class_object_aaa932248197a895b6b7264d001f08643}\label{class_object_aaa932248197a895b6b7264d001f08643} 
+void {\bfseries Set\+Position} (const Direct\+X\+::\+Simple\+Math\+::\+Vector3 \&pos)
+\item 
+\Hypertarget{class_object_ae994f91574d5f8b40d7c48d2ec9994a8}\label{class_object_ae994f91574d5f8b40d7c48d2ec9994a8} 
+Direct\+X\+::\+Simple\+Math\+::\+Vector3 {\bfseries Get\+Position} (void) const
 \end{DoxyCompactItemize}
-\doxysubsubsection*{限定公開変数類}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 \mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{m\+\_\+\+Position}} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)
+\Hypertarget{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}\label{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c} 
+Direct\+X\+::\+Simple\+Math\+::\+Vector3 {\bfseries m\+\_\+\+Position} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)
 \item 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 \mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\+\_\+\+Rotation}} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)
+\Hypertarget{class_object_a9b545cc1abc4a9e65255602ed607654b}\label{class_object_a9b545cc1abc4a9e65255602ed607654b} 
+Direct\+X\+::\+Simple\+Math\+::\+Vector3 {\bfseries m\+\_\+\+Rotation} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)
 \item 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\+\_\+\+Scale}} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(1.\+0f, 1.\+0f, 1.\+0f)
+\Hypertarget{class_object_aa75488dd4290c48a3f8f66e1996b6e47}\label{class_object_aa75488dd4290c48a3f8f66e1996b6e47} 
+Direct\+X\+::\+Simple\+Math\+::\+Vector3 {\bfseries m\+\_\+\+Scale} = Direct\+X\+::\+Simple\+Math\+::\+Vector3(1.\+0f, 1.\+0f, 1.\+0f)
 \item 
-\mbox{\hyperlink{class_shader}{Shader}} \mbox{\hyperlink{class_object_a759d3d097234eb30e36045a652e5b1e9}{m\+\_\+\+Shader}}
+\Hypertarget{class_object_a759d3d097234eb30e36045a652e5b1e9}\label{class_object_a759d3d097234eb30e36045a652e5b1e9} 
+\mbox{\hyperlink{class_shader}{Shader}} {\bfseries m\+\_\+\+Shader}
+\item 
+\Hypertarget{class_object_a5f7ad38d29ef9458e7b18a094517390a}\label{class_object_a5f7ad38d29ef9458e7b18a094517390a} 
+\mbox{\hyperlink{class_camera}{Camera}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Camera}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{詳解}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_object_af90d3ee9cbd625a34994b0eb264c3275}\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily \label{class_object_af90d3ee9cbd625a34994b0eb264c3275} 
+Object\+::\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_camera}{Camera}} \texorpdfstring{$\ast$}{*}}]{cam}{}\end{DoxyParamCaption})}
 
 
- \mbox{\hyperlink{_object_8h_source}{Object.\+h}} の \mbox{\hyperlink{_object_8h_source_l00009}{9}} 行目に定義があります。
+
+�\+R���\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & �\+J�����̃\texorpdfstring{$\vert$}{|}�\+C���\texorpdfstring{$^\wedge$}{\string^} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_ae8f5483f459e46687bd01e6f9977afd3}\index{Object@{Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily \label{class_object_ae8f5483f459e46687bd01e6f9977afd3} 
+Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-\doxysubsection{関数詳解}
+�\+R���\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} 
+
+�f�\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} 
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_object_acbd787db750bc1be296d152b324acf20}\index{Object@{Object}!Draw@{Draw}}
 \index{Draw@{Draw}!Object@{Object}}
 \doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
@@ -62,7 +84,7 @@ virtual void Object\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 
-\mbox{\hyperlink{class_golf_ball_a5386af8ca0ebcd61f8c9889f511bfa2b}{Golf\+Ball}}, \mbox{\hyperlink{class_ground_a2370ec120536f0831d1a4fe59cae804f}{Ground}}, \mbox{\hyperlink{class_test_cube_a9f98cf35cd30f59b226a4a3fff746b63}{Test\+Cube}}, \mbox{\hyperlink{class_test_model_a18bc7f4a5f9d405af758572b7bd55258}{Test\+Model}}で実装されています。
+Implemented in \mbox{\hyperlink{class_ground_a2370ec120536f0831d1a4fe59cae804f}{Ground}}.
 
 \Hypertarget{class_object_a7254c74e9926c9c9e5076b606dbfc962}\index{Object@{Object}!Init@{Init}}
 \index{Init@{Init}!Object@{Object}}
@@ -72,7 +94,11 @@ virtual void Object\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 
-\mbox{\hyperlink{class_golf_ball_a1faa794a7a359c683bfc9f453d249ea5}{Golf\+Ball}}, \mbox{\hyperlink{class_ground_a387a4f0f1d006a606e83f24bedf9550e}{Ground}}, \mbox{\hyperlink{class_test_cube_a3979f3a1407a0c8a58bf8800bf697c35}{Test\+Cube}}, \mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{Test\+Model}}で実装されています。
+�f�\+X�g���\+N�\texorpdfstring{$^\wedge$}{\string^} 
+
+
+
+Implemented in \mbox{\hyperlink{class_arrow_abb7b4a74aaa26290f474a5e7d1114cff}{Arrow}}, \mbox{\hyperlink{class_fade_animation_aefe022430d8fd5f5f9b6984e09b4cb93}{Fade\+Animation}}, \mbox{\hyperlink{class_golf_ball_a1faa794a7a359c683bfc9f453d249ea5}{Golf\+Ball}}, \mbox{\hyperlink{class_ground_a387a4f0f1d006a606e83f24bedf9550e}{Ground}}, \mbox{\hyperlink{class_pole_aa5958bfd613f9ad066b8baf21e13addd}{Pole}}, \mbox{\hyperlink{class_sphere_a8a5dc7f51e1b61323666bf8873fd017b}{Sphere}}, \mbox{\hyperlink{class_test_cube_a3979f3a1407a0c8a58bf8800bf697c35}{Test\+Cube}}, \mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{Test\+Model}}, and \mbox{\hyperlink{class_texture2_d_ac618027d8b5251bc44148a19793e4618}{Texture2D}}.
 
 \Hypertarget{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}\index{Object@{Object}!Uninit@{Uninit}}
 \index{Uninit@{Uninit}!Object@{Object}}
@@ -82,7 +108,7 @@ virtual void Object\+::\+Uninit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-\mbox{\hyperlink{class_golf_ball_ac60f034d5766da19040c0fba3d408851}{Golf\+Ball}}, \mbox{\hyperlink{class_ground_a1f6015b52b228479a8e4ecaa4562ecef}{Ground}}, \mbox{\hyperlink{class_test_cube_aa2c0662e796abedfbf73999d51a41f1a}{Test\+Cube}}, \mbox{\hyperlink{class_test_model_abf8157852ca941d4f4bbc83d15ec1f03}{Test\+Model}}で実装されています。
+Implemented in \mbox{\hyperlink{class_golf_ball_ac60f034d5766da19040c0fba3d408851}{Golf\+Ball}}.
 
 \Hypertarget{class_object_a5ee5c17a09981cbd7c469370e210b4ff}\index{Object@{Object}!Update@{Update}}
 \index{Update@{Update}!Object@{Object}}
@@ -92,53 +118,11 @@ virtual void Object\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-\mbox{\hyperlink{class_golf_ball_a3846b9ead3794c8f618e15bf70eb66ac}{Golf\+Ball}}, \mbox{\hyperlink{class_ground_a5ff52e10347694af24780d58de7622b7}{Ground}}, \mbox{\hyperlink{class_test_cube_aff1c0602a9a0a6414bf5bd6fd3e48e51}{Test\+Cube}}, \mbox{\hyperlink{class_test_model_a794f0eb5bb913ddd6b705b7168b50cb8}{Test\+Model}}で実装されています。
+Implemented in \mbox{\hyperlink{class_golf_ball_a3846b9ead3794c8f618e15bf70eb66ac}{Golf\+Ball}}.
 
 
 
-\doxysubsection{メンバ詳解}
-\Hypertarget{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}\index{Object@{Object}!m\_Position@{m\_Position}}
-\index{m\_Position@{m\_Position}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{m\_Position}{m\_Position}}
-{\footnotesize\ttfamily \label{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c} 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 Object\+::m\+\_\+\+Position = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_object_8h_source}{Object.\+h}} の \mbox{\hyperlink{_object_8h_source_l00012}{12}} 行目に定義があります。
-
-\Hypertarget{class_object_a9b545cc1abc4a9e65255602ed607654b}\index{Object@{Object}!m\_Rotation@{m\_Rotation}}
-\index{m\_Rotation@{m\_Rotation}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{m\_Rotation}{m\_Rotation}}
-{\footnotesize\ttfamily \label{class_object_a9b545cc1abc4a9e65255602ed607654b} 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 Object\+::m\+\_\+\+Rotation = Direct\+X\+::\+Simple\+Math\+::\+Vector3(0.\+0f, 0.\+0f, 0.\+0f)\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_object_8h_source}{Object.\+h}} の \mbox{\hyperlink{_object_8h_source_l00013}{13}} 行目に定義があります。
-
-\Hypertarget{class_object_aa75488dd4290c48a3f8f66e1996b6e47}\index{Object@{Object}!m\_Scale@{m\_Scale}}
-\index{m\_Scale@{m\_Scale}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{m\_Scale}{m\_Scale}}
-{\footnotesize\ttfamily \label{class_object_aa75488dd4290c48a3f8f66e1996b6e47} 
-Direct\+X\+::\+Simple\+Math\+::\+Vector3 Object\+::m\+\_\+\+Scale = Direct\+X\+::\+Simple\+Math\+::\+Vector3(1.\+0f, 1.\+0f, 1.\+0f)\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_object_8h_source}{Object.\+h}} の \mbox{\hyperlink{_object_8h_source_l00014}{14}} 行目に定義があります。
-
-\Hypertarget{class_object_a759d3d097234eb30e36045a652e5b1e9}\index{Object@{Object}!m\_Shader@{m\_Shader}}
-\index{m\_Shader@{m\_Shader}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{m\_Shader}{m\_Shader}}
-{\footnotesize\ttfamily \label{class_object_a759d3d097234eb30e36045a652e5b1e9} 
-\mbox{\hyperlink{class_shader}{Shader}} Object\+::m\+\_\+\+Shader\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_object_8h_source}{Object.\+h}} の \mbox{\hyperlink{_object_8h_source_l00017}{17}} 行目に定義があります。
-
-
-
-このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\mbox{\hyperlink{_object_8h}{Object.\+h}}\end{DoxyCompactItemize}
+dx22\+\_\+plane/Object.\+h\item 
+dx22\+\_\+plane/Object.\+cpp\end{DoxyCompactItemize}

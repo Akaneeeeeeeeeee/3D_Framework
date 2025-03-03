@@ -1,34 +1,51 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/æˆæ¥­å†…ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ/dx22\+\_\+plane/dx22\+\_\+plane/\+Golf\+Ball.h}
-\hypertarget{_golf_ball_8h_source}{}\label{_golf_ball_8h_source}\mbox{\hyperlink{_golf_ball_8h}{\mbox{[}è©³è§£\mbox{]}}}
+\doxysection{Golf\+Ball.\+h}
+\hypertarget{_golf_ball_8h_source}{}\label{_golf_ball_8h_source}\index{dx22\_plane/GolfBall.h@{dx22\_plane/GolfBall.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_8h}{Object.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_renderer_8h}{MeshRenderer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00006}\mbox{\hyperlink{class_golf_ball}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_golf_ball}{GolfBall}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00008}00008\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ ‘¬“x}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00010}00010\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Velocity\{\ 0.0f,0.0f,0.0f\ \};}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//\ ‰Á‘¬“x}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00013}00013\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Acceleration\{\ 0.0f,0.0f,0.0f\ \};}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiƒƒbƒVƒ…‚ÉŠÖ‚í‚éî•ñj}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ ’¸“\_ƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒX”}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiŒ©‚½–Ú‚ÉŠÖ‚í‚é•”•ªj}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00019}00019\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materials;}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00020}00020\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00021}00021\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ ƒeƒNƒXƒ`ƒƒ}}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00023}00023\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_a1faa794a7a359c683bfc9f453d249ea5}{Init}}();}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_a3846b9ead3794c8f618e15bf70eb66ac}{Update}}();}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_a5386af8ca0ebcd61f8c9889f511bfa2b}{Draw}}();}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_ac60f034d5766da19040c0fba3d408851}{Uninit}}();}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00028}00028\ \};}
-\DoxyCodeLine{\Hypertarget{_golf_ball_8h_source_l00029}00029\ }
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MeshRenderer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_golf_ball}{GolfBall}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ ‘¬“x}}
+\DoxyCodeLine{00011\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Velocity\{\ 0.0f,0.0f,0.0f\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ ‰Á‘¬“x}}
+\DoxyCodeLine{00014\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Acceleration\{\ 0.0f,0.0f,0.0f\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiƒƒbƒVƒ…‚ÉŠÖ‚í‚éî•ñj}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ ’¸“\_ƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒX”}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiŒ©‚½–Ú‚ÉŠÖ‚í‚é•”•ªj}}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materials;}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ ƒeƒNƒXƒ`ƒƒ}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_State\ =\ 0;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ó‘Ô 0:•¨—‹““®,\ 1:’â\string~,\ 2:ƒJƒbƒvƒCƒ“}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_StopConut\ =\ 0;\ \ \ \ \textcolor{comment}{//\ Ã\string~ƒJƒEƒ“ƒg}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_golf_ball_add57fdb10cf733e66d1b9c82857e9033}{GolfBall}}(\mbox{\hyperlink{class_camera}{Camera}}*\ cam);\ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_golf_ball_a9114816f1b058b641a14dfbf68ce2ffa}{\string~GolfBall}}();\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_a1faa794a7a359c683bfc9f453d249ea5}{Init}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_a3846b9ead3794c8f618e15bf70eb66ac}{Update}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_golf_ball_ac60f034d5766da19040c0fba3d408851}{Uninit}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ ó‘Ô‚Ìİ’èEæ“¾}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ SetState(\textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ GetState();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ ƒVƒ‡ƒbƒg}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ Shot(DirectX::SimpleMath::Vector3\ v);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
 
 \end{DoxyCode}

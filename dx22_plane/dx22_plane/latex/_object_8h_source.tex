@@ -1,29 +1,41 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/\+Object.h}
-\hypertarget{_object_8h_source}{}\label{_object_8h_source}\mbox{\hyperlink{_object_8h}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\doxysection{Object.\+h}
+\hypertarget{_object_8h_source}{}\label{_object_8h_source}\index{dx22\_plane/Object.h@{dx22\_plane/Object.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <SimpleMath.h>}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vertex_buffer_8h}{VertexBuffer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_index_buffer_8h}{IndexBuffer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shader_8h}{Shader.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_texture_8h}{Texture.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00009}\mbox{\hyperlink{class_object}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object}{Object}}\ \{}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00010}00010\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//\ SRTèÓïÒÅiépê®èÓïÒÅj}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00012}\mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{00012}}\ \ \ \ \ DirectX::SimpleMath::Vector3\ \mbox{\hyperlink{class_object_ae2f30786c0280a2f4e3fe1ec5977eb3c}{m\_Position}}\ =\ DirectX::SimpleMath::Vector3(0.0f,\ 0.0f,\ 0.0f);\ \textcolor{comment}{//\ Position(Translation)}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00013}\mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{00013}}\ \ \ \ \ DirectX::SimpleMath::Vector3\ \mbox{\hyperlink{class_object_a9b545cc1abc4a9e65255602ed607654b}{m\_Rotation}}\ =\ DirectX::SimpleMath::Vector3(0.0f,\ 0.0f,\ 0.0f);}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00014}\mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{00014}}\ \ \ \ \ DirectX::SimpleMath::Vector3\ \mbox{\hyperlink{class_object_aa75488dd4290c48a3f8f66e1996b6e47}{m\_Scale}}\ =\ DirectX::SimpleMath::Vector3(1.0f,\ 1.0f,\ 1.0f);}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ ï`âÊÇÃà◊ÇÃèÓïÒÅiå©ÇΩñ⁄Ç…ä÷ÇÌÇÈïîï™Åj}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00017}\mbox{\hyperlink{class_object_a759d3d097234eb30e36045a652e5b1e9}{00017}}\ \ \ \ \ \mbox{\hyperlink{class_shader}{Shader}}\ \mbox{\hyperlink{class_object_a759d3d097234eb30e36045a652e5b1e9}{m\_Shader}};\ \textcolor{comment}{//\ ÉVÉFÅ[É\_Å[}}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00019}00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00020}\mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{00020}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}}()=0;}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00021}\mbox{\hyperlink{class_object_a5ee5c17a09981cbd7c469370e210b4ff}{00021}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a5ee5c17a09981cbd7c469370e210b4ff}{Update}}()\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00022}\mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{00022}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Draw}}()\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00023}\mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{00023}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Uninit}}()\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_object_8h_source_l00024}00024\ \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SimpleMath.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}VertexBuffer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}IndexBuffer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Shader.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object}{Object}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ SRTèÓïÒÅiépê®èÓïÒÅj}}
+\DoxyCodeLine{00012\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Position\ =\ DirectX::SimpleMath::Vector3(0.0f,\ 0.0f,\ 0.0f);\ \ \ \textcolor{comment}{//\ Position(Translation)}}
+\DoxyCodeLine{00013\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Rotation\ =\ DirectX::SimpleMath::Vector3(0.0f,\ 0.0f,\ 0.0f);}
+\DoxyCodeLine{00014\ \ \ \ \ DirectX::SimpleMath::Vector3\ m\_Scale\ =\ DirectX::SimpleMath::Vector3(1.0f,\ 1.0f,\ 1.0f);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ ï`âÊÇÃà◊ÇÃèÓïÒÅiå©ÇΩñ⁄Ç…ä÷ÇÌÇÈïîï™Åj}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_shader}{Shader}}\ m\_Shader;\ \textcolor{comment}{//\ ÉVÉFÅ[É\_Å[}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ ÉJÉÅÉâ}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}*\ m\_Camera;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_object_af90d3ee9cbd625a34994b0eb264c3275}{Object}}(\mbox{\hyperlink{class_camera}{Camera}}*\ cam);\ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_object_ae8f5483f459e46687bd01e6f9977afd3}{\string~Object}}();\ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}}()=0;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update()\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Draw()\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Uninit()\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ positionÇÃÉZÉbÉ\string^Å[ÉQÉbÉ\string^Å[}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ pos);}
+\DoxyCodeLine{00034\ \ \ \ \ DirectX::SimpleMath::Vector3\ GetPosition(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \};}
 
 \end{DoxyCode}

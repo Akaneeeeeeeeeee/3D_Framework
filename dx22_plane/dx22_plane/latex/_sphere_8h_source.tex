@@ -1,0 +1,45 @@
+\doxysection{Sphere.\+h}
+\hypertarget{_sphere_8h_source}{}\label{_sphere_8h_source}\index{dx22\_plane/Sphere.h@{dx22\_plane/Sphere.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MeshRenderer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ M\_PI\ 3.14159265358979323846}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sphere}{Sphere}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_sphere}{Sphere}}(\mbox{\hyperlink{class_camera}{Camera}}*\ \_cam)\ :\mbox{\hyperlink{class_object_af90d3ee9cbd625a34994b0eb264c3275}{Object}}(\_cam)\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_sphere}{\string~Sphere}}()\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_a8a5dc7f51e1b61323666bf8873fd017b}{Init}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//void\ Generate(int\ segments,\ float\ radius);}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（メッシュに関わる情報）}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 頂貼_バッファ・インデックスバッファ・インデックス数}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（見た目に関わる部分）}}
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materials;}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ テクスチャ}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+
+\end{DoxyCode}

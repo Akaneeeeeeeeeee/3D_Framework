@@ -1,0 +1,44 @@
+\doxysection{Pole.\+h}
+\hypertarget{_pole_8h_source}{}\label{_pole_8h_source}\index{dx22\_plane/Pole.h@{dx22\_plane/Pole.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MeshRenderer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Poleクラス}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pole}{Pole}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（メッシュに関わる情報）}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ 頂貼_バッファ・インデックスバッファ・インデックス数}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（見た目に関わる部分）}}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materiales;}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ テクスチャ}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_State\ =\ 0;\ \textcolor{comment}{//\ 0:非表(\backslash\)示・1:方向選択・2:パワー選択}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_pole}{Pole}}(\mbox{\hyperlink{class_camera}{Camera}}*\ cam);\ \textcolor{comment}{//\ コンストラクソstring^}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_pole}{\string~Pole}}();\ \textcolor{comment}{//\ デストラクソstring^}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pole_aa5958bfd613f9ad066b8baf21e13addd}{Init}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ 位置の設定}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(DirectX::SimpleMath::Vector3\ pos);}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+
+\end{DoxyCode}

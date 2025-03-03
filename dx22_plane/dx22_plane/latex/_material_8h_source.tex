@@ -1,143 +1,144 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/æŽˆæ¥­å†…ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ/dx22\+\_\+plane/dx22\+\_\+plane/\+Material.h}
-\hypertarget{_material_8h_source}{}\label{_material_8h_source}\mbox{\hyperlink{_material_8h}{\mbox{[}è©³è§£\mbox{]}}}
+\doxysection{Material.\+h}
+\hypertarget{_material_8h_source}{}\label{_material_8h_source}\index{dx22\_plane/Material.h@{dx22\_plane/Material.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <Windows.h>}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <directxmath.h>}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ <d3d11.h>}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_renderer_8h}{Renderer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00009}\mbox{\hyperlink{class_material}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_material}{Material}}\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{struct\ }ConstantBufferMaterial\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00012}00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \ \ \ \mbox{\hyperlink{class_material}{Material}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00013}00013\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \ \ \ m\_Material\{\};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00016}00016\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ m\_pConstantBufferMaterial;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00018}00018\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00019}\mbox{\hyperlink{class_material_a137e987401b63eb7c6c27c3e38bc74b5}{00019}}\ \ \ \ \ \mbox{\hyperlink{class_material_a137e987401b63eb7c6c27c3e38bc74b5}{Material}}()\ \{\}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00020}\mbox{\hyperlink{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc}{Material}}(\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ mtrl)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_material_a2be31dc5e88124a50e410cc058cdc2e4}{Create}}(mtrl);}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00022}00022\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00023}\mbox{\hyperlink{class_material_a2c19452d71f54075df8f5405b03129f4}{00023}}\ \ \ \ \ \mbox{\hyperlink{class_material_a2c19452d71f54075df8f5405b03129f4}{\string~Material}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}{Uninit}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00025}00025\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00027}\mbox{\hyperlink{class_material_a2be31dc5e88124a50e410cc058cdc2e4}{00027}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_material_a2be31dc5e88124a50e410cc058cdc2e4}{Create}}(\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ mtrl)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ ID3D11Device*\ dev;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ dev\ =\ \mbox{\hyperlink{class_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc}{Renderer::GetDevice}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@ì¬}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ \mbox{\hyperlink{dx11helper_8cpp_ab36f0bd1d17063c03f474733e0fea219}{CreateConstantBuffer}}(}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ dev,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒfƒoƒCƒX}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(ConstantBufferMaterial),\ \ \ \ \ \textcolor{comment}{//\ ƒTƒCƒY}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.GetAddressOf());\ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@‚S}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!sts)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox(NULL,\ \textcolor{stringliteral}{"{}CreateBuffer(constant\ buffer\ Material)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a21355539fb20e51a5e7239201f8df836}{Ambient}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a21355539fb20e51a5e7239201f8df836}{Ambient}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a8c87e0476708aa06c2f4725c962a75a6}{Diffuse}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a8c87e0476708aa06c2f4725c962a75a6}{Diffuse}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a65cd554eceae8adbad163a309c993d0b}{Specular}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a65cd554eceae8adbad163a309c993d0b}{Specular}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_ab83d49096162c781924419db2df78614}{Emission}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_ab83d49096162c781924419db2df78614}{Emission}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a192f60c071ad7d5e6ec7c0907725a5ae}{Shiness}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a192f60c071ad7d5e6ec7c0907725a5ae}{Shiness}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_affc171132d68102dc9d82733e493eadb}{TextureEnable}}\ =\ mtrl.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_affc171132d68102dc9d82733e493eadb}{TextureEnable}};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_material_a29194f54f95adb35452acd85066b3b7d}{Update}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00052}00052\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00054}\mbox{\hyperlink{class_material_a29194f54f95adb35452acd85066b3b7d}{00054}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a29194f54f95adb35452acd85066b3b7d}{Update}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ ConstantBufferMaterial\ \ \ \ \ \ cb\{\};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ cb.Material\ =\ m\_Material;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ devcontext\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ devcontext-\/>UpdateSubresource(}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.Get(),}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \&cb,}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0);}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00075}00075\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00077}\mbox{\hyperlink{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b}{00077}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b}{SetGPU}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ devcontext\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00087}00087\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00089}\mbox{\hyperlink{class_material_a9da08daeabc17958465476ad6470c18b}{00089}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a9da08daeabc17958465476ad6470c18b}{SetMaterial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\&\ mtrl)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ ConstantBufferMaterial\ \ \ \ \ \ cb\{\};}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ cb.Material\ =\ mtrl;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00093}00093\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00095}00095\ \ \ \ \ \ \ \ \ devcontext\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}();}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ devcontext-\/>UpdateSubresource(}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.Get(),}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \&cb,}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0);}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00103}00103\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00108}00108\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00109}00109\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00110}00110\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00111}00111\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00112}\mbox{\hyperlink{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}{00112}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}{Uninit}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00113}00113\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00115}\mbox{\hyperlink{class_material_ab65611cbe7e5803fa5a31e97d245e8ea}{00115}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_ab65611cbe7e5803fa5a31e97d245e8ea}{SetDiffuse}}(DirectX::XMFLOAT4\ diffuse)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Diffuse\ =\ diffuse;}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00117}00117\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00119}\mbox{\hyperlink{class_material_aff63b0b7cb7850bf09a0657d7bbd306d}{00119}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_aff63b0b7cb7850bf09a0657d7bbd306d}{SetAmbient}}(DirectX::XMFLOAT4\ ambient)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Ambient\ =\ ambient;}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00121}00121\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00123}\mbox{\hyperlink{class_material_a0fc919851047661776292cbd158c62f0}{00123}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a0fc919851047661776292cbd158c62f0}{SetSpecular}}(DirectX::XMFLOAT4\ specular)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Specular\ =\ specular;}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00125}00125\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00126}00126\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00127}\mbox{\hyperlink{class_material_a295446063e2f7f22467913cdd99faad5}{00127}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a295446063e2f7f22467913cdd99faad5}{SetEmission}}(DirectX::XMFLOAT4\ emission)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Emission\ =\ emission;}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00129}00129\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00130}00130\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00131}\mbox{\hyperlink{class_material_ac709b0da0715aa4da5ec1f01e46eac8c}{00131}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_ac709b0da0715aa4da5ec1f01e46eac8c}{SetShiness}}(\textcolor{keywordtype}{float}\ shiness)\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Shiness\ =\ shiness;}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00133}00133\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00134}00134\ }
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00135}\mbox{\hyperlink{class_material_a0f39b437615f5a8ebc5d37421574bb84}{00135}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_material_a0f39b437615f5a8ebc5d37421574bb84}{isTextureEnable}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Material.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_affc171132d68102dc9d82733e493eadb}{TextureEnable}}\ ==\ TRUE;}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00137}00137\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_material_8h_source_l00138}00138\ \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ \ \ <Windows.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ \ \ <directxmath.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ \ \ \ <d3d11.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ \ \ \ "{}dx11helper.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ \ \ \ "{}Renderer.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_material}{Material}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }ConstantBufferMaterial\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \ \ \ \mbox{\hyperlink{class_material}{Material}};}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \ \ \ m\_Material\{\};}
+\DoxyCodeLine{00016\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ m\_pConstantBufferMaterial;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_material}{Material}}()\ \{\}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_material}{Material}}(\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ mtrl)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Create(mtrl);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_material}{\string~Material}}()\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Uninit();}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ Create(\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ mtrl)\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ ID3D11Device*\ dev;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ dev\ =\ Renderer::GetDevice();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@ì¬}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ CreateConstantBuffer(}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ dev,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒfƒoƒCƒX}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(ConstantBufferMaterial),\ \ \ \ \ \textcolor{comment}{//\ ƒTƒCƒY}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.GetAddressOf());\ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@‚S}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!sts)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox(NULL,\ \textcolor{stringliteral}{"{}CreateBuffer(constant\ buffer\ Material)\ error"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ MB\_OK);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ m\_Material.Ambient\ =\ mtrl.Ambient;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ m\_Material.Diffuse\ =\ mtrl.Diffuse;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ m\_Material.Specular\ =\ mtrl.Specular;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ m\_Material.Emission\ =\ mtrl.Emission;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ m\_Material.Shiness\ =\ mtrl.Shiness;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ m\_Material.TextureEnable\ =\ mtrl.TextureEnable;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ Update();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ Update()\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ ConstantBufferMaterial\ \ \ \ \ \ cb\{\};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ cb.Material\ =\ m\_Material;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ devcontext\ =\ Renderer::GetDeviceContext();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ devcontext-\/>UpdateSubresource(}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.Get(),}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \&cb,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ SetGPU()\ \{}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ devcontext\ =\ Renderer::GetDeviceContext();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMaterial(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\&\ mtrl)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ ConstantBufferMaterial\ \ \ \ \ \ cb\{\};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ cb.Material\ =\ mtrl;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devcontext;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ devcontext\ =\ Renderer::GetDeviceContext();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ devcontext-\/>UpdateSubresource(}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pConstantBufferMaterial.Get(),}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \&cb,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 0);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒgi’¸“\_ƒVƒF[ƒ\_[—pj}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ devcontext-\/>VSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ƒRƒ“ƒXƒ\string^ƒ“ƒgƒoƒbƒtƒ@4‚ð‚‚4ƒŒƒWƒXƒ\string^‚ÖƒZƒbƒg(ƒsƒNƒZƒ‹ƒVƒF[ƒ\_[—p)}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ devcontext-\/>PSSetConstantBuffers(4,\ 1,\ m\_pConstantBufferMaterial.GetAddressOf());}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit()\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDiffuse(DirectX::XMFLOAT4\ diffuse)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Diffuse\ =\ diffuse;}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAmbient(DirectX::XMFLOAT4\ ambient)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Ambient\ =\ ambient;}}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSpecular(DirectX::XMFLOAT4\ specular)\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Specular\ =\ specular;}}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ SetEmission(DirectX::XMFLOAT4\ emission)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Emission\ =\ emission;}}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ SetShiness(\textcolor{keywordtype}{float}\ shiness)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_Material.Shiness\ =\ shiness;}}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTextureEnable()\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Material.TextureEnable\ ==\ TRUE;}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \};}
 
 \end{DoxyCode}

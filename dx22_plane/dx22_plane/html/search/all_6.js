@@ -1,29 +1,6 @@
 var searchData=
 [
-  ['g_5findices_0',['g_indices',['../namespace_assimp_perse.html#a57073d2778871e4ece716f541161d74c',1,'AssimpPerse']]],
-  ['g_5fmaterials_1',['g_materials',['../namespace_assimp_perse.html#a7a8abd94ba7e0b9e92382123737e660b',1,'AssimpPerse']]],
-  ['g_5fsubsets_2',['g_subsets',['../namespace_assimp_perse.html#ade45e3db1edeff3268b11500a8287e2a',1,'AssimpPerse']]],
-  ['g_5ftextures_3',['g_textures',['../namespace_assimp_perse.html#accdddfd6701c17e4f8c1ecd928561715',1,'AssimpPerse']]],
-  ['g_5fvertices_4',['g_vertices',['../namespace_assimp_perse.html#a5dc9d43b3ef2b9a72b56b5e9dbf32508',1,'AssimpPerse']]],
-  ['get_5fdirectory_5',['get_directory',['../namespaceutility.html#ae8974cad9091993145ed9e1e2e94635e',1,'utility::get_directory(const std::string &amp;path)'],['../namespaceutility.html#a12b220815a29946f81253027d6af54e0',1,'utility::get_directory(const std::u8string &amp;path)'],['../namespaceutility.html#a20eca751e03a746f33a640ef755c0a00',1,'utility::get_directory(const std::wstring &amp;path)']]],
-  ['getdevice_6',['GetDevice',['../class_renderer.html#a8a4db5c7c4741070e75fe73fbd5a97fc',1,'Renderer']]],
-  ['getdevicecontext_7',['GetDeviceContext',['../class_renderer.html#ac642f0314dfa500d60c0fe6eae9ef4ef',1,'Renderer']]],
-  ['getfileext_8',['GetFileExt',['../dx11helper_8cpp.html#afe2aab602993aa0b2a3fc81a95858aa9',1,'dx11helper.cpp']]],
-  ['getheight_9',['GetHeight',['../class_application.html#a2d023977e1078daa3f74f9d03860c14f',1,'Application']]],
-  ['getindices_10',['GetIndices',['../class_mesh.html#a44151c8da47eaee149acc4b3ba96249f',1,'Mesh::GetIndices()'],['../namespace_assimp_perse.html#a50cf42c61e28ffcfd30d90764560c00b',1,'AssimpPerse::GetIndices()']]],
-  ['getmaterialdata_11',['GetMaterialData',['../namespace_assimp_perse.html#a3b772901dacdd733c02d8b90aba9e5d6',1,'AssimpPerse']]],
-  ['getmaterials_12',['GetMaterials',['../class_static_mesh.html#a57e217176173fb0ffbcea0717cab7076',1,'StaticMesh::GetMaterials()'],['../namespace_assimp_perse.html#a72c507bfd18d72bac3462abe0e27fc50',1,'AssimpPerse::GetMaterials()']]],
-  ['getmodeldata_13',['GetModelData',['../namespace_assimp_perse.html#a3238f76c2d1e93ffa81136a2f87e9171',1,'AssimpPerse']]],
-  ['getsubsets_14',['GetSubsets',['../class_static_mesh.html#ad429505c5cd3b575c83d833f07e8ada7',1,'StaticMesh::GetSubsets()'],['../namespace_assimp_perse.html#a0610f13164ef6a63549b680057e7043c',1,'AssimpPerse::GetSubsets()']]],
-  ['gettexturenames_15',['GetTextureNames',['../class_static_mesh.html#a89f4e5e72da8132c5d9091ae3dc62fef',1,'StaticMesh']]],
-  ['gettextures_16',['GetTextures',['../class_static_mesh.html#abc1be91629a0e4edf8c874d365d4f87b',1,'StaticMesh::GetTextures()'],['../namespace_assimp_perse.html#a7112cfe61431f25cc9e7a21842bfd9b9',1,'AssimpPerse::GetTextures()']]],
-  ['getvertices_17',['GetVertices',['../class_mesh.html#a1ccfd5a62e7a0944c6308c367f036e06',1,'Mesh::GetVertices()'],['../namespace_assimp_perse.html#a11bad62214443ed63cac60768b27900b',1,'AssimpPerse::GetVertices()']]],
-  ['getwidth_18',['GetWidth',['../class_application.html#a4a3e0701ad5b9a555517b4837d343fda',1,'Application']]],
-  ['getwindow_19',['GetWindow',['../class_application.html#a7f377b70e2789b3254c12af666c572f2',1,'Application']]],
-  ['golfball_20',['GolfBall',['../class_golf_ball.html',1,'']]],
-  ['golfball_2ecpp_21',['GolfBall.cpp',['../_golf_ball_8cpp.html',1,'']]],
-  ['golfball_2eh_22',['GolfBall.h',['../_golf_ball_8h.html',1,'']]],
-  ['ground_23',['Ground',['../class_ground.html',1,'']]],
-  ['ground_2ecpp_24',['Ground.cpp',['../_ground_8cpp.html',1,'']]],
-  ['ground_2eh_25',['Ground.h',['../_ground_8h.html',1,'']]]
+  ['indexbuffer_0',['IndexBuffer',['../class_index_buffer.html',1,'']]],
+  ['init_1',['Init',['../class_arrow.html#abb7b4a74aaa26290f474a5e7d1114cff',1,'Arrow::Init()'],['../class_fade_animation.html#aefe022430d8fd5f5f9b6984e09b4cb93',1,'FadeAnimation::Init()'],['../class_golf_ball.html#a1faa794a7a359c683bfc9f453d249ea5',1,'GolfBall::Init()'],['../class_ground.html#a387a4f0f1d006a606e83f24bedf9550e',1,'Ground::Init()'],['../class_object.html#a7254c74e9926c9c9e5076b606dbfc962',1,'Object::Init()'],['../class_pole.html#aa5958bfd613f9ad066b8baf21e13addd',1,'Pole::Init()'],['../class_sphere.html#a8a5dc7f51e1b61323666bf8873fd017b',1,'Sphere::Init()'],['../class_test_cube.html#a3979f3a1407a0c8a58bf8800bf697c35',1,'TestCube::Init()'],['../class_test_model.html#a7e1de57e00664a32a5045e496f996b31',1,'TestModel::Init()'],['../class_texture2_d.html#ac618027d8b5251bc44148a19793e4618',1,'Texture2D::Init()']]],
+  ['input_2',['Input',['../class_input.html',1,'']]]
 ];

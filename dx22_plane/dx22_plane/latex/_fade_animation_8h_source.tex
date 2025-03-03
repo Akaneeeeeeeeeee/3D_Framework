@@ -1,0 +1,44 @@
+\doxysection{Fade\+Animation.\+h}
+\hypertarget{_fade_animation_8h_source}{}\label{_fade_animation_8h_source}\index{dx22\_plane/FadeAnimation.h@{dx22\_plane/FadeAnimation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Texture2D.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fade_animation}{FadeAnimation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_texture2_d}{Texture2D}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_fade_animation}{FadeAnimation}}(\mbox{\hyperlink{class_camera}{Camera}}*\ \_cam)\ :\mbox{\hyperlink{class_texture2_d}{Texture2D}}(\_cam)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ m\_Duration\ =\ 0.0f;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ m\_FrameCount\ =\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ m\_FPS\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ m\_Alpha\ =\ 0.0f;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ IsPlaying\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ In\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_fade_animation}{\string~FadeAnimation}}()\ \{\};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fade_animation_aefe022430d8fd5f5f9b6984e09b4cb93}{Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ StartFadeIn(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ StartFadeOut(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ FadeIn(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ FadeOut(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetIsPlaying(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_Duration;\ \ \ \textcolor{comment}{//\ アニメーション秒数}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_Alpha;\ \ \ \ \ \ \textcolor{comment}{//\ 透明度設定用変数}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_FrameCount;\ \ \ \textcolor{comment}{//\ フレーム数カウント変数}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_FPS;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ フレームレート}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsPlaying;\ \ \ \ \ \textcolor{comment}{//\ アニメーション中かの判定}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ In;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ フェードイン・アウトの判定 true:フェードイン,false:フェードアウト}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+
+\end{DoxyCode}

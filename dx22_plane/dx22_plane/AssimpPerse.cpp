@@ -330,7 +330,7 @@ namespace AssimpPerse
 	{
 		return g_subsets;
 	}
-
+	
 	std::vector<std::vector<VERTEX>> GetVertices()
 	{
 		return g_vertices; // 頂点データ（メッシュ単位）

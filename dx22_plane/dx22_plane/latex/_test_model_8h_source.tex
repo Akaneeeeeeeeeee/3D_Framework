@@ -1,32 +1,33 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/æˆæ¥­å†…ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ/dx22\+\_\+plane/dx22\+\_\+plane/\+Test\+Model.h}
-\hypertarget{_test_model_8h_source}{}\label{_test_model_8h_source}\mbox{\hyperlink{_test_model_8h}{\mbox{[}è©³è§£\mbox{]}}}
+\doxysection{Test\+Model.\+h}
+\hypertarget{_test_model_8h_source}{}\label{_test_model_8h_source}\index{dx22\_plane/TestModel.h@{dx22\_plane/TestModel.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <SimpleMath.h>}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_renderer_8h}{MeshRenderer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_8h}{Object.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_static_mesh_8h}{StaticMesh.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00009}00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00010}00010\ \textcolor{comment}{//TestModelƒNƒ‰ƒX}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00011}00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00012}\mbox{\hyperlink{class_test_model}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_test_model}{TestModel}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}\ \{}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00013}00013\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiƒƒbƒVƒ…‚ÉŠÖ‚í‚éî•ñj}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ ’¸“\_ƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒX”}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiŒ©‚½–Ú‚ÉŠÖ‚í‚é•”•ªj}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00018}00018\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materials;}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00019}00019\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00020}00020\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ ƒeƒNƒXƒ`ƒƒ}}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00022}00022\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{Init}}();}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a794f0eb5bb913ddd6b705b7168b50cb8}{Update}}();}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a18bc7f4a5f9d405af758572b7bd55258}{Draw}}();}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_abf8157852ca941d4f4bbc83d15ec1f03}{Uninit}}();}
-\DoxyCodeLine{\Hypertarget{_test_model_8h_source_l00027}00027\ \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SimpleMath.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MeshRenderer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}StaticMesh.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}utility.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//TestModelƒNƒ‰ƒX}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_test_model}{TestModel}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiƒƒbƒVƒ…‚ÉŠÖ‚í‚éî•ñj}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ ’¸“\_ƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@EƒCƒ“ƒfƒbƒNƒX”}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ •`‰æ‚Ìˆ×‚Ìî•ñiŒ©‚½–Ú‚ÉŠÖ‚í‚é•”•ªj}}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materials;}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ ƒeƒNƒXƒ`ƒƒ}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_model_a7e1de57e00664a32a5045e496f996b31}{Init}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();}
+\DoxyCodeLine{00027\ \};}
 
 \end{DoxyCode}

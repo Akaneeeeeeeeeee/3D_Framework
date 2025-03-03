@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['testcube_0',['TestCube',['../class_test_cube.html',1,'']]],
-  ['testmodel_1',['TestModel',['../class_test_model.html',1,'']]],
-  ['testplane_2',['TestPlane',['../class_test_plane.html',1,'']]],
-  ['texture_3',['Texture',['../class_texture.html',1,'']]]
+  ['plane_0',['Plane',['../struct_collision_1_1_plane.html',1,'Collision']]],
+  ['pole_1',['Pole',['../class_pole.html',1,'']]],
+  ['polygon_2',['Polygon',['../struct_collision_1_1_polygon.html',1,'Collision']]]
 ];

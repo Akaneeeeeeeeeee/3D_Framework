@@ -1,110 +1,111 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/dx11helper.h}
-\hypertarget{dx11helper_8h_source}{}\label{dx11helper_8h_source}\mbox{\hyperlink{dx11helper_8h}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\doxysection{dx11helper.\+h}
+\hypertarget{dx11helper_8h_source}{}\label{dx11helper_8h_source}\index{dx22\_plane/dx11helper.h@{dx22\_plane/dx11helper.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <d3dcompiler.h>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <directxmath.h>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ <locale.h>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ \ \ \ <d3d11.h>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ \ \ \ <DirectXMath.h>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ \ \ \ <memory>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ \ \ \ <string>}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00010}00010\ HRESULT\ \mbox{\hyperlink{dx11helper_8h_ad25b2bdaa1dd7872c556ccc8fea3122e}{CompileShader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00011}00011\ \ \ \ \ LPCSTR\ szEntryPoint,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00012}00012\ \ \ \ \ LPCSTR\ szShaderModel,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{void}**\ ShaderObject,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{size\_t}\&\ ShaderObjectSize,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00015}00015\ \ \ \ \ ID3DBlob**\ ppBlobOut);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00017}00017\ HRESULT\ \mbox{\hyperlink{dx11helper_8h_a957c5097d8616850cb70f67fe1635a71}{CompileShaderFromFile}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00019}00019\ \ \ \ \ LPCSTR\ szEntryPoint,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00020}00020\ \ \ \ \ LPCSTR\ szShaderModel,\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00021}00021\ \ \ \ \ ID3DBlob**\ ppBlobOut);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00023}00023\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_ab36f0bd1d17063c03f474733e0fea219}{CreateConstantBuffer}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00024}00024\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00026}00026\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00027}00027\ \ \ \ \ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00029}00029\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a24a9587dc8c80845d3c8b72b3827d092}{CreateConstantBufferWrite}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00030}00030\ \ \ \ \ ID3D11Device*\ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉIÉuÉWÉFÉNÉg}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÉTÉCÉY}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00032}00032\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00033}00033\ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00035}00035\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a34cf71f12f2b5c66f91a93b621488a8b}{CreateIndexBuffer}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00036}00036\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}*\ indexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00039}00039\ \ \ \ \ ID3D11Buffer**\ pIndexBuffer);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00041}00041\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_aace919015b525f2aaae86aee9f7d882d}{CreateVertexBuffer}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00042}00042\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00046}00046\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00047}00047\ \ \ \ \ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00049}00049\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a95b082e67794f996ed8b41c83046e4d5}{CreateVertexBufferWrite}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00050}00050\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00054}00054\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00055}00055\ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00057}00057\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a35c6e06fbbf5443d2a0d43d375404c1d}{CreateVertexBufferUAV}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00058}00058\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00062}00062\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00063}00063\ \ \ \ \ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00065}00065\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a72ead3bd43ce7bb0cf7a86175f70c1e0}{CreateStructuredBuffer}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00066}00066\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉXÉgÉâÉCÉhÉoÉCÉgêî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ å¬êî}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}*\ data,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00070}00070\ \ \ \ \ ID3D11Buffer**\ pStructuredBuffer\ \ \ \ \textcolor{comment}{//\ StructuredBuffer}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00071}00071\ \ \ \ \ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00073}00073\ ID3D11Buffer*\ \mbox{\hyperlink{dx11helper_8h_afec5a1a4664e27a164d30cc9a12f5b17}{CreateAndCopyToBuffer}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00074}00074\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00075}00075\ \ \ \ \ ID3D11DeviceContext*\ devicecontext,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00076}00076\ \ \ \ \ ID3D11Buffer*\ pBuffer\ \ \ \textcolor{comment}{//\ RWStructuredBuffer}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00077}00077\ \ \ \ \ );}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00079}00079\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_af2e589eba237f625b906774e8eb199ff}{CreateShaderResourceView}}(\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@Ç©ÇÁÉVÉFÅ[É\_Å[ÉäÉ\(\backslash\)Å[ÉXÉrÉÖÅ[ÇçÏê¨Ç∑ÇÈ }}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00080}00080\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00081}00081\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00082}00082\ \ \ \ \ ID3D11ShaderResourceView**\ ppSRV);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00084}00084\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a3da83001edc9b8ae56cc2d1d1252f2f6}{CreateUnOrderAccessView}}(}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00085}00085\ \ \ \ \ ID3D11Device*\ device,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00086}00086\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00087}00087\ \ \ \ \ ID3D11UnorderedAccessView**\ ppUAV);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00089}00089\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_a4dfbddd06ed9936bbaa62063c5cbeea7}{CreateVertexShader}}(ID3D11Device*\ device,\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨ÅAìØéûÇ…í∏ì\_ÉåÉCÉAÉEÉgÇ‡ê∂ê¨}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00091}00091\ \ \ \ \ LPCSTR\ szEntryPoint,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00092}00092\ \ \ \ \ LPCSTR\ szShaderModel,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00093}00093\ \ \ \ \ D3D11\_INPUT\_ELEMENT\_DESC*\ layout,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ numElements,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00095}00095\ \ \ \ \ ID3D11VertexShader**\ ppVertexShader,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00096}00096\ \ \ \ \ ID3D11InputLayout**\ \ ppVertexLayout);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00099}00099\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{dx11helper_8h_ae8ec19eab7e615ced445d3ccbbe86f05}{CreatePixelShader}}(ID3D11Device*\ device,\ \ \ \ \ \ \ \textcolor{comment}{//\ ÉsÉNÉZÉãÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨}}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00100}00100\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00101}00101\ \ \ \ \ LPCSTR\ szEntryPoint,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00102}00102\ \ \ \ \ LPCSTR\ szShaderModel,}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00103}00103\ \ \ \ \ ID3D11PixelShader**\ ppPixelShader);}
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00104}00104\ }
-\DoxyCodeLine{\Hypertarget{dx11helper_8h_source_l00105}00105\ std::string\ \mbox{\hyperlink{dx11helper_8h_a273e01d3c573ea3378ab39b74cf8e74e}{ExtractFileName}}(std::string\ fullpath,\ \textcolor{keywordtype}{char}\ split);}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ \ \ <d3dcompiler.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ \ \ <directxmath.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ \ \ \ <locale.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ \ \ \ <d3d11.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ \ \ \ <DirectXMath.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ \ \ \ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ \ \ \ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ HRESULT\ CompileShader(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ }
+\DoxyCodeLine{00011\ \ \ \ \ LPCSTR\ szEntryPoint,\ }
+\DoxyCodeLine{00012\ \ \ \ \ LPCSTR\ szShaderModel,\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}**\ ShaderObject,\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{size\_t}\&\ ShaderObjectSize,\ }
+\DoxyCodeLine{00015\ \ \ \ \ ID3DBlob**\ ppBlobOut);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ HRESULT\ CompileShaderFromFile(}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,\ }
+\DoxyCodeLine{00019\ \ \ \ \ LPCSTR\ szEntryPoint,\ }
+\DoxyCodeLine{00020\ \ \ \ \ LPCSTR\ szShaderModel,\ }
+\DoxyCodeLine{00021\ \ \ \ \ ID3DBlob**\ ppBlobOut);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{bool}\ CreateConstantBuffer(}
+\DoxyCodeLine{00024\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,}
+\DoxyCodeLine{00026\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{00027\ \ \ \ \ );}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{bool}\ CreateConstantBufferWrite(}
+\DoxyCodeLine{00030\ \ \ \ \ ID3D11Device*\ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉIÉuÉWÉFÉNÉg}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bytesize,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@ÉTÉCÉY}}
+\DoxyCodeLine{00032\ \ \ \ \ ID3D11Buffer**\ pConstantBuffer\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉRÉìÉXÉ\string^ÉìÉgÉoÉbÉtÉ@}}
+\DoxyCodeLine{00033\ );}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{bool}\ CreateIndexBuffer(}
+\DoxyCodeLine{00036\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}*\ indexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00039\ \ \ \ \ ID3D11Buffer**\ pIndexBuffer);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{bool}\ CreateVertexBuffer(}
+\DoxyCodeLine{00042\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00046\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{00047\ \ \ \ \ );}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{bool}\ CreateVertexBufferWrite(}
+\DoxyCodeLine{00050\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00054\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{00055\ );}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{bool}\ CreateVertexBufferUAV(}
+\DoxyCodeLine{00058\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexnum,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}*\ vertexdata,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00062\ \ \ \ \ ID3D11Buffer**\ pVertexBuffer\ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{00063\ \ \ \ \ );}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ CreateStructuredBuffer(}
+\DoxyCodeLine{00066\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉXÉgÉâÉCÉhÉoÉCÉgêî}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ å¬êî}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}*\ data,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00070\ \ \ \ \ ID3D11Buffer**\ pStructuredBuffer\ \ \ \ \textcolor{comment}{//\ StructuredBuffer}}
+\DoxyCodeLine{00071\ \ \ \ \ );}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ ID3D11Buffer*\ CreateAndCopyToBuffer(}
+\DoxyCodeLine{00074\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00075\ \ \ \ \ ID3D11DeviceContext*\ devicecontext,}
+\DoxyCodeLine{00076\ \ \ \ \ ID3D11Buffer*\ pBuffer\ \ \ \textcolor{comment}{//\ RWStructuredBuffer}}
+\DoxyCodeLine{00077\ \ \ \ \ );}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ CreateShaderResourceView(\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉoÉbÉtÉ@Ç©ÇÁÉVÉFÅ[É\_Å[ÉäÉ\(\backslash\)Å[ÉXÉrÉÖÅ[ÇçÏê¨Ç∑ÇÈ }}
+\DoxyCodeLine{00080\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00081\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer}}
+\DoxyCodeLine{00082\ \ \ \ \ ID3D11ShaderResourceView**\ ppSRV);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{bool}\ CreateUnOrderAccessView(}
+\DoxyCodeLine{00085\ \ \ \ \ ID3D11Device*\ device,}
+\DoxyCodeLine{00086\ \ \ \ \ ID3D11Buffer*\ pBuffer,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer}}
+\DoxyCodeLine{00087\ \ \ \ \ ID3D11UnorderedAccessView**\ ppUAV);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{bool}\ CreateVertexShader(ID3D11Device*\ device,\ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨ÅAìØéûÇ…í∏ì\_ÉåÉCÉAÉEÉgÇ‡ê∂ê¨}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
+\DoxyCodeLine{00091\ \ \ \ \ LPCSTR\ szEntryPoint,}
+\DoxyCodeLine{00092\ \ \ \ \ LPCSTR\ szShaderModel,}
+\DoxyCodeLine{00093\ \ \ \ \ D3D11\_INPUT\_ELEMENT\_DESC*\ layout,}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ numElements,}
+\DoxyCodeLine{00095\ \ \ \ \ ID3D11VertexShader**\ ppVertexShader,}
+\DoxyCodeLine{00096\ \ \ \ \ ID3D11InputLayout**\ \ ppVertexLayout);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{bool}\ CreatePixelShader(ID3D11Device*\ device,\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉsÉNÉZÉãÉVÉFÅ[É\_Å[ÉIÉuÉWÉFÉNÉgÇê∂ê¨}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ szFileName,}
+\DoxyCodeLine{00101\ \ \ \ \ LPCSTR\ szEntryPoint,}
+\DoxyCodeLine{00102\ \ \ \ \ LPCSTR\ szShaderModel,}
+\DoxyCodeLine{00103\ \ \ \ \ ID3D11PixelShader**\ ppPixelShader);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ std::string\ ExtractFileName(std::string\ fullpath,\ \textcolor{keywordtype}{char}\ split);}
 
 \end{DoxyCode}

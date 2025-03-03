@@ -1,7 +1,0 @@
-<map id="GolfBall" name="GolfBall">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,73,199"/>
-<area shape="rect" id="Node000002" href="$class_object.html" title=" " alt="" coords="9,96,69,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,138,42,172,36,172,36,138"/>
-<area shape="rect" id="Node000003" href="$class_shader.html" title=" " alt="" coords="8,5,70,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="42,48,42,95,36,95,36,48"/>
-</map>

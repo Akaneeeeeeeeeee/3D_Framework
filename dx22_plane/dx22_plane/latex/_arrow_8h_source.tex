@@ -1,0 +1,51 @@
+\doxysection{Arrow.\+h}
+\hypertarget{_arrow_8h_source}{}\label{_arrow_8h_source}\index{dx22\_plane/Arrow.h@{dx22\_plane/Arrow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MeshRenderer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }DirectX::SimpleMath;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Arrowクラス}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_arrow}{Arrow}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（メッシュに関わる情報）}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_mesh_renderer}{MeshRenderer}}\ m\_MeshRenderer;\ \textcolor{comment}{//\ 頂貼_バッファ・インデックスバッファ・インデックス数}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（見た目に関わる部分）}}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::unique\_ptr<Material>>\ m\_Materiales;}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<SUBSET>\ m\_subsets;}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<std::unique\_ptr<Texture>>\ m\_Textures;\ \textcolor{comment}{//\ テクスチャ}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_State\ =\ 0;\ \textcolor{comment}{//\ 0:非表(\backslash\)示・1:方向選択・2:角度選択・3:パワー選択}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_arrow}{Arrow}}(\mbox{\hyperlink{class_camera}{Camera}}*\ cam);\ \textcolor{comment}{//\ コンストラクソstring^}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_arrow}{\string~Arrow}}();\ \textcolor{comment}{//\ デストラクソstring^}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arrow_abb7b4a74aaa26290f474a5e7d1114cff}{Init}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ 状態の設定}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ SetState(\textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ 矢印のベクトルを取得}}
+\DoxyCodeLine{00040\ \ \ \ \ Vector3\ GetVector();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ SetVector(\textcolor{keyword}{const}\ Vector3\&\ \_vec);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ Vector3\ GetRotation(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+
+\end{DoxyCode}

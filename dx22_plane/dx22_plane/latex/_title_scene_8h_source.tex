@@ -1,0 +1,26 @@
+\doxysection{Title\+Scene.\+h}
+\hypertarget{_title_scene_8h_source}{}\label{_title_scene_8h_source}\index{dx22\_plane/TitleScene.h@{dx22\_plane/TitleScene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Scene.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ TitleSceneクラス}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_title_scene}{TitleScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene}{Scene}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::vector<Object*>\ m\_MySceneObjects;\ \textcolor{comment}{//\ このシーンのオブジェクト}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();\ \textcolor{comment}{//\ 初期化}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();\ \textcolor{comment}{//\ 終了処理}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_title_scene}{TitleScene}}();\ \textcolor{comment}{//\ コンストラクソstring^}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_title_scene}{\string~TitleScene}}();\ \textcolor{comment}{//\ デストラクソstring^}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();\ \textcolor{comment}{//\ 更新}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+
+\end{DoxyCode}

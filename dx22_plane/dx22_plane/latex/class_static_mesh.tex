@@ -1,153 +1,49 @@
-\doxysection{Static\+Mesh クラス}
+\doxysection{Static\+Mesh Class Reference}
 \hypertarget{class_static_mesh}{}\label{class_static_mesh}\index{StaticMesh@{StaticMesh}}
-
-
-{\ttfamily \#include $<$Static\+Mesh.\+h$>$}
-
-
-
-Static\+Mesh の継承関係図\nopagebreak
-\begin{figure}[H]
+Inheritance diagram for Static\+Mesh\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=146pt]{class_static_mesh__inherit__graph}
+\includegraphics[height=2.000000cm]{class_static_mesh}
 \end{center}
 \end{figure}
-
-
-Static\+Mesh 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=146pt]{class_static_mesh__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{公開メンバ関数}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f}{Load}} (std\+::string filename, std\+::string texturedirectory="{}"{})
+\Hypertarget{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f}\label{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f} 
+void {\bfseries Load} (std\+::string filename, std\+::string texturedirectory="{}"{})
 \item 
-const std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \& \mbox{\hyperlink{class_static_mesh_a57e217176173fb0ffbcea0717cab7076}{Get\+Materials}} ()
+\Hypertarget{class_static_mesh_a57e217176173fb0ffbcea0717cab7076}\label{class_static_mesh_a57e217176173fb0ffbcea0717cab7076} 
+const std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \& {\bfseries Get\+Materials} ()
 \item 
-const std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \& \mbox{\hyperlink{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7}{Get\+Subsets}} ()
+\Hypertarget{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7}\label{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7} 
+const std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \& {\bfseries Get\+Subsets} ()
 \item 
-const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{class_static_mesh_a89f4e5e72da8132c5d9091ae3dc62fef}{Get\+Texture\+Names}} ()
+\Hypertarget{class_static_mesh_a89f4e5e72da8132c5d9091ae3dc62fef}\label{class_static_mesh_a89f4e5e72da8132c5d9091ae3dc62fef} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries Get\+Texture\+Names} ()
 \item 
-std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b}{Get\+Textures}} ()
+\Hypertarget{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b}\label{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ {\bfseries Get\+Textures} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{基底クラス \mbox{\hyperlink{class_mesh}{Mesh}} に属する継承公開メンバ関数}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mesh}{Mesh}}}
 \begin{DoxyCompactItemize}
 \item 
-const std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \& \mbox{\hyperlink{class_mesh_a1ccfd5a62e7a0944c6308c367f036e06}{Get\+Vertices}} ()
+const std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \& {\bfseries Get\+Vertices} ()
 \item 
-const std\+::vector$<$ unsigned int $>$ \& \mbox{\hyperlink{class_mesh_a44151c8da47eaee149acc4b3ba96249f}{Get\+Indices}} ()
+const std\+::vector$<$ unsigned int $>$ \& {\bfseries Get\+Indices} ()
+\item 
+void {\bfseries Invert\+Normals} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{その他の継承メンバ}
-\doxysubsection*{基底クラス \mbox{\hyperlink{class_mesh}{Mesh}} に属する継承限定公開変数類}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_mesh}{Mesh}}}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \mbox{\hyperlink{class_mesh_a9916edf79cbe3da4c4a0781c533ace76}{m\+\_\+vertices}}
+std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ {\bfseries m\+\_\+vertices}
 \item 
-std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_mesh_a152e304fac07170530ce0a707a61bd80}{m\+\_\+indices}}
+std\+::vector$<$ unsigned int $>$ {\bfseries m\+\_\+indices}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{詳解}
-
-
- \mbox{\hyperlink{_static_mesh_8h_source}{Static\+Mesh.\+h}} の \mbox{\hyperlink{_static_mesh_8h_source_l00011}{11}} 行目に定義があります。
-
-
-
-\doxysubsection{関数詳解}
-\Hypertarget{class_static_mesh_a57e217176173fb0ffbcea0717cab7076}\index{StaticMesh@{StaticMesh}!GetMaterials@{GetMaterials}}
-\index{GetMaterials@{GetMaterials}!StaticMesh@{StaticMesh}}
-\doxysubsubsection{\texorpdfstring{GetMaterials()}{GetMaterials()}}
-{\footnotesize\ttfamily \label{class_static_mesh_a57e217176173fb0ffbcea0717cab7076} 
-const std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \& Static\+Mesh\+::\+Get\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_static_mesh_8h_source}{Static\+Mesh.\+h}} の \mbox{\hyperlink{_static_mesh_8h_source_l00015}{15}} 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=324pt]{class_static_mesh_a57e217176173fb0ffbcea0717cab7076_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7}\index{StaticMesh@{StaticMesh}!GetSubsets@{GetSubsets}}
-\index{GetSubsets@{GetSubsets}!StaticMesh@{StaticMesh}}
-\doxysubsubsection{\texorpdfstring{GetSubsets()}{GetSubsets()}}
-{\footnotesize\ttfamily \label{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7} 
-const std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \& Static\+Mesh\+::\+Get\+Subsets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_static_mesh_8h_source}{Static\+Mesh.\+h}} の \mbox{\hyperlink{_static_mesh_8h_source_l00019}{19}} 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{class_static_mesh_ad429505c5cd3b575c83d833f07e8ada7_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_static_mesh_a89f4e5e72da8132c5d9091ae3dc62fef}\index{StaticMesh@{StaticMesh}!GetTextureNames@{GetTextureNames}}
-\index{GetTextureNames@{GetTextureNames}!StaticMesh@{StaticMesh}}
-\doxysubsubsection{\texorpdfstring{GetTextureNames()}{GetTextureNames()}}
-{\footnotesize\ttfamily \label{class_static_mesh_a89f4e5e72da8132c5d9091ae3dc62fef} 
-const std\+::vector$<$ std\+::string $>$ \& Static\+Mesh\+::\+Get\+Texture\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_static_mesh_8h_source}{Static\+Mesh.\+h}} の \mbox{\hyperlink{_static_mesh_8h_source_l00023}{23}} 行目に定義があります。
-
-\Hypertarget{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b}\index{StaticMesh@{StaticMesh}!GetTextures@{GetTextures}}
-\index{GetTextures@{GetTextures}!StaticMesh@{StaticMesh}}
-\doxysubsubsection{\texorpdfstring{GetTextures()}{GetTextures()}}
-{\footnotesize\ttfamily \label{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b} 
-std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ Static\+Mesh\+::\+Get\+Textures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_static_mesh_8h_source}{Static\+Mesh.\+h}} の \mbox{\hyperlink{_static_mesh_8h_source_l00027}{27}} 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=321pt]{class_static_mesh_abc1be91629a0e4edf8c874d365d4f87b_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f}\index{StaticMesh@{StaticMesh}!Load@{Load}}
-\index{Load@{Load}!StaticMesh@{StaticMesh}}
-\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
-{\footnotesize\ttfamily \label{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f} 
-void Static\+Mesh\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string}]{filename}{, }\item[{std\+::string}]{texturedirectory}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
-
-
-
- \mbox{\hyperlink{_static_mesh_8cpp_source}{Static\+Mesh.\+cpp}} の \mbox{\hyperlink{_static_mesh_8cpp_source_l00004}{4}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=289pt]{class_static_mesh_a666f5b10dcd38ed322477444bb3f702f_icgraph}
-\end{center}
-\end{figure}
-
-
-このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\mbox{\hyperlink{_static_mesh_8h}{Static\+Mesh.\+h}}\item 
-C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\mbox{\hyperlink{_static_mesh_8cpp}{Static\+Mesh.\+cpp}}\end{DoxyCompactItemize}
+dx22\+\_\+plane/Static\+Mesh.\+h\item 
+dx22\+\_\+plane/Static\+Mesh.\+cpp\end{DoxyCompactItemize}

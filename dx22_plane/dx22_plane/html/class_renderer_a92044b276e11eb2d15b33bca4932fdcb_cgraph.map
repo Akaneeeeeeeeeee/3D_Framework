@@ -1,7 +1,0 @@
-<map id="Renderer::SetWorldViewProjection2D" name="Renderer::SetWorldViewProjection2D">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,245,57"/>
-<area shape="rect" id="Node000002" href="$class_application.html#a2d023977e1078daa3f74f9d03860c14f" title=" " alt="" coords="293,5,445,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,29,277,25,277,31,245,34"/>
-<area shape="rect" id="Node000003" href="$class_application.html#a4a3e0701ad5b9a555517b4837d343fda" title=" " alt="" coords="295,56,443,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,54,280,57,279,63,245,59"/>
-</map>

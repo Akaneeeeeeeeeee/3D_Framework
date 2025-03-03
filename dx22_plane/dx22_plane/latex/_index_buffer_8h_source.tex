@@ -1,51 +1,69 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/\+Index\+Buffer.h}
-\hypertarget{_index_buffer_8h_source}{}\label{_index_buffer_8h_source}\mbox{\hyperlink{_index_buffer_8h}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\doxysection{Index\+Buffer.\+h}
+\hypertarget{_index_buffer_8h_source}{}\label{_index_buffer_8h_source}\index{dx22\_plane/IndexBuffer.h@{dx22\_plane/IndexBuffer.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <vector>}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_renderer_8h}{renderer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00008}00008\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00010}00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00011}00011\ \textcolor{comment}{//IndexBufferÉNÉâÉX}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00012}00012\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00013}\mbox{\hyperlink{class_index_buffer}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_index_buffer}{IndexBuffer}}\ \{}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00015}00015\ \ \ \ \ ComPtr<ID3D11Buffer>\ m\_IndexBuffer;}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00017}00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00018}\mbox{\hyperlink{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c}{00018}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c}{Create}}(\textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices)\ \{}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXéÊìæ}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ ID3D11Device*\ device\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ device\ =\ \mbox{\hyperlink{class_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc}{Renderer::GetDevice}}();}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ assert(device);}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@çÏê¨}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ \mbox{\hyperlink{dx11helper_8cpp_a34cf71f12f2b5c66f91a93b621488a8b}{CreateIndexBuffer}}(}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉX}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(indices.size()),\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXêî}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)indices.data(),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉfÅ[É\string^êÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \&m\_IndexBuffer);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ assert(sts\ ==\ \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00035}00035\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00037}\mbox{\hyperlink{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9}{SetGPU}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉRÉìÉeÉLÉXÉgéÊìæ}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devicecontext\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ devicecontext\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}();}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÇÉZÉbÉg}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ devicecontext-\/>IASetIndexBuffer(m\_IndexBuffer.Get(),\ DXGI\_FORMAT\_R32\_UINT,\ 0);}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00045}00045\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_index_buffer_8h_source_l00046}00046\ \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ \ \ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ \ \ \ "{}dx11helper.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ \ \ \ "{}renderer.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//IndexBufferÉNÉâÉX}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_index_buffer}{IndexBuffer}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ ComPtr<ID3D11Buffer>\ m\_IndexBuffer;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Create(\textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices)\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXéÊìæ}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ ID3D11Device*\ device\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ device\ =\ Renderer::GetDevice();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ assert(device);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@çÏê¨}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ CreateIndexBuffer(}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ device,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉX}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})(indices.size()),\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXêî}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)indices.data(),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉfÅ[É\string^êÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \&m\_IndexBuffer);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ assert(sts\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ SetGPU()\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉRÉìÉeÉLÉXÉgéÊìæ}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devicecontext\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ devicecontext\ =\ Renderer::GetDeviceContext();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÇÉZÉbÉg}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ devicecontext-\/>IASetIndexBuffer(m\_IndexBuffer.Get(),\ DXGI\_FORMAT\_R32\_UINT,\ 0);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ ÉCÉìÉfÉbÉNÉXÉoÉbÉtÉ@ÉoÉbÉtÉ@èëÇ´ä∑Ç¶}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ Modify(\textcolor{keyword}{const}\ std::vector<T>\&\ indices)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//í∏ì\_ÉfÅ[É\string^èëÇ´ä∑Ç¶}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ D3D11\_MAPPED\_SUBRESOURCE\ msr;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ Renderer::GetDeviceContext()-\/>Map(}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ m\_IndexBuffer.Get(),}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ D3D11\_MAP\_WRITE\_DISCARD,\ 0,\ \&msr);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SUCCEEDED(hr))\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(msr.pData,\ indices.data(),\ indices.size()\ *\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ Renderer::GetDeviceContext()-\/>Unmap(m\_IndexBuffer.Get(),\ 0);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \};}
 
 \end{DoxyCode}

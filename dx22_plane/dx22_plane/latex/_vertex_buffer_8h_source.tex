@@ -1,70 +1,71 @@
-\doxysection{C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/ÊéàÊ•≠ÂÜÖ„Éó„É≠„Ç∏„Çß„ÇØ„Éà/dx22\+\_\+plane/dx22\+\_\+plane/\+Vertex\+Buffer.h}
-\hypertarget{_vertex_buffer_8h_source}{}\label{_vertex_buffer_8h_source}\mbox{\hyperlink{_vertex_buffer_8h}{\mbox{[}Ë©≥Ëß£\mbox{]}}}
+\doxysection{Vertex\+Buffer.\+h}
+\hypertarget{_vertex_buffer_8h_source}{}\label{_vertex_buffer_8h_source}\index{dx22\_plane/VertexBuffer.h@{dx22\_plane/VertexBuffer.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ \ \ \ <vector>}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ \ \ \ "{}\mbox{\hyperlink{_renderer_8h}{renderer.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00009}00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00010}00010\ \textcolor{comment}{//VertexBufferÉNÉâÉX}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00011}00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00012}00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00013}\mbox{\hyperlink{class_vertex_buffer}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex_buffer}{VertexBuffer}}\{}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00015}00015\ \ \ \ \ ComPtr<ID3D11Buffer>\ m\_VertexBuffer;}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00017}00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00018}\mbox{\hyperlink{class_vertex_buffer_a33585f350baef4547f9359848dd28625}{00018}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_buffer_a33585f350baef4547f9359848dd28625}{Create}}(\textcolor{keyword}{const}\ std::vector<T>\&\ vertices)\ \{}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXéÊìæ}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ ID3D11Device*\ device\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ device\ =\ \mbox{\hyperlink{class_renderer_a8a4db5c7c4741070e75fe73fbd5a97fc}{Renderer::GetDevice}}();}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ assert(device);}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@çÏê¨}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ \mbox{\hyperlink{dx11helper_8cpp_a95b082e67794f996ed8b41c83046e4d5}{CreateVertexBufferWrite}}(}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ device,}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(T),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})vertices.size(),\ \ \textcolor{comment}{//\ í∏ì\_êî}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)vertices.data(),\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \&m\_VertexBuffer);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ assert(sts\ ==\ \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00034}00034\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ GPUÇ…ÉZÉbÉg}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00037}\mbox{\hyperlink{class_vertex_buffer_a5cce227e623555879628165b9855c614}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_buffer_a5cce227e623555879628165b9855c614}{SetGPU}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉRÉìÉeÉLÉXÉgéÊìæ}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devicecontext\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ devicecontext\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}();}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ÇÉZÉbÉgÇ∑ÇÈ}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride\ =\ \textcolor{keyword}{sizeof}(T);}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \ offset\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ devicecontext-\/>IASetVertexBuffers(0,\ 1,\ m\_VertexBuffer.GetAddressOf(),\ \&stride,\ \&offset);}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ÇèëÇ´ä∑Ç¶ÇÈ}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00051}\mbox{\hyperlink{class_vertex_buffer_af820a0b31c6e694afebc61f6631c49c5}{00051}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_buffer_af820a0b31c6e694afebc61f6631c49c5}{Modify}}(\textcolor{keyword}{const}\ std::vector<T>\&\ vertices)}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00052}00052\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//í∏ì\_ÉfÅ[É\string^èëÇ´ä∑Ç¶}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ D3D11\_MAPPED\_SUBRESOURCE\ msr;}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}()-\/>Map(}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ m\_VertexBuffer.Get(),\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ D3D11\_MAP\_WRITE\_DISCARD,\ 0,\ \&msr);}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SUCCEEDED(hr))\ \{}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(msr.pData,\ vertices.data(),\ vertices.size()\ *\ \textcolor{keyword}{sizeof}(T));}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_renderer_ac642f0314dfa500d60c0fe6eae9ef4ef}{Renderer::GetDeviceContext}}()-\/>Unmap(m\_VertexBuffer.Get(),\ 0);}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00064}00064\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_vertex_buffer_8h_source_l00065}00065\ \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ \ \ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ \ \ <wrl/client.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ \ \ \ "{}dx11helper.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ \ \ \ "{}renderer.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//VertexBufferÉNÉâÉX}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex_buffer}{VertexBuffer}}\{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ ComPtr<ID3D11Buffer>\ m\_VertexBuffer;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Create(\textcolor{keyword}{const}\ std::vector<T>\&\ vertices)\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXéÊìæ}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ ID3D11Device*\ device\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ device\ =\ Renderer::GetDevice();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ assert(device);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@çÏê¨}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sts\ =\ CreateVertexBufferWrite(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ device,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(T),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÇPí∏ì\_ìñÇΩÇËÉoÉCÉgêî}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})vertices.size(),\ \ \textcolor{comment}{//\ í∏ì\_êî}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)vertices.data(),\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉfÅ[É\string^äiî[ÉÅÉÇÉäêÊì™ÉAÉhÉåÉX}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \&m\_VertexBuffer);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ assert(sts\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ GPUÇ…ÉZÉbÉg}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ SetGPU()\ \{}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ÉfÉoÉCÉXÉRÉìÉeÉLÉXÉgéÊìæ}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ ID3D11DeviceContext*\ devicecontext\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ devicecontext\ =\ Renderer::GetDeviceContext();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ÇÉZÉbÉgÇ∑ÇÈ}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride\ =\ \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \ offset\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ devicecontext-\/>IASetVertexBuffers(0,\ 1,\ m\_VertexBuffer.GetAddressOf(),\ \&stride,\ \&offset);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ í∏ì\_ÉoÉbÉtÉ@ÇèëÇ´ä∑Ç¶ÇÈ}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ Modify(\textcolor{keyword}{const}\ std::vector<T>\&\ vertices)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//í∏ì\_ÉfÅ[É\string^èëÇ´ä∑Ç¶}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ D3D11\_MAPPED\_SUBRESOURCE\ msr;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ Renderer::GetDeviceContext()-\/>Map(}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ m\_VertexBuffer.Get(),\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ D3D11\_MAP\_WRITE\_DISCARD,\ 0,\ \&msr);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SUCCEEDED(hr))\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(msr.pData,\ vertices.data(),\ vertices.size()\ *\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ Renderer::GetDeviceContext()-\/>Unmap(m\_VertexBuffer.Get(),\ 0);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \};}
 
 \end{DoxyCode}

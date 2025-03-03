@@ -1,258 +1,46 @@
-\doxysection{Material クラス}
+\doxysection{Material Class Reference}
 \hypertarget{class_material}{}\label{class_material}\index{Material@{Material}}
-
-
-{\ttfamily \#include $<$Material.\+h$>$}
-
-\doxysubsubsection*{公開メンバ関数}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_material_a137e987401b63eb7c6c27c3e38bc74b5}{Material}} ()
+\Hypertarget{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc}\label{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc} 
+{\bfseries Material} (\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} mtrl)
 \item 
-\mbox{\hyperlink{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc}{Material}} (\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} mtrl)
+\Hypertarget{class_material_a2be31dc5e88124a50e410cc058cdc2e4}\label{class_material_a2be31dc5e88124a50e410cc058cdc2e4} 
+bool {\bfseries Create} (\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} mtrl)
 \item 
-\mbox{\hyperlink{class_material_a2c19452d71f54075df8f5405b03129f4}{\texorpdfstring{$\sim$}{\string~}\+Material}} ()
+\Hypertarget{class_material_a29194f54f95adb35452acd85066b3b7d}\label{class_material_a29194f54f95adb35452acd85066b3b7d} 
+void {\bfseries Update} ()
 \item 
-bool \mbox{\hyperlink{class_material_a2be31dc5e88124a50e410cc058cdc2e4}{Create}} (\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} mtrl)
+\Hypertarget{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b}\label{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b} 
+void {\bfseries Set\+GPU} ()
 \item 
-void \mbox{\hyperlink{class_material_a29194f54f95adb35452acd85066b3b7d}{Update}} ()
+\Hypertarget{class_material_a9da08daeabc17958465476ad6470c18b}\label{class_material_a9da08daeabc17958465476ad6470c18b} 
+void {\bfseries Set\+Material} (const \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \&mtrl)
 \item 
-void \mbox{\hyperlink{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b}{Set\+GPU}} ()
+\Hypertarget{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}\label{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d} 
+void {\bfseries Uninit} ()
 \item 
-void \mbox{\hyperlink{class_material_a9da08daeabc17958465476ad6470c18b}{Set\+Material}} (const \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \&mtrl)
+\Hypertarget{class_material_ab65611cbe7e5803fa5a31e97d245e8ea}\label{class_material_ab65611cbe7e5803fa5a31e97d245e8ea} 
+void {\bfseries Set\+Diffuse} (Direct\+X\+::\+XMFLOAT4 diffuse)
 \item 
-void \mbox{\hyperlink{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}{Uninit}} ()
+\Hypertarget{class_material_aff63b0b7cb7850bf09a0657d7bbd306d}\label{class_material_aff63b0b7cb7850bf09a0657d7bbd306d} 
+void {\bfseries Set\+Ambient} (Direct\+X\+::\+XMFLOAT4 ambient)
 \item 
-void \mbox{\hyperlink{class_material_ab65611cbe7e5803fa5a31e97d245e8ea}{Set\+Diffuse}} (Direct\+X\+::\+XMFLOAT4 diffuse)
+\Hypertarget{class_material_a0fc919851047661776292cbd158c62f0}\label{class_material_a0fc919851047661776292cbd158c62f0} 
+void {\bfseries Set\+Specular} (Direct\+X\+::\+XMFLOAT4 specular)
 \item 
-void \mbox{\hyperlink{class_material_aff63b0b7cb7850bf09a0657d7bbd306d}{Set\+Ambient}} (Direct\+X\+::\+XMFLOAT4 ambient)
+\Hypertarget{class_material_a295446063e2f7f22467913cdd99faad5}\label{class_material_a295446063e2f7f22467913cdd99faad5} 
+void {\bfseries Set\+Emission} (Direct\+X\+::\+XMFLOAT4 emission)
 \item 
-void \mbox{\hyperlink{class_material_a0fc919851047661776292cbd158c62f0}{Set\+Specular}} (Direct\+X\+::\+XMFLOAT4 specular)
+\Hypertarget{class_material_ac709b0da0715aa4da5ec1f01e46eac8c}\label{class_material_ac709b0da0715aa4da5ec1f01e46eac8c} 
+void {\bfseries Set\+Shiness} (float shiness)
 \item 
-void \mbox{\hyperlink{class_material_a295446063e2f7f22467913cdd99faad5}{Set\+Emission}} (Direct\+X\+::\+XMFLOAT4 emission)
-\item 
-void \mbox{\hyperlink{class_material_ac709b0da0715aa4da5ec1f01e46eac8c}{Set\+Shiness}} (float shiness)
-\item 
-bool \mbox{\hyperlink{class_material_a0f39b437615f5a8ebc5d37421574bb84}{is\+Texture\+Enable}} ()
+\Hypertarget{class_material_a0f39b437615f5a8ebc5d37421574bb84}\label{class_material_a0f39b437615f5a8ebc5d37421574bb84} 
+bool {\bfseries is\+Texture\+Enable} ()
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{詳解}
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00009}{9}} 行目に定義があります。
-
-
-
-\doxysubsection{構築子と解体子}
-\Hypertarget{class_material_a137e987401b63eb7c6c27c3e38bc74b5}\index{Material@{Material}!Material@{Material}}
-\index{Material@{Material}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{class_material_a137e987401b63eb7c6c27c3e38bc74b5} 
-Material\+::\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00019}{19}} 行目に定義があります。
-
-\Hypertarget{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc}\index{Material@{Material}!Material@{Material}}
-\index{Material@{Material}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc} 
-Material\+::\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}}]{mtrl}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00020}{20}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_material_a6eb1d1e57ee26abc2b9380f3d662e0fc_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_material_a2c19452d71f54075df8f5405b03129f4}\index{Material@{Material}!````~Material@{\texorpdfstring{$\sim$}{\string~}Material}}
-\index{````~Material@{\texorpdfstring{$\sim$}{\string~}Material}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Material()}{\string~Material()}}
-{\footnotesize\ttfamily \label{class_material_a2c19452d71f54075df8f5405b03129f4} 
-Material\+::\texorpdfstring{$\sim$}{\string~}\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00023}{23}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=295pt]{class_material_a2c19452d71f54075df8f5405b03129f4_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{関数詳解}
-\Hypertarget{class_material_a2be31dc5e88124a50e410cc058cdc2e4}\index{Material@{Material}!Create@{Create}}
-\index{Create@{Create}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
-{\footnotesize\ttfamily \label{class_material_a2be31dc5e88124a50e410cc058cdc2e4} 
-bool Material\+::\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}}]{mtrl}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00027}{27}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_material_a2be31dc5e88124a50e410cc058cdc2e4_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=293pt]{class_material_a2be31dc5e88124a50e410cc058cdc2e4_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_material_a0f39b437615f5a8ebc5d37421574bb84}\index{Material@{Material}!isTextureEnable@{isTextureEnable}}
-\index{isTextureEnable@{isTextureEnable}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{isTextureEnable()}{isTextureEnable()}}
-{\footnotesize\ttfamily \label{class_material_a0f39b437615f5a8ebc5d37421574bb84} 
-bool Material\+::is\+Texture\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00135}{135}} 行目に定義があります。
-
-\Hypertarget{class_material_aff63b0b7cb7850bf09a0657d7bbd306d}\index{Material@{Material}!SetAmbient@{SetAmbient}}
-\index{SetAmbient@{SetAmbient}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetAmbient()}{SetAmbient()}}
-{\footnotesize\ttfamily \label{class_material_aff63b0b7cb7850bf09a0657d7bbd306d} 
-void Material\+::\+Set\+Ambient (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{ambient}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00119}{119}} 行目に定義があります。
-
-\Hypertarget{class_material_ab65611cbe7e5803fa5a31e97d245e8ea}\index{Material@{Material}!SetDiffuse@{SetDiffuse}}
-\index{SetDiffuse@{SetDiffuse}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetDiffuse()}{SetDiffuse()}}
-{\footnotesize\ttfamily \label{class_material_ab65611cbe7e5803fa5a31e97d245e8ea} 
-void Material\+::\+Set\+Diffuse (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{diffuse}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00115}{115}} 行目に定義があります。
-
-\Hypertarget{class_material_a295446063e2f7f22467913cdd99faad5}\index{Material@{Material}!SetEmission@{SetEmission}}
-\index{SetEmission@{SetEmission}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetEmission()}{SetEmission()}}
-{\footnotesize\ttfamily \label{class_material_a295446063e2f7f22467913cdd99faad5} 
-void Material\+::\+Set\+Emission (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{emission}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00127}{127}} 行目に定義があります。
-
-\Hypertarget{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b}\index{Material@{Material}!SetGPU@{SetGPU}}
-\index{SetGPU@{SetGPU}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetGPU()}{SetGPU()}}
-{\footnotesize\ttfamily \label{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b} 
-void Material\+::\+Set\+GPU (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00077}{77}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_material_a7b0803f8bfd73f4fb54da4ab697eaf8b_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_material_a9da08daeabc17958465476ad6470c18b}\index{Material@{Material}!SetMaterial@{SetMaterial}}
-\index{SetMaterial@{SetMaterial}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetMaterial()}{SetMaterial()}}
-{\footnotesize\ttfamily \label{class_material_a9da08daeabc17958465476ad6470c18b} 
-void Material\+::\+Set\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \&}]{mtrl}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00089}{89}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_material_a9da08daeabc17958465476ad6470c18b_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_material_ac709b0da0715aa4da5ec1f01e46eac8c}\index{Material@{Material}!SetShiness@{SetShiness}}
-\index{SetShiness@{SetShiness}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetShiness()}{SetShiness()}}
-{\footnotesize\ttfamily \label{class_material_ac709b0da0715aa4da5ec1f01e46eac8c} 
-void Material\+::\+Set\+Shiness (\begin{DoxyParamCaption}\item[{float}]{shiness}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00131}{131}} 行目に定義があります。
-
-\Hypertarget{class_material_a0fc919851047661776292cbd158c62f0}\index{Material@{Material}!SetSpecular@{SetSpecular}}
-\index{SetSpecular@{SetSpecular}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{SetSpecular()}{SetSpecular()}}
-{\footnotesize\ttfamily \label{class_material_a0fc919851047661776292cbd158c62f0} 
-void Material\+::\+Set\+Specular (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{specular}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00123}{123}} 行目に定義があります。
-
-\Hypertarget{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d}\index{Material@{Material}!Uninit@{Uninit}}
-\index{Uninit@{Uninit}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
-{\footnotesize\ttfamily \label{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d} 
-void Material\+::\+Uninit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00112}{112}} 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=295pt]{class_material_ab5cda6568c5da1b0d100f8164bbc5e0d_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_material_a29194f54f95adb35452acd85066b3b7d}\index{Material@{Material}!Update@{Update}}
-\index{Update@{Update}!Material@{Material}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_material_a29194f54f95adb35452acd85066b3b7d} 
-void Material\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
- \mbox{\hyperlink{_material_8h_source}{Material.\+h}} の \mbox{\hyperlink{_material_8h_source_l00054}{54}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=347pt]{class_material_a29194f54f95adb35452acd85066b3b7d_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_material_a29194f54f95adb35452acd85066b3b7d_icgraph}
-\end{center}
-\end{figure}
-
-
-このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\mbox{\hyperlink{_material_8h}{Material.\+h}}\end{DoxyCompactItemize}
+dx22\+\_\+plane/Material.\+h\end{DoxyCompactItemize}

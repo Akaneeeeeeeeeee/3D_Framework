@@ -3,15 +3,21 @@
 #include "Application.h"
 #include "Renderer.h"
 
+#include "ImGui/DebugUI/DebugUI.h"
+
 #include "Game.h"
 
-const auto ClassName = TEXT("2024 framework ひな型");     //!< ウィンドウクラス名.
-const auto WindowName = TEXT("2024 framework ひな型(フィールド描画)");    //!< ウィンドウ名.
+const auto ClassName = TEXT("就職作品");     //!< ウィンドウクラス名.
+const auto WindowName = TEXT("就職作品");    //!< ウィンドウ名.
+
 
 HINSTANCE  Application::m_hInst;        // インスタンスハンドル
 HWND       Application::m_hWnd;         // ウィンドウハンドル
 uint32_t   Application::m_Width;        // ウィンドウの横幅
 uint32_t   Application::m_Height;       // ウィンドウの縦幅
+
+// ImGuiのWin32プロシージャハンドラ（マウス対応）
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 //-----------------------------------------------------------------------------
 // コンストラクタ
@@ -167,6 +173,9 @@ void Application::MainLoop()
 {
 	//! MSG：ウィンドウのイベントを識別するメッセージを保持するための構造体
 	MSG msg = {};
+
+	//! デバッグUI初期化
+	DebugUI::Init(Renderer::GetDevice(), Renderer::GetDeviceContext());
 
 	//! 初期化
 	Game::Init();
@@ -333,6 +342,10 @@ void Application::MainLoop()
 //-----------------------------------------------------------------------------
 LRESULT CALLBACK Application::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+	if (ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam)){
+		return true;
+	}
+
 	switch (uMsg)
 	{
 	case WM_DESTROY:// ウィンドウ破棄のメッセージ

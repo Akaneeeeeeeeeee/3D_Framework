@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['main_2ecpp_0',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['main_2eh_1',['main.h',['../main_8h.html',1,'']]],
-  ['material_2eh_2',['Material.h',['../_material_8h.html',1,'']]],
-  ['mesh_2eh_3',['Mesh.h',['../_mesh_8h.html',1,'']]],
-  ['meshrenderer_2eh_4',['MeshRenderer.h',['../_mesh_renderer_8h.html',1,'']]]
-];

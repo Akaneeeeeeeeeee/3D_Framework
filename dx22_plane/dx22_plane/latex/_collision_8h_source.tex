@@ -1,0 +1,139 @@
+\doxysection{Collision.\+h}
+\hypertarget{_collision_8h_source}{}\label{_collision_8h_source}\index{dx22\_plane/Collision.h@{dx22\_plane/Collision.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <simplemath.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Collision}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ ライン（無限の長さの線）}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_line}{Line}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ point;\ \textcolor{comment}{//\ 通過地貼_}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ vec;\ \textcolor{comment}{//\ 線の方向ベクトル}}
+\DoxyCodeLine{00011\ \ \ \ \ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ プレーン(無限の広さの平面)}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ point;\ \textcolor{comment}{//\ 平面上の1貼_}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ normal;\ \textcolor{comment}{//\ 平面の法線ベクトル}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//float\ d;\ \ \ \ \ \ \ \ \ //\ 平面の方程式:\ ax\ +\ by\ +\ cz\ +\ d\ =\ 0\ の d}}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ セグメント（有限の長さの線分）}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ start;\ \textcolor{comment}{//\ 始貼_}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ end;\ \textcolor{comment}{//\ 終貼_}}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ 三角形ポリゴン（有限の広さの平面）}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\ p0;\ \textcolor{comment}{//頂貼_0}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\ p1;\ \textcolor{comment}{//頂貼_1}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\ p2;\ \textcolor{comment}{//頂貼_2}}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ 球体}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ center;\ \textcolor{comment}{//\ 中心}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius;\ \textcolor{comment}{//\ 半径}}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//struct\ Cylinder\ \{}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ \ DirectX::SimpleMath::Vector3\ top;\ //\ 上}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ \ DirectX::SimpleMath::Vector3\ bottom;\ //\ 底}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ \ float\ radius;\ //\ 半径}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//struct\ Capsule\ \{}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ \ DirectX::SimpleMath::Vector3\ top;\ //\ 上の中心\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ \ DirectX::SimpleMath::Vector3\ bottom;\ //\ 底の中心}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ \ float\ radius;\ //\ 半径}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ BOX定義}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collision_1_1_a_a_b_b}{AABB}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ min;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ max;}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//当たり判定}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_line}{Line}}\&\ line,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\&\ plane);\ \textcolor{comment}{//線(無限の長さ)と平面(無限の大きさ)}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\&\ plane);\ \textcolor{comment}{//線分と平面(無限の大きさ)}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_line}{Line}}\&\ line,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);\ \textcolor{comment}{//線(無限の長さ)とポリゴン}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_line}{Line}}\&\ line,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon,\ DirectX::SimpleMath::Vector3\&\ contact);\ \textcolor{comment}{//同上}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);\ \textcolor{comment}{//線分とポリゴン}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon,\ DirectX::SimpleMath::Vector3\&\ contact);\ \textcolor{comment}{//同上}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\&\ sphere,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\&\ plane);\ \textcolor{comment}{//球体と平面(無限の大きさ)}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\&\ sphere,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);\ \textcolor{comment}{//球体とポリゴン}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\&\ sphere,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon,\ DirectX::SimpleMath::Vector3\&\ contact);\ \textcolor{comment}{//同上}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Cylinder\&\ cylinder,\ const\ Plane\&\ plane);\ //噂string~柱と平面}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Cylinder\&\ cylinder,\ const\ Polygon\&\ polygon);\ //噂string~柱とポリゴン}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Cylinder\&\ cylinder,\ const\ Polygon\&\ polygon,\ DirectX::SimpleMath::Vector3\&\ contact);\ //同上}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Capsule\&\ capsule,\ const\ Plane\&\ plane);\ //カプセルと平面(無限の大きさ)}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Capsule\&\ capsule,\ const\ Polygon\&\ polygon);\ //カプセルとポリゴン}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//bool\ CheckHit(const\ Capsule\&\ capsule,\ const\ Polygon\&\ polygon,\ DirectX::SimpleMath::Vector3\&\ contact);\ //同上}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\ sphere1,\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\ sphere2);\ \textcolor{comment}{//球体と球体}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\ sphere1,\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\ sphere2,\ DirectX::SimpleMath::Vector3\&\ contact);\ \textcolor{comment}{//同上}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckHit(\mbox{\hyperlink{struct_collision_1_1_a_a_b_b}{AABB}}\ p1,\ \mbox{\hyperlink{struct_collision_1_1_a_a_b_b}{AABB}}\ p2);\ \textcolor{comment}{//\ AABBとAABB}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//内積・外積}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ Dot(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ v1,\ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ v2);}
+\DoxyCodeLine{00082\ \ \ \ \ DirectX::SimpleMath::Vector3\ Cross(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ v1,\ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ v2);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ DirectX::SimpleMath::Vector3\ ClosestPointOnSegment(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{float}\ DistanceSquaredPointToSegment(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ DistanceSquaredPointToSegment(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment,\ DirectX::SimpleMath::Vector3\&\ contact);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ DistancePointToSegment(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ DistancePointToSegment(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ segment,\ DirectX::SimpleMath::Vector3\&\ contact);}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{float}\ DistancePointToPlane(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\&\ plane);}
+\DoxyCodeLine{00091\ \ \ \ \ DirectX::SimpleMath::Vector3\ ProjectPointToPlane(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_plane}{Plane}}\&\ plane);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ PointInTriangle(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);}
+\DoxyCodeLine{00093\ \ \ \ \ DirectX::SimpleMath::Vector3\ ClosestPointOnTriangle(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ point,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);}
+\DoxyCodeLine{00094\ \ \ \ \ DirectX::SimpleMath::Vector3\ GetNormal(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ DirectX::SimpleMath::Vector3\ moveSphere(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_segment}{Segment}}\&\ capsule,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ radius,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon,\ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ contact,\ \textcolor{keywordtype}{float}\&\ distance);}
+\DoxyCodeLine{00098\ \ \ \ \ DirectX::SimpleMath::Vector3\ moveSphere(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_sphere}{Sphere}}\&\ sphere,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collision_1_1_polygon}{Polygon}}\&\ polygon,\ \textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ contact);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//struct\ Plane\ \{}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ \ DirectX::SimpleMath::Vector3\ normal;\ //\ 平面の法線ベクトル}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ \ float\ d;\ \ \ \ \ \ \ \ \ //\ 平面の方程式:\ ax\ +\ by\ +\ cz\ +\ d\ =\ 0\ の d}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ make\ AABB}}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{struct_collision_1_1_a_a_b_b}{AABB}}\ SetAABB(DirectX::SimpleMath::Vector3\ centerposition,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ //\ 線分に平行な予string^えられた幅の４角形の座標を求める}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ void\ CalcQuadOrientedLine(}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ startpos,}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ endpos,}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3*\ v,}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ \ \ \ float\ width);}}
+\DoxyCodeLine{00120\ \textcolor{comment}{}}
+\DoxyCodeLine{00121\ \textcolor{comment}{}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ \ \ \ //\ 幅をもった線分（四角形）と球の当たり判定を行う}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ \ \ \ bool\ CollisionSphereOrientedQuad(}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ StartPos,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 開始位置}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ EndPos,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 終了位置}}
+\DoxyCodeLine{00126\ \textcolor{comment}{\ \ \ \ \ \ \ \ float\ width,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 幅}}
+\DoxyCodeLine{00127\ \textcolor{comment}{\ \ \ \ \ \ \ \ float\ radius,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 半径}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ \ \ \ \ \ \ \ DirectX::SimpleMath::Vector3\ CirclePos);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 中心座標}}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}

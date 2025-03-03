@@ -1,0 +1,108 @@
+\doxysection{input.\+h}
+\hypertarget{input_8h_source}{}\label{input_8h_source}\index{dx22\_plane/input.h@{dx22\_plane/input.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <d3d11.h>}\ \ \textcolor{comment}{//\ DirectX11を使うためのヘッソ_ーファイル}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ <DirectXMath.h>\ //\ DirextXの数学関連のヘッソ_ーファイル}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SimpleMath.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <Xinput.h>}\ \textcolor{comment}{//XInputを使うためのヘッソ_ーファイル}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ comment\ (lib,\ "{}xinput.lib"{})\ }\textcolor{comment}{//XInputを使うために必要}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ XINPUT\_A\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1000}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ XINPUT\_B\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x2000}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ XINPUT\_X\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x4000}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ XINPUT\_Y\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x8000}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ XINPUT\_UP\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0001}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ XINPUT\_DOWN\ \ \ \ \ \ \ \ \ \ \ 0x0002}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ XINPUT\_LEFT\ \ \ \ \ \ \ \ \ \ \ 0x0004}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ XINPUT\_RIGHT\ \ \ \ \ \ \ \ \ \ 0x0008}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ XINPUT\_START\ \ \ \ \ \ \ \ \ \ 0x0010}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ XINPUT\_BACK\ \ \ \ \ \ \ \ \ \ \ 0x0020}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ XINPUT\_LEFT\_THUMB\ \ \ \ \ 0x0040\ }\textcolor{comment}{//左スティック押し込み}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ XINPUT\_RIGHT\_THUMB\ \ \ \ 0x0080\ }\textcolor{comment}{//右スティック押し込み}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ XINPUT\_LEFT\_SHOULDER\ \ 0x0100\ }\textcolor{comment}{//L}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ XINPUT\_RIGHT\_SHOULDER\ 0x0200\ }\textcolor{comment}{//R}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ VK\_0\ 0x30}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ VK\_1\ 0x31}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ VK\_2\ 0x32}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ VK\_3\ 0x33}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ VK\_4\ 0x34}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ VK\_5\ 0x35}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VK\_6\ 0x36}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VK\_7\ 0x37}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VK\_8\ 0x38}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ VK\_9\ 0x39}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ VK\_A\ 0x41}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ VK\_B\ 0x42}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ VK\_C\ 0x43}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ VK\_D\ 0x44}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ VK\_E\ 0x45}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ VK\_F\ 0x46}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ VK\_G\ 0x47}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ VK\_H\ 0x48}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ VK\_I\ 0x49}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ VK\_J\ 0x4A}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ VK\_K\ 0x4B}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ VK\_L\ 0x4C}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ VK\_M\ 0x4D}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ VK\_N\ 0x4E}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ VK\_O\ 0x4F}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ VK\_P\ 0x50}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ VK\_Q\ 0x51}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ VK\_R\ 0x52}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ VK\_S\ 0x53}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ VK\_T\ 0x54}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ VK\_U\ 0x45}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ VK\_V\ 0x56}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ VK\_W\ 0x57}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ VK\_X\ 0x58}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ VK\_Y\ 0x59}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ VK\_Z\ 0x5A}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input}{Input}}\ \{}
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//キー入力情報を保存する変数}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ BYTE\ keyState[256];}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ BYTE\ keyState\_old[256];}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//コントローラー入力情報を保存する変数}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ XINPUT\_STATE\ controllerState;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ XINPUT\_STATE\ controllerState\_old;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ VibrationTime;\ \textcolor{comment}{//振動継続時間をカウントする変数}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_input}{Input}}();\ \textcolor{comment}{//コンストラクソstring^}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_input}{\string~Input}}();\ \textcolor{comment}{//デストラクソstring^}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();\ \textcolor{comment}{//更新}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//キー入力}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetKeyPress(\textcolor{keywordtype}{int}\ key);\ \ \ \textcolor{comment}{//プレス(押している間ずっと)}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetKeyTrigger(\textcolor{keywordtype}{int}\ key);\ \textcolor{comment}{//トリガー(押し始めた時)}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetKeyRelease(\textcolor{keywordtype}{int}\ key);\ \textcolor{comment}{//リリース(押し終わった時)}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//アナログスティック(コントローラー)}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::SimpleMath::Vector2\ GetLeftAnalogStick(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::SimpleMath::Vector2\ GetRightAnalogStick(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//トリガー(コントローラー)}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ GetLeftTrigger(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ GetRightTrigger(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//ソ{ソstring^ン入力(コントローラー)}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetButtonPress(WORD\ btn);\ \ \ \textcolor{comment}{//プレス(押している間ずっと)}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetButtonTrigger(WORD\ btn);\ \textcolor{comment}{//トリガー(押し始めた時)}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ GetButtonRelease(WORD\ btn);\ \textcolor{comment}{//リリース(押し終わった時)}}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//振動(コントローラー)}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//flame：振動を継続する時間(単位：フレーム)}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//powoe：振動の強さ(0～1)}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetVibration(\textcolor{keywordtype}{int}\ frame\ =\ 1,\ \textcolor{keywordtype}{float}\ powor\ =\ 1);}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+
+\end{DoxyCode}

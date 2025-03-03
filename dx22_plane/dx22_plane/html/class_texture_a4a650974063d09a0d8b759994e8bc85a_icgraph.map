@@ -1,9 +1,0 @@
-<map id="Texture::SetGPU" name="Texture::SetGPU">
-<area shape="rect" id="Node000001" title=" " alt="" coords="172,56,293,83"/>
-<area shape="rect" id="Node000002" href="$class_ground.html#a2370ec120536f0831d1a4fe59cae804f" title=" " alt="" coords="13,5,116,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,53,110,35,112,30,172,48"/>
-<area shape="rect" id="Node000003" href="$class_test_cube.html#a9f98cf35cd30f59b226a4a3fff746b63" title=" " alt="" coords="6,56,123,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,72,123,72,123,67,156,67"/>
-<area shape="rect" id="Node000004" href="$class_test_plane.html#a3911aded8e7c6e66a0ae477de7ac13ae" title=" " alt="" coords="5,107,124,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,90,112,109,110,104,170,85"/>
-</map>

@@ -1,0 +1,66 @@
+\doxysection{Texture2\+D.\+h}
+\hypertarget{_texture2_d_8h_source}{}\label{_texture2_d_8h_source}\index{dx22\_plane/Texture2D.h@{dx22\_plane/Texture2D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}VertexBuffer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IndexBuffer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Texture2Dクラス}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture2_d}{Texture2D}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（メッシュに関わる情報）}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_index_buffer}{IndexBuffer}}\ m\_IndexBuffer;\ \textcolor{comment}{//\ インデックスバッファ}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_vertex_buffer}{VertexBuffer<VERTEX\_3D>}}\ m\_VertexBuffer;\ \textcolor{comment}{//\ 頂貼_バッファ}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ 描画の為の情報（見た目に関わる部分）}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_texture}{Texture}}\ m\_Texture;\ \textcolor{comment}{//\ テクスチャ}}
+\DoxyCodeLine{00020\ \ \ \ \ std::unique\_ptr<Material>\ m\_Material;\ \textcolor{comment}{//ソ}テリアル}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ UV座標の情報}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_NumU\ =\ 1;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_NumV\ =\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_SplitX\ =\ 1;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_SplitY\ =\ 1;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_texture2_d}{Texture2D}}(\mbox{\hyperlink{class_camera}{Camera}}*\ cam);\ \textcolor{comment}{//\ コンストラクソstring^}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_texture2_d}{\string~Texture2D}}();\ \textcolor{comment}{//\ デストラクソstring^}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture2_d_ac618027d8b5251bc44148a19793e4618}{Init}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ Uninit();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ テクスチャを指定}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetTexture(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ imgname);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ 位置を指定}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ z);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ pos);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ 角度を指定}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ z);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRotation(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ rot);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ 大きさを指定}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ SetScale(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ z);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ SetScale(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector3\&\ scl);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ 透明度指定}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDiffuse(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ z,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ w);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDiffuse(\textcolor{keyword}{const}\ DirectX::SimpleMath::Vector4\&\ dfs);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ UV座標を指定}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ SetUV(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ nu,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ nv,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ sx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ sy);}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+
+\end{DoxyCode}

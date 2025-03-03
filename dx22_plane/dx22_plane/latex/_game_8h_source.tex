@@ -1,0 +1,95 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\index{dx22\_plane/Game.h@{dx22\_plane/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}FadeAnimation.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Input.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TitleScene.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Hole1Scene.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Hole2Scene.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Hole3Scene.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ResultScene.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum}\ SceneName\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ TITLE,}
+\DoxyCodeLine{00014\ \ \ \ \ HOLE1,}
+\DoxyCodeLine{00015\ \ \ \ \ HOLE2,}
+\DoxyCodeLine{00016\ \ \ \ \ HOLE3,}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{/*HOLE4,}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ HOLE5,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ HOLE6,}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ HOLE7,}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ HOLE8,}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ HOLE9,*/}}
+\DoxyCodeLine{00023\ \ \ \ \ BONUS,}
+\DoxyCodeLine{00024\ \ \ \ \ RESULT}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game}{Game}}*\ m\_Instance;\ \textcolor{comment}{//\ ゲームインスソstring^ンス}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_scene}{Scene}}*\ m\_Scene;\ \textcolor{comment}{//\ シーン}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::vector<std::unique\_ptr<Object>>\ m\_Objects;\ \textcolor{comment}{//\ オブジェクト}}
+\DoxyCodeLine{00041\ \ \ \ \ std::unique\_ptr<Input>\ m\_Input;\ \ \textcolor{comment}{//\ 入力処理}}
+\DoxyCodeLine{00042\ \ \ \ \ std::unique\_ptr<Camera>\ m\_Camera;\ \textcolor{comment}{//\ カメラ}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ Change\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ シーン切り替えフラグ}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ Changing\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \textcolor{comment}{//\ シーン遷移中管理フラグ}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//std::unique\_ptr<FadeAnimation>\ m\_FadeAnimation;}}
+\DoxyCodeLine{00047\ \ \ \ \ SceneName\ m\_NextSceneName;\ \ \textcolor{comment}{//\ 次シーンの名前}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}();\ \textcolor{comment}{//\ コンストラクソstring^}}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_game}{\string~Game}}();\ \textcolor{comment}{//\ デストラクソstring^}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Init();\ \textcolor{comment}{//\ 初期化}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Update();\ \textcolor{comment}{//\ 更新}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Draw();\ \textcolor{comment}{//\ 描画}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Uninit();\ \textcolor{comment}{//\ 終了処理}}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game}{Game}}*\ GetInstance();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ SetChange(\textcolor{keywordtype}{bool}\ \_flg);\ \ \ \ \ \ \textcolor{comment}{//\ 後から追加}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetChange(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 後から追加}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ SetChanging(\textcolor{keywordtype}{bool}\ \_flg);\ \ \ \ \textcolor{comment}{//\ 後から追加}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetChanging(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 後から追加}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ ChangeScene(SceneName\ sName);\ \ \textcolor{comment}{//\ シーンを変更}}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\&\ GetCamera();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ カメラ取得}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ DeleteObject(\mbox{\hyperlink{class_object}{Object}}*\ pt);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ オブジェクトを削除する}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ DeleteAllObject();\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ オブジェクトをすべて削除する}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ オブジェクトを追加する(※テンプレート関数なのでここに直接記述)}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ T*\ AddObject()}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ T*\ pt\ =\ \textcolor{keyword}{new}\ T(m\_Camera.get());}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ m\_Instance-\/>m\_Objects.emplace\_back(pt);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ pt-\/>Init();\ \textcolor{comment}{//\ 初期化}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pt;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ オブジェクトを取得する(※テンプレート関数なのでここに直接記述)}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ std::vector<T*>\ GetObjects()}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::vector<T*>\ res;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ o\ :\ m\_Instance-\/>m\_Objects)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dynamic\_castで圭string^をチェック}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (T*\ derivedObj\ =\ \textcolor{keyword}{dynamic\_cast<}T*\textcolor{keyword}{>}(o.get()))\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res.emplace\_back(derivedObj);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

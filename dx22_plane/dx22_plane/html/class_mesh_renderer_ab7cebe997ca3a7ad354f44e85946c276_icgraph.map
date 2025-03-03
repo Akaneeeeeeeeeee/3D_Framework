@@ -1,7 +1,0 @@
-<map id="MeshRenderer::DrawSubset" name="MeshRenderer::DrawSubset">
-<area shape="rect" id="Node000001" title=" " alt="" coords="174,31,360,57"/>
-<area shape="rect" id="Node000002" href="$class_golf_ball.html#a5386af8ca0ebcd61f8c9889f511bfa2b" title=" " alt="" coords="12,5,119,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,33,119,28,119,23,159,28"/>
-<area shape="rect" id="Node000003" href="$class_test_model.html#a18bc7f4a5f9d405af758572b7bd55258" title=" " alt="" coords="5,56,126,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,60,126,64,126,59,158,55"/>
-</map>

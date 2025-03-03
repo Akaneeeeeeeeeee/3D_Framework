@@ -1,172 +1,34 @@
-\doxysection{Mesh\+Renderer クラス}
+\doxysection{Mesh\+Renderer Class Reference}
 \hypertarget{class_mesh_renderer}{}\label{class_mesh_renderer}\index{MeshRenderer@{MeshRenderer}}
-
-
-{\ttfamily \#include $<$Mesh\+Renderer.\+h$>$}
-
-
-
-Mesh\+Renderer 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{class_mesh_renderer__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{公開メンバ関数}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984}{Init}} (\mbox{\hyperlink{class_mesh}{Mesh}} \&mesh)
+\Hypertarget{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984}\label{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984} 
+virtual void {\bfseries Init} (\mbox{\hyperlink{class_mesh}{Mesh}} \&mesh)
 \item 
-virtual void \mbox{\hyperlink{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314}{Before\+Draw}} ()
+\Hypertarget{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314}\label{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314} 
+virtual void {\bfseries Before\+Draw} ()
 \item 
-virtual void \mbox{\hyperlink{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276}{Draw\+Subset}} (unsigned int indexnum, unsigned int baseindex, unsigned int basevertexindex)
+\Hypertarget{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276}\label{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276} 
+virtual void {\bfseries Draw\+Subset} (unsigned int indexnum, unsigned int baseindex, unsigned int basevertexindex)
 \item 
-virtual void \mbox{\hyperlink{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2}{Draw}} ()
+\Hypertarget{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2}\label{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2} 
+virtual void {\bfseries Draw} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{限定公開変数類}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \mbox{\hyperlink{class_mesh_renderer_ae62bde8ae7b2004cf27fc03305789b19}{m\+\_\+\+Vertex\+Buffer}}
+\Hypertarget{class_mesh_renderer_ae62bde8ae7b2004cf27fc03305789b19}\label{class_mesh_renderer_ae62bde8ae7b2004cf27fc03305789b19} 
+\mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ {\bfseries m\+\_\+\+Vertex\+Buffer}
 \item 
-\mbox{\hyperlink{class_index_buffer}{Index\+Buffer}} \mbox{\hyperlink{class_mesh_renderer_a570a0355a996d8ab4aa345214b3e13e4}{m\+\_\+\+Index\+Buffer}}
+\Hypertarget{class_mesh_renderer_a570a0355a996d8ab4aa345214b3e13e4}\label{class_mesh_renderer_a570a0355a996d8ab4aa345214b3e13e4} 
+\mbox{\hyperlink{class_index_buffer}{Index\+Buffer}} {\bfseries m\+\_\+\+Index\+Buffer}
 \item 
-int \mbox{\hyperlink{class_mesh_renderer_a2da69c284eb1abbce6c45ffdeb7052ad}{m\+\_\+\+Index\+Num}} = 0
+\Hypertarget{class_mesh_renderer_a2da69c284eb1abbce6c45ffdeb7052ad}\label{class_mesh_renderer_a2da69c284eb1abbce6c45ffdeb7052ad} 
+int {\bfseries m\+\_\+\+Index\+Num} = 0
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{詳解}
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00006}{6}} 行目に定義があります。
-
-
-
-\doxysubsection{関数詳解}
-\Hypertarget{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314}\index{MeshRenderer@{MeshRenderer}!BeforeDraw@{BeforeDraw}}
-\index{BeforeDraw@{BeforeDraw}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{BeforeDraw()}{BeforeDraw()}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314} 
-virtual void Mesh\+Renderer\+::\+Before\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00020}{20}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_mesh_renderer_ae286a90ae654b01b56420dc3a819b314_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2}\index{MeshRenderer@{MeshRenderer}!Draw@{Draw}}
-\index{Draw@{Draw}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2} 
-virtual void Mesh\+Renderer\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00041}{41}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_mesh_renderer_a9013b56c1b4d52152677c5317d4274b2_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276}\index{MeshRenderer@{MeshRenderer}!DrawSubset@{DrawSubset}}
-\index{DrawSubset@{DrawSubset}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{DrawSubset()}{DrawSubset()}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276} 
-virtual void Mesh\+Renderer\+::\+Draw\+Subset (\begin{DoxyParamCaption}\item[{unsigned int}]{indexnum}{, }\item[{unsigned int}]{baseindex}{, }\item[{unsigned int}]{basevertexindex}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00032}{32}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=346pt]{class_mesh_renderer_ab7cebe997ca3a7ad354f44e85946c276_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984}\index{MeshRenderer@{MeshRenderer}!Init@{Init}}
-\index{Init@{Init}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984} 
-virtual void Mesh\+Renderer\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} \&}]{mesh}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00012}{12}} 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=296pt]{class_mesh_renderer_aa3476f8b7457ff0e5b86662c69b09984_icgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\Hypertarget{class_mesh_renderer_a570a0355a996d8ab4aa345214b3e13e4}\index{MeshRenderer@{MeshRenderer}!m\_IndexBuffer@{m\_IndexBuffer}}
-\index{m\_IndexBuffer@{m\_IndexBuffer}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{m\_IndexBuffer}{m\_IndexBuffer}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_a570a0355a996d8ab4aa345214b3e13e4} 
-\mbox{\hyperlink{class_index_buffer}{Index\+Buffer}} Mesh\+Renderer\+::m\+\_\+\+Index\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00009}{9}} 行目に定義があります。
-
-\Hypertarget{class_mesh_renderer_a2da69c284eb1abbce6c45ffdeb7052ad}\index{MeshRenderer@{MeshRenderer}!m\_IndexNum@{m\_IndexNum}}
-\index{m\_IndexNum@{m\_IndexNum}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{m\_IndexNum}{m\_IndexNum}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_a2da69c284eb1abbce6c45ffdeb7052ad} 
-int Mesh\+Renderer\+::m\+\_\+\+Index\+Num = 0\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00010}{10}} 行目に定義があります。
-
-\Hypertarget{class_mesh_renderer_ae62bde8ae7b2004cf27fc03305789b19}\index{MeshRenderer@{MeshRenderer}!m\_VertexBuffer@{m\_VertexBuffer}}
-\index{m\_VertexBuffer@{m\_VertexBuffer}!MeshRenderer@{MeshRenderer}}
-\doxysubsubsection{\texorpdfstring{m\_VertexBuffer}{m\_VertexBuffer}}
-{\footnotesize\ttfamily \label{class_mesh_renderer_ae62bde8ae7b2004cf27fc03305789b19} 
-\mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$\mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}}$>$ Mesh\+Renderer\+::m\+\_\+\+Vertex\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
- \mbox{\hyperlink{_mesh_renderer_8h_source}{Mesh\+Renderer.\+h}} の \mbox{\hyperlink{_mesh_renderer_8h_source_l00008}{8}} 行目に定義があります。
-
-
-
-このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/caram/\+Desktop/\+HAL/\+DX/\+DX22/授業内プロジェクト/dx22\+\_\+plane/dx22\+\_\+plane/\mbox{\hyperlink{_mesh_renderer_8h}{Mesh\+Renderer.\+h}}\end{DoxyCompactItemize}
+dx22\+\_\+plane/Mesh\+Renderer.\+h\end{DoxyCompactItemize}

@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -78,6 +74,15 @@
     </Filter>
     <Filter Include="ソース ファイル\シーン\ホール">
       <UniqueIdentifier>{e045d278-9fba-494b-9b00-1ae9ca0382c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ImGui">
+      <UniqueIdentifier>{1ca3bcdc-b843-4a55-b35c-7b4915000cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ImGui\DebugUI">
+      <UniqueIdentifier>{2567a7f8-75c2-4385-84da-1e94eb262d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\シングルトンテンプレート">
+      <UniqueIdentifier>{380b626c-1e6a-4b6e-a446-a8d1ed25ea80}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +178,36 @@
     </ClCompile>
     <ClCompile Include="Hole3Scene.cpp">
       <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton_Template\Singleton_Template.cpp">
+      <Filter>ソース ファイル\シングルトンテンプレート</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\DebugUI\DebugUI.cpp">
+      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
+      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +318,39 @@
     </ClInclude>
     <ClInclude Include="Hole3Scene.h">
       <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_dx11.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_win32.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton_Template\Singleton_Template.h">
+      <Filter>ソース ファイル\シングルトンテンプレート</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\DebugUI\DebugUI.h">
+      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\DebugUI\DebugFunction\DebugFunction.h">
+      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
