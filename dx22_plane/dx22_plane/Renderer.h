@@ -6,10 +6,13 @@
 #include	<io.h>
 #include	<string>
 #include	<vector>
+#include	<wrl/client.h>
 
 //外部ライブラリ
 #pragma comment(lib,"directxtk.lib")
 #pragma comment(lib,"d3d11.lib")
+
+using Microsoft::WRL::ComPtr;
 
 // ３Ｄ頂点データ
 struct VERTEX_3D
@@ -70,29 +73,29 @@ private:
 	static D3D_FEATURE_LEVEL       m_FeatureLevel;
 
 	// 描画系
-	static ID3D11Device*           m_Device;
-	static ID3D11DeviceContext*    m_DeviceContext;
-	static IDXGISwapChain*         m_SwapChain;
-	static ID3D11RenderTargetView* m_RenderTargetView;
-	static ID3D11DepthStencilView* m_DepthStencilView;
+	static ComPtr<ID3D11Device>				m_Device;
+	static ComPtr<ID3D11DeviceContext>		m_DeviceContext;
+	static ComPtr<IDXGISwapChain>			m_SwapChain;
+	static ComPtr<ID3D11RenderTargetView>	m_RenderTargetView;
+	static ComPtr<ID3D11DepthStencilView>	m_DepthStencilView;
 
 	// 行列系
-	static ID3D11Buffer*			m_WorldBuffer;
-	static ID3D11Buffer*			m_ViewBuffer;
-	static ID3D11Buffer*			m_ProjectionBuffer;
+	static ComPtr<ID3D11Buffer> m_WorldBuffer;
+	static ComPtr<ID3D11Buffer> m_ViewBuffer;
+	static ComPtr<ID3D11Buffer> m_ProjectionBuffer;
 
 	// 光源、質感系
-	static ID3D11Buffer*			m_LightBuffer;
-	static ID3D11Buffer*			m_MaterialBuffer;
-	static ID3D11Buffer*			m_TextureBuffer;	// UV設定
+	static ComPtr<ID3D11Buffer>			m_LightBuffer;
+	static ComPtr<ID3D11Buffer>			m_MaterialBuffer;
+	static ComPtr<ID3D11Buffer>			m_TextureBuffer;	// UV設定
 
 	// 深度バッファ
-	static ID3D11DepthStencilState* m_DepthStateEnable;
-	static ID3D11DepthStencilState* m_DepthStateDisable;
+	static ComPtr<ID3D11DepthStencilState> m_DepthStateEnable;
+	static ComPtr<ID3D11DepthStencilState> m_DepthStateDisable;
 
 	// ブレンド ステート
-	static ID3D11BlendState*		m_BlendState[MAX_BLENDSTATE];
-	static ID3D11BlendState*		m_BlendStateATC;
+	static ComPtr<ID3D11BlendState>		m_BlendState[MAX_BLENDSTATE];
+	static ComPtr<ID3D11BlendState>		m_BlendStateATC;
 
 public:
 
@@ -110,8 +113,8 @@ public:
 	static void SetViewMatrix(DirectX::SimpleMath::Matrix* ViewMatrix);
 	static void SetProjectionMatrix(DirectX::SimpleMath::Matrix* ProjectionMatrix);
 
-	static ID3D11Device* GetDevice( void ){ return m_Device; }
-	static ID3D11DeviceContext* GetDeviceContext( void ){ return m_DeviceContext; }
+	static ID3D11Device* GetDevice( void ){ return m_Device.Get(); }
+	static ID3D11DeviceContext* GetDeviceContext( void ){ return m_DeviceContext.Get(); }
 
 	static void CreateVertexShader(ID3D11VertexShader** VertexShader, ID3D11InputLayout** VertexLayout, const char* FileName);
 	static void CreatePixelShader(ID3D11PixelShader** PixelShader, const char* FileName);
@@ -127,7 +130,7 @@ public:
 	{
 		if (nBlendState >= 0 && nBlendState < MAX_BLENDSTATE) {
 			float blendFactor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
-			m_DeviceContext->OMSetBlendState(m_BlendState[nBlendState], blendFactor, 0xffffffff);
+			m_DeviceContext->OMSetBlendState(m_BlendState[nBlendState].Get(), blendFactor, 0xffffffff);
 		}
 	}
 };
