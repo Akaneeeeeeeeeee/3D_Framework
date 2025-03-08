@@ -165,7 +165,7 @@ void Renderer::Init()
 	hr = m_Device->CreateDepthStencilState(&depthStencilDesc, &m_DepthStateDisable); //深度無効ステート
 	if (FAILED(hr)) return;
 
-	m_DeviceContext->OMSetDepthStencilState(m_DepthStateEnable, NULL);
+	m_DeviceContext->OMSetDepthStencilState(m_DepthStateEnable.Get(), NULL);
 
 	// サンプラーステート設定
 	D3D11_SAMPLER_DESC samplerDesc{};
