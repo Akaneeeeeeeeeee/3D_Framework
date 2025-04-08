@@ -174,9 +174,6 @@ void Application::MainLoop()
 	//! MSG：ウィンドウのイベントを識別するメッセージを保持するための構造体
 	MSG msg = {};
 
-	//! デバッグUI初期化
-	DebugUI::Init(Renderer::GetDevice(), Renderer::GetDeviceContext());
-
 	//! 初期化
 	Game::Init();
 

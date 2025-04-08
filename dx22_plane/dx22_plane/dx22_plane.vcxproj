@@ -154,7 +154,9 @@
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="Hole2Scene.cpp" />
     <ClCompile Include="Hole3Scene.cpp" />
-    <ClCompile Include="ImGui\DebugUI\DebugFunction\DebugFunction.cpp" />
+    <ClCompile Include="ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ImGui\DebugUI\DebugUI.cpp" />
     <ClCompile Include="ImGui\imgui.cpp" />
     <ClCompile Include="ImGui\imgui_demo.cpp" />
@@ -201,7 +203,9 @@
     <ClInclude Include="Ground.h" />
     <ClInclude Include="Hole2Scene.h" />
     <ClInclude Include="Hole3Scene.h" />
-    <ClInclude Include="ImGui\DebugUI\DebugFunction\DebugFunction.h" />
+    <ClInclude Include="ImGui\DebugUI\DebugFunction\DebugFunction.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ImGui\DebugUI\DebugUI.h" />
     <ClInclude Include="ImGui\imconfig.h" />
     <ClInclude Include="ImGui\imgui.h" />

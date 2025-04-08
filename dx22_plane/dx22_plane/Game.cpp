@@ -27,6 +27,9 @@ void Game::Init()
 
 	// 描画初期化
 	Renderer::Init();
+	//! デバッグUI初期化
+	DebugUI::Init(Renderer::GetDevice(), Renderer::GetDeviceContext());
+
 
 	// オブジェクト配列作成
 	//m_Instance->m_Objects.emplace_back(new GolfBall);

@@ -6,26 +6,26 @@ using namespace DirectX::SimpleMath;
 // D3D_FEATURE_LEVELはDirect3Dのバージョン
 D3D_FEATURE_LEVEL Renderer::m_FeatureLevel = D3D_FEATURE_LEVEL_11_0;
 
-ID3D11Device* Renderer::m_Device{};						// Direct3Dデバイス
-ID3D11DeviceContext* Renderer::m_DeviceContext{};		// デバイスコンテキスト
-IDXGISwapChain* Renderer::m_SwapChain{};				// スワップチェーン
-ID3D11RenderTargetView* Renderer::m_RenderTargetView{}; // レンダーターゲットビュー
-ID3D11DepthStencilView* Renderer::m_DepthStencilView{}; // デプスステンシルビュー
+ComPtr<ID3D11Device> Renderer::m_Device{};						// Direct3Dデバイス
+ComPtr<ID3D11DeviceContext> Renderer::m_DeviceContext{};		// デバイスコンテキスト
+ComPtr<IDXGISwapChain> Renderer::m_SwapChain{};				// スワップチェーン
+ComPtr<ID3D11RenderTargetView> Renderer::m_RenderTargetView{}; // レンダーターゲットビュー
+ComPtr<ID3D11DepthStencilView> Renderer::m_DepthStencilView{}; // デプスステンシルビュー
 
-ID3D11Buffer* Renderer::m_WorldBuffer{};				// ワールド行列
-ID3D11Buffer* Renderer::m_ViewBuffer{};					// ビュー行列
-ID3D11Buffer* Renderer::m_ProjectionBuffer{};			// プロジェクション行列
+ComPtr<ID3D11Buffer> Renderer::m_WorldBuffer{};				// ワールド行列
+ComPtr<ID3D11Buffer> Renderer::m_ViewBuffer{};					// ビュー行列
+ComPtr<ID3D11Buffer> Renderer::m_ProjectionBuffer{};			// プロジェクション行列
 
-ID3D11Buffer* Renderer::m_LightBuffer{};				// ライト設定（平行光源）
-ID3D11Buffer* Renderer::m_MaterialBuffer{};				// マテリアル設定
-ID3D11Buffer* Renderer::m_TextureBuffer{};				// UV設定
+ComPtr<ID3D11Buffer> Renderer::m_LightBuffer{};				// ライト設定（平行光源）
+ComPtr<ID3D11Buffer> Renderer::m_MaterialBuffer{};				// マテリアル設定
+ComPtr<ID3D11Buffer> Renderer::m_TextureBuffer{};				// UV設定
 
 // デプスステンシルステート
-ID3D11DepthStencilState* Renderer::m_DepthStateEnable{};
-ID3D11DepthStencilState* Renderer::m_DepthStateDisable{};
+ComPtr<ID3D11DepthStencilState> Renderer::m_DepthStateEnable{};
+ComPtr<ID3D11DepthStencilState> Renderer::m_DepthStateDisable{};
 
-ID3D11BlendState* Renderer::m_BlendState[MAX_BLENDSTATE];	// ブレンドステート配列
-ID3D11BlendState* Renderer::m_BlendStateATC{};				// 特定のアルファテストとカバレッジ（ATC）用のブレンドステート
+ComPtr<ID3D11BlendState> Renderer::m_BlendState[MAX_BLENDSTATE];	// ブレンドステート配列
+ComPtr<ID3D11BlendState> Renderer::m_BlendStateATC{};				// 特定のアルファテストとカバレッジ（ATC）用のブレンドステート
 
 
 //=======================================
@@ -50,13 +50,13 @@ void Renderer::Init()
 	swapChainDesc.Windowed = TRUE; // ウィンドウモード（フルスクリーンではなく、ウィンドウモードで実行）
 
 	hr = D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, 0, NULL, 0, 
-		D3D11_SDK_VERSION, &swapChainDesc, &m_SwapChain, &m_Device, &m_FeatureLevel, &m_DeviceContext);
+		D3D11_SDK_VERSION, &swapChainDesc, m_SwapChain.GetAddressOf(), m_Device.GetAddressOf(), &m_FeatureLevel, m_DeviceContext.GetAddressOf());
 	if (FAILED(hr)) return;
 
 	// レンダーターゲットビュー作成
 	ID3D11Texture2D* renderTarget{};
 	hr = m_SwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&renderTarget);
-	if (renderTarget != nullptr)m_Device->CreateRenderTargetView(renderTarget, NULL, &m_RenderTargetView);
+	if (renderTarget != nullptr)m_Device->CreateRenderTargetView(renderTarget, NULL, m_RenderTargetView.GetAddressOf());
 	renderTarget->Release();
 
 	// デプスステンシルバッファ作成
@@ -81,10 +81,10 @@ void Renderer::Init()
 	depthStencilViewDesc.Format = textureDesc.Format; // デプスステンシルバッファのフォーマットを設定
 	depthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D; // ビューの次元を2Dテクスチャとして設定（2Dテクスチャ用のデプスステンシルビュー）
 	depthStencilViewDesc.Flags = 0; // 特別なフラグは設定しない（デフォルトの動作）
-	if (depthStencile != nullptr)m_Device->CreateDepthStencilView(depthStencile, &depthStencilViewDesc, &m_DepthStencilView);
+	if (depthStencile != nullptr)m_Device->CreateDepthStencilView(depthStencile, &depthStencilViewDesc, m_DepthStencilView.GetAddressOf());
 	depthStencile->Release();
 
-	m_DeviceContext->OMSetRenderTargets(1, &m_RenderTargetView, m_DepthStencilView); // レンダーターゲットとデプスステンシルビューを設定
+	m_DeviceContext->OMSetRenderTargets(1, m_RenderTargetView.GetAddressOf(), m_DepthStencilView.Get()); // レンダーターゲットとデプスステンシルビューを設定
 
 	// ビューポート設定
 	D3D11_VIEWPORT viewport;
@@ -128,23 +128,23 @@ void Renderer::Init()
 	BlendDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;		// アルファ値に対して加算操作を行う
 	BlendDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL; // レンダーターゲットのカラーチャンネル書き込みマスク
 
-	hr = m_Device->CreateBlendState(&BlendDesc, &m_BlendState[0]);
+	hr = m_Device->CreateBlendState(&BlendDesc, m_BlendState[0].GetAddressOf());
 	if (FAILED(hr)) return;
 
 	// ブレンド ステート生成 (アルファ ブレンド用)
 	//BlendDesc.AlphaToCoverageEnable = TRUE;
 	BlendDesc.RenderTarget[0].BlendEnable = TRUE;
-	hr = m_Device->CreateBlendState(&BlendDesc, &m_BlendState[1]);
+	hr = m_Device->CreateBlendState(&BlendDesc, m_BlendState[1].GetAddressOf());
 	if (FAILED(hr)) return;
 
 	// ブレンド ステート生成 (加算合成用)
 	BlendDesc.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
-	hr = m_Device->CreateBlendState(&BlendDesc, &m_BlendState[2]);
+	hr = m_Device->CreateBlendState(&BlendDesc, m_BlendState[2].GetAddressOf());
 	if (FAILED(hr)) return;
 
 	// ブレンド ステート生成 (減算合成用)
 	BlendDesc.RenderTarget[0].BlendOp = D3D11_BLEND_OP_REV_SUBTRACT;
-	hr = m_Device->CreateBlendState(&BlendDesc, &m_BlendState[3]);
+	hr = m_Device->CreateBlendState(&BlendDesc, m_BlendState[3].GetAddressOf());
 	if (FAILED(hr)) return;
 
 	SetBlendState(BS_ALPHABLEND);
@@ -155,14 +155,16 @@ void Renderer::Init()
 	depthStencilDesc.DepthEnable = TRUE;
 	depthStencilDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
 	depthStencilDesc.DepthFunc = D3D11_COMPARISON_LESS_EQUAL;
-	//depthStencilDesc.DepthFunc = D3D11_COMPARISON_ALWAYS;		// ------------デバッグ用(深度バッファに関わらず全部映すモード) ----------------
+	// ------------デバッグ用(深度バッファに関わらず全部映すモード) ----------------
+	//depthStencilDesc.DepthFunc = D3D11_COMPARISON_ALWAYS;
+	// --------------------------------------------------------------------
 	depthStencilDesc.StencilEnable = FALSE;
 
-	hr = m_Device->CreateDepthStencilState(&depthStencilDesc, &m_DepthStateEnable); //深度有効ステート
+	hr = m_Device->CreateDepthStencilState(&depthStencilDesc, m_DepthStateEnable.GetAddressOf()); //深度有効ステート
 	if (FAILED(hr)) return;
 
 	depthStencilDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ZERO;
-	hr = m_Device->CreateDepthStencilState(&depthStencilDesc, &m_DepthStateDisable); //深度無効ステート
+	hr = m_Device->CreateDepthStencilState(&depthStencilDesc, m_DepthStateDisable.GetAddressOf()); //深度無効ステート
 	if (FAILED(hr)) return;
 
 	m_DeviceContext->OMSetDepthStencilState(m_DepthStateEnable.Get(), NULL);
@@ -191,21 +193,22 @@ void Renderer::Init()
 	bufferDesc.MiscFlags = 0;
 	bufferDesc.StructureByteStride = sizeof(float);
 	// 0番目の定数バッファにworld行列
-	hr = m_Device->CreateBuffer(&bufferDesc, NULL, &m_WorldBuffer);
-	m_DeviceContext->VSSetConstantBuffers(0, 1, &m_WorldBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_WorldBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(0, 1, m_WorldBuffer.GetAddressOf());
 	if (FAILED(hr)) return;
 	// 1番目の定数バッファにview行列
-	hr = m_Device->CreateBuffer(&bufferDesc, NULL, &m_ViewBuffer);
-	m_DeviceContext->VSSetConstantBuffers(1, 1, &m_ViewBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_ViewBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(1, 1, m_ViewBuffer.GetAddressOf());
 	if (FAILED(hr)) return;
 	// 2番目の定数バッファにProjection行列
-	hr = m_Device->CreateBuffer(&bufferDesc, NULL, &m_ProjectionBuffer);
-	m_DeviceContext->VSSetConstantBuffers(2, 1, &m_ProjectionBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_ProjectionBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(2, 1, m_ProjectionBuffer.GetAddressOf());
 	if (FAILED(hr)) return;
 	// 3番目の定数バッファに光源情報
 	bufferDesc.ByteWidth = sizeof(LIGHT);
-	m_Device->CreateBuffer(&bufferDesc, NULL, &m_LightBuffer);
-	m_DeviceContext->VSSetConstantBuffers(3, 1, &m_LightBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_LightBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(3, 1, m_LightBuffer.GetAddressOf());
+	if (FAILED(hr)) return;
 
 	// ライト初期化
 	LIGHT light{};
@@ -218,9 +221,9 @@ void Renderer::Init()
 
 	// 4番目の定数バッファにマテリアル情報
 	bufferDesc.ByteWidth = sizeof(MATERIAL);
-	hr = m_Device->CreateBuffer(&bufferDesc, NULL, &m_MaterialBuffer);
-	m_DeviceContext->VSSetConstantBuffers(4, 1, &m_MaterialBuffer);
-	m_DeviceContext->PSSetConstantBuffers(4, 1, &m_MaterialBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_MaterialBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(4, 1, m_MaterialBuffer.GetAddressOf());
+	m_DeviceContext->PSSetConstantBuffers(4, 1, m_MaterialBuffer.GetAddressOf());
 	if (FAILED(hr)) return;
 
 	// マテリアル初期化
@@ -230,8 +233,8 @@ void Renderer::Init()
 	SetMaterial(material);
 
 	bufferDesc.ByteWidth = sizeof(Matrix);
-	hr = m_Device->CreateBuffer(&bufferDesc, NULL, &m_TextureBuffer);
-	m_DeviceContext->VSSetConstantBuffers(5, 1, &m_TextureBuffer);
+	hr = m_Device->CreateBuffer(&bufferDesc, NULL, m_TextureBuffer.GetAddressOf());
+	m_DeviceContext->VSSetConstantBuffers(5, 1, m_TextureBuffer.GetAddressOf());
 	if (FAILED(hr))  return;
 
 	// UV初期化
@@ -265,8 +268,8 @@ void Renderer::Begin()
 {
 	// 全消し
 	float clearColor[4] = { 0.0f, 0.0f, 1.0f, 1.0f };
-	m_DeviceContext->ClearRenderTargetView(m_RenderTargetView, clearColor);
-	m_DeviceContext->ClearDepthStencilView(m_DepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
+	m_DeviceContext->ClearRenderTargetView(m_RenderTargetView.Get(), clearColor);
+	m_DeviceContext->ClearDepthStencilView(m_DepthStencilView.Get(), D3D11_CLEAR_DEPTH, 1.0f, 0);
 }
 
 //=======================================
@@ -286,12 +289,12 @@ void Renderer::SetDepthEnable(bool Enable)
 	if (Enable) 
 	{
 		// 深度テストを有効にするステンシルステートをセット
-		m_DeviceContext->OMSetDepthStencilState(m_DepthStateEnable, NULL);
+		m_DeviceContext->OMSetDepthStencilState(m_DepthStateEnable.Get(), NULL);
 	}
 	else
 	{
 		// 深度テストを無効にするステンシルステートをセット
-		m_DeviceContext->OMSetDepthStencilState(m_DepthStateDisable, NULL);
+		m_DeviceContext->OMSetDepthStencilState(m_DepthStateDisable.Get(), NULL);
 	}
 }
 
@@ -306,12 +309,12 @@ void Renderer::SetATCEnable(bool Enable)
 	if (Enable)
 	{
 		// アルファテストとカバレッジ (ATC) を有効にするブレンドステートをセット
-		m_DeviceContext->OMSetBlendState(m_BlendStateATC, blendFactor, 0xffffffff);
+		m_DeviceContext->OMSetBlendState(m_BlendStateATC.Get(), blendFactor, 0xffffffff);
 	}
 	else 
 	{
 		// 通常のブレンドステートをセット
-		m_DeviceContext->OMSetBlendState(m_BlendState[0], blendFactor, 0xffffffff);
+		m_DeviceContext->OMSetBlendState(m_BlendState[0].Get(), blendFactor, 0xffffffff);
 	}
 }
 
@@ -322,11 +325,11 @@ void Renderer::SetWorldViewProjection2D()
 {
 	Matrix world = Matrix::Identity;			// 単位行列にする
 	world = world.Transpose();			// 転置
-	m_DeviceContext->UpdateSubresource(m_WorldBuffer, 0, NULL, &world, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_WorldBuffer.Get(), 0, NULL, &world, 0, 0);
 
 	Matrix view = Matrix::Identity;			// 単位行列にする
 	view = view.Transpose();			// 転置
-	m_DeviceContext->UpdateSubresource(m_ViewBuffer, 0, NULL, &view, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_ViewBuffer.Get(), 0, NULL, &view, 0, 0);
 
 	// 2D描画を左上原点にする
 	Matrix projection = DirectX::XMMatrixOrthographicOffCenterLH(
@@ -339,7 +342,7 @@ void Renderer::SetWorldViewProjection2D()
 
 	projection = projection.Transpose();
 
-	m_DeviceContext->UpdateSubresource(m_ProjectionBuffer, 0, NULL, &projection, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_ProjectionBuffer.Get(), 0, NULL, &projection, 0, 0);
 }
 
 //=======================================
@@ -351,7 +354,7 @@ void Renderer::SetWorldMatrix(Matrix* WorldMatrix)
 	world = WorldMatrix->Transpose(); // 転置
 
 	// ワールド行列をGPU側へ送る
-	m_DeviceContext->UpdateSubresource(m_WorldBuffer, 0, NULL, &world, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_WorldBuffer.Get(), 0, NULL, &world, 0, 0);
 }
 
 //=======================================
@@ -363,7 +366,7 @@ void Renderer::SetViewMatrix(Matrix* ViewMatrix)
 	view = ViewMatrix->Transpose(); // 転置
 
 	// ビュー行列をGPU側へ送る
-	m_DeviceContext->UpdateSubresource(m_ViewBuffer, 0, NULL, &view, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_ViewBuffer.Get(), 0, NULL, &view, 0, 0);
 }
 
 //=======================================
@@ -375,7 +378,7 @@ void Renderer::SetProjectionMatrix(Matrix* ProjectionMatrix)
 	projection = ProjectionMatrix->Transpose(); // 転置
 
 	// プロジェクション行列をGPU側へ送る
-	m_DeviceContext->UpdateSubresource(m_ProjectionBuffer, 0, NULL, &projection, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_ProjectionBuffer.Get(), 0, NULL, &projection, 0, 0);
 }
 
 //=======================================
@@ -383,7 +386,7 @@ void Renderer::SetProjectionMatrix(Matrix* ProjectionMatrix)
 //=======================================
 void Renderer::SetLight(LIGHT Light) {
 	// ライトの設定をGPU側に送る
-	m_DeviceContext->UpdateSubresource(m_LightBuffer, 0, NULL, &Light, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_LightBuffer.Get(), 0, NULL, &Light, 0, 0);
 }
 
 //=======================================
@@ -391,7 +394,7 @@ void Renderer::SetLight(LIGHT Light) {
 //=======================================
 void Renderer::SetMaterial(MATERIAL Material) {
 	// マテリアルの設定をGPU側に送る
-	m_DeviceContext->UpdateSubresource(m_MaterialBuffer, 0, NULL, &Material, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_MaterialBuffer.Get(), 0, NULL, &Material, 0, 0);
 }
 
 //=======================================
@@ -402,7 +405,7 @@ void Renderer::SetUV(float u, float v, float uw, float vh) {
 	Matrix mat = Matrix::CreateScale(uw, vh, 1.0f);
 	mat *= Matrix::CreateTranslation(u, v, 0.0f).Transpose();
 
-	m_DeviceContext->UpdateSubresource(m_TextureBuffer, 0, NULL, &mat, 0, 0);
+	m_DeviceContext->UpdateSubresource(m_TextureBuffer.Get(), 0, NULL, &mat, 0, 0);
 }
 
 //=======================================

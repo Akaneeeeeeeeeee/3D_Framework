@@ -28,10 +28,3 @@ private:
 
 };
 
-DebugUI::DebugUI()
-{
-}
-
-DebugUI::~DebugUI()
-{
-}
