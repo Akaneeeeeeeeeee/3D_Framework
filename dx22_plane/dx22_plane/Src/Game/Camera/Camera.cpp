@@ -1,9 +1,9 @@
-#include "Renderer.h"
+#include "../../Framework/Renderer/Renderer.h"
 #include "Camera.h"
-#include "Application.h"
-#include "input.h"
-#include "Game.h"
-#include "GolfBall.h"
+#include "../../Application/Application.h"
+#include "../../Framework/Input/input.h"
+#include "../../Game/Game.h"
+#include "../Object_3D/3DModel/GolfBall.h"
 
 using namespace DirectX::SimpleMath;
 using namespace std;

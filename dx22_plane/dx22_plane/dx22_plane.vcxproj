@@ -142,15 +142,10 @@
   <ItemGroup>
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Mesh\StaticMesh.cpp" />
-    <ClCompile Include="Scenes\Hole1Scene.cpp" />
-    <ClCompile Include="Scenes\Hole2Scene.cpp" />
-    <ClCompile Include="Scenes\Hole3Scene.cpp" />
-    <ClCompile Include="Scenes\ResultScene.cpp" />
-    <ClCompile Include="Scenes\Scene.cpp" />
-    <ClCompile Include="Scenes\TitleScene.cpp" />
     <ClCompile Include="Src\Application\Application.cpp" />
     <ClCompile Include="Src\Entry\main.cpp" />
     <ClCompile Include="Src\Framework\Assimp\AssimpPerse.cpp" />
+    <ClCompile Include="Src\Framework\Component\IComponent\IComponent.cpp" />
     <ClCompile Include="Src\Framework\DX11Helper\dx11helper.cpp" />
     <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp" />
     <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugUI.cpp" />
@@ -180,23 +175,24 @@
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestCube.cpp" />
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestModel.cpp" />
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestPlane.cpp" />
+    <ClCompile Include="Src\Game\Scenes\Hole1Scene.cpp" />
+    <ClCompile Include="Src\Game\Scenes\Hole2Scene.cpp" />
+    <ClCompile Include="Src\Game\Scenes\Hole3Scene.cpp" />
+    <ClCompile Include="Src\Game\Scenes\ResultScene.cpp" />
+    <ClCompile Include="Src\Game\Scenes\Scene.cpp" />
+    <ClCompile Include="Src\Game\Scenes\TitleScene.cpp" />
     <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collision.h" />
     <ClInclude Include="Mesh\Mesh.h" />
     <ClInclude Include="Mesh\StaticMesh.h" />
-    <ClInclude Include="Scenes\Hole1Scene.h" />
-    <ClInclude Include="Scenes\Hole2Scene.h" />
-    <ClInclude Include="Scenes\Hole3Scene.h" />
-    <ClInclude Include="Scenes\ResultScene.h" />
-    <ClInclude Include="Scenes\Scene.h" />
-    <ClInclude Include="Scenes\TitleScene.h" />
     <ClInclude Include="Src\Application\Application.h" />
     <ClInclude Include="Src\Entry\main.h" />
     <ClInclude Include="Src\Framework\Assimp\AssimpPerse.h" />
     <ClInclude Include="Src\Framework\Buffer\IndexBuffer.h" />
     <ClInclude Include="Src\Framework\Buffer\VertexBuffer.h" />
+    <ClInclude Include="Src\Framework\Component\IComponent\IComponent.h" />
     <ClInclude Include="Src\Framework\DX11Helper\dx11helper.h" />
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h" />
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugUI.h" />
@@ -229,6 +225,12 @@
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestCube.h" />
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestModel.h" />
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestPlane.h" />
+    <ClInclude Include="Src\Game\Scenes\Hole1Scene.h" />
+    <ClInclude Include="Src\Game\Scenes\Hole2Scene.h" />
+    <ClInclude Include="Src\Game\Scenes\Hole3Scene.h" />
+    <ClInclude Include="Src\Game\Scenes\ResultScene.h" />
+    <ClInclude Include="Src\Game\Scenes\Scene.h" />
+    <ClInclude Include="Src\Game\Scenes\TitleScene.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>

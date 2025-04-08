@@ -9,56 +9,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\Material">
-      <UniqueIdentifier>{7f7295e1-11c5-4fcf-b2d0-d49713f5a8ba}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Collision">
       <UniqueIdentifier>{717dc221-fc15-49f9-b0d5-d62019c4d7a3}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\シーン">
       <UniqueIdentifier>{9044c0e9-c750-49fb-8a1d-7f10c6e4af67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Renderer">
-      <UniqueIdentifier>{955a6d0c-3595-4b16-953f-c8a037b6a9f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\テクスチャ">
-      <UniqueIdentifier>{bf29b7de-d694-4e3a-8e91-573c9d137358}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object_3D">
-      <UniqueIdentifier>{72e2abc6-8a32-4d8d-ad2d-b1420559655f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Utility">
-      <UniqueIdentifier>{8aaf5b51-186c-4fd3-bcad-11eb373a3ffc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Game">
       <UniqueIdentifier>{80db628b-c9cc-4991-9596-21a9a6f7104e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Shader">
-      <UniqueIdentifier>{1758d506-91af-439c-b8b9-a04cf8b4163c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Mesh">
-      <UniqueIdentifier>{af26d4dd-b6ae-4885-a587-ba834f78f79d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object_3D\3Dモデル">
-      <UniqueIdentifier>{0f6f61a0-f8cb-4c96-ad35-1f2b014f5391}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Buffer">
-      <UniqueIdentifier>{194403f9-f0e4-427d-abc2-0d8c4348f9e7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object_3D\基本モデル">
-      <UniqueIdentifier>{9bb8dd65-af6b-4698-b15b-ff0580ff83fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Assimp">
-      <UniqueIdentifier>{21c22a92-0b91-4de2-a66e-ca50c8c5517e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\DX11Helper">
-      <UniqueIdentifier>{8ba2af92-e19b-42f7-9429-652e55aad677}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\stb_image">
-      <UniqueIdentifier>{2711a2a1-8d44-4720-9f48-8b5cea718cbc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Renderer\MeshRenderer">
-      <UniqueIdentifier>{239cce81-ff18-4495-b2f6-a6014e670856}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\カメラ">
       <UniqueIdentifier>{cd66ddac-9e4b-4fee-a867-0014c62b1a24}</UniqueIdentifier>
@@ -66,23 +24,80 @@
     <Filter Include="ソース ファイル\シーン\ホール">
       <UniqueIdentifier>{e045d278-9fba-494b-9b00-1ae9ca0382c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\ImGui">
-      <UniqueIdentifier>{1ca3bcdc-b843-4a55-b35c-7b4915000cb9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\ImGui\DebugUI">
-      <UniqueIdentifier>{2567a7f8-75c2-4385-84da-1e94eb262d4f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\シングルトンテンプレート">
-      <UniqueIdentifier>{380b626c-1e6a-4b6e-a446-a8d1ed25ea80}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\エントリーポイント">
       <UniqueIdentifier>{0142d8fe-34fd-42d8-8541-d869af2be0e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\入力">
-      <UniqueIdentifier>{6cbe3c17-1e75-43bb-9317-1ecdb8532a82}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Application">
       <UniqueIdentifier>{4ad2cc0e-7706-4a98-9acd-ed0d71374f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク">
+      <UniqueIdentifier>{3b9d379d-74d2-41fe-8d68-602e2746c52a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\入力">
+      <UniqueIdentifier>{6cbe3c17-1e75-43bb-9317-1ecdb8532a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\3Dモデル読み込み">
+      <UniqueIdentifier>{21c22a92-0b91-4de2-a66e-ca50c8c5517e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Utility">
+      <UniqueIdentifier>{8aaf5b51-186c-4fd3-bcad-11eb373a3ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\stb_image">
+      <UniqueIdentifier>{2711a2a1-8d44-4720-9f48-8b5cea718cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Shader">
+      <UniqueIdentifier>{1758d506-91af-439c-b8b9-a04cf8b4163c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Renderer">
+      <UniqueIdentifier>{955a6d0c-3595-4b16-953f-c8a037b6a9f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Renderer\MeshRenderer">
+      <UniqueIdentifier>{239cce81-ff18-4495-b2f6-a6014e670856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\コンポーネント">
+      <UniqueIdentifier>{609f20de-2bb8-49b6-85c5-2a8c89301445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Mesh">
+      <UniqueIdentifier>{af26d4dd-b6ae-4885-a587-ba834f78f79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Material">
+      <UniqueIdentifier>{7f7295e1-11c5-4fcf-b2d0-d49713f5a8ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\テクスチャ">
+      <UniqueIdentifier>{bf29b7de-d694-4e3a-8e91-573c9d137358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\シングルトン用基底クラス">
+      <UniqueIdentifier>{380b626c-1e6a-4b6e-a446-a8d1ed25ea80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\ImGui">
+      <UniqueIdentifier>{1ca3bcdc-b843-4a55-b35c-7b4915000cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\ImGui\DebugUI">
+      <UniqueIdentifier>{2567a7f8-75c2-4385-84da-1e94eb262d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\DX11Helper">
+      <UniqueIdentifier>{8ba2af92-e19b-42f7-9429-652e55aad677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\Buffer">
+      <UniqueIdentifier>{194403f9-f0e4-427d-abc2-0d8c4348f9e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\コンポーネント\基底コンポーネント">
+      <UniqueIdentifier>{c5b77a35-349b-4f92-a427-fd2edd4d5b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\コンポーネント\Collider">
+      <UniqueIdentifier>{0a07c1e4-6ef5-401a-9fec-6a7f25cb28f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\コンポーネント\RigidBody">
+      <UniqueIdentifier>{2cb0dd68-9299-44a2-ac16-7cadd55bd20c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\オブジェクト">
+      <UniqueIdentifier>{72e2abc6-8a32-4d8d-ad2d-b1420559655f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\オブジェクト\3Dモデル">
+      <UniqueIdentifier>{0f6f61a0-f8cb-4c96-ad35-1f2b014f5391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\オブジェクト\基本モデル">
+      <UniqueIdentifier>{9bb8dd65-af6b-4698-b15b-ff0580ff83fb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -90,124 +105,127 @@
       <Filter>ソース ファイル\Collision</Filter>
     </ClCompile>
     <ClCompile Include="stb_image.cpp">
-      <Filter>ソース ファイル\stb_image</Filter>
+      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="Mesh\StaticMesh.cpp">
-      <Filter>ソース ファイル\Mesh</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\Hole1Scene.cpp">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\Hole2Scene.cpp">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\Hole3Scene.cpp">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\ResultScene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\Scene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\TitleScene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Application.cpp">
       <Filter>ソース ファイル\Application</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugUI.cpp">
-      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui\DebugUI</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
-      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui\DebugUI</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_demo.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_draw.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_impl_dx11.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_impl_win32.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_tables.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui_widgets.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Input\input.cpp">
-      <Filter>ソース ファイル\入力</Filter>
+      <Filter>ソース ファイル\フレームワーク\入力</Filter>
     </ClCompile>
     <ClCompile Include="Src\Entry\main.cpp">
       <Filter>ソース ファイル\エントリーポイント</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Singleton_Template\Singleton_Template.cpp">
-      <Filter>ソース ファイル\シングルトンテンプレート</Filter>
+      <Filter>ソース ファイル\フレームワーク\シングルトン用基底クラス</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Texture\FadeAnimation.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Texture\Texture.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Texture\Texture2D.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\DX11Helper\dx11helper.cpp">
-      <Filter>ソース ファイル\DX11Helper</Filter>
+      <Filter>ソース ファイル\フレームワーク\DX11Helper</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Game.cpp">
       <Filter>ソース ファイル\Game</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Assimp\AssimpPerse.cpp">
-      <Filter>ソース ファイル\Assimp</Filter>
+      <Filter>ソース ファイル\フレームワーク\3Dモデル読み込み</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\3DModel\Arrow.cpp">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\3DModel\GolfBall.cpp">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\3DModel\Pole.cpp">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\Ground.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\Object.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\Sphere.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestCube.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestModel.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Object_3D\BaseModel\TestPlane.cpp">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Renderer\Renderer.cpp">
-      <Filter>ソース ファイル\Renderer</Filter>
+      <Filter>ソース ファイル\フレームワーク\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Shader\Shader.cpp">
-      <Filter>ソース ファイル\Shader</Filter>
+      <Filter>ソース ファイル\フレームワーク\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Src\Framework\Utility\utility.cpp">
-      <Filter>ソース ファイル\Utility</Filter>
+      <Filter>ソース ファイル\フレームワーク\Utility</Filter>
     </ClCompile>
     <ClCompile Include="Src\Game\Camera\Camera.cpp">
       <Filter>ソース ファイル\カメラ</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Component\IComponent\IComponent.cpp">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\基底コンポーネント</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\ResultScene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\Scene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\TitleScene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\Hole1Scene.cpp">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\Hole2Scene.cpp">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Scenes\Hole3Scene.cpp">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -215,142 +233,145 @@
       <Filter>ソース ファイル\Collision</Filter>
     </ClInclude>
     <ClInclude Include="stb_image.h">
-      <Filter>ソース ファイル\stb_image</Filter>
+      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="Mesh\Mesh.h">
-      <Filter>ソース ファイル\Mesh</Filter>
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
     </ClInclude>
     <ClInclude Include="Mesh\StaticMesh.h">
-      <Filter>ソース ファイル\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\Hole1Scene.h">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\Hole2Scene.h">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\Hole3Scene.h">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\ResultScene.h">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\Scene.h">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\TitleScene.h">
-      <Filter>ソース ファイル\シーン</Filter>
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Application.h">
       <Filter>ソース ファイル\Application</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Buffer\IndexBuffer.h">
-      <Filter>ソース ファイル\Buffer</Filter>
+      <Filter>ソース ファイル\フレームワーク\Buffer</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Buffer\VertexBuffer.h">
-      <Filter>ソース ファイル\Buffer</Filter>
+      <Filter>ソース ファイル\フレームワーク\Buffer</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugUI.h">
-      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui\DebugUI</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h">
-      <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui\DebugUI</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imconfig.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imgui.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imgui_impl_dx11.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imgui_impl_win32.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imgui_internal.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imstb_rectpack.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imstb_textedit.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imstb_truetype.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+      <Filter>ソース ファイル\フレームワーク\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Input\input.h">
-      <Filter>ソース ファイル\入力</Filter>
+      <Filter>ソース ファイル\フレームワーク\入力</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Material\Material.h">
-      <Filter>ソース ファイル\Material</Filter>
+      <Filter>ソース ファイル\フレームワーク\Material</Filter>
     </ClInclude>
     <ClInclude Include="Src\Entry\main.h">
       <Filter>ソース ファイル\エントリーポイント</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Singleton_Template\Singleton_Template.h">
-      <Filter>ソース ファイル\シングルトンテンプレート</Filter>
+      <Filter>ソース ファイル\フレームワーク\シングルトン用基底クラス</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Texture\FadeAnimation.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Texture\Texture.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Texture\Texture2D.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+      <Filter>ソース ファイル\フレームワーク\テクスチャ</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\DX11Helper\dx11helper.h">
-      <Filter>ソース ファイル\DX11Helper</Filter>
+      <Filter>ソース ファイル\フレームワーク\DX11Helper</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Game.h">
       <Filter>ソース ファイル\Game</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Assimp\AssimpPerse.h">
-      <Filter>ソース ファイル\Assimp</Filter>
+      <Filter>ソース ファイル\フレームワーク\3Dモデル読み込み</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\3DModel\Arrow.h">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\3DModel\GolfBall.h">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\3DModel\Pole.h">
-      <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\Ground.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\Object.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\Sphere.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestCube.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestModel.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Object_3D\BaseModel\TestPlane.h">
-      <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
+      <Filter>ソース ファイル\オブジェクト\基本モデル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Renderer\MeshRenderer.h">
-      <Filter>ソース ファイル\Renderer\MeshRenderer</Filter>
+      <Filter>ソース ファイル\フレームワーク\Renderer\MeshRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Renderer\Renderer.h">
-      <Filter>ソース ファイル\Renderer</Filter>
+      <Filter>ソース ファイル\フレームワーク\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Shader\Shader.h">
-      <Filter>ソース ファイル\Shader</Filter>
+      <Filter>ソース ファイル\フレームワーク\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Src\Framework\Utility\utility.h">
-      <Filter>ソース ファイル\Utility</Filter>
+      <Filter>ソース ファイル\フレームワーク\Utility</Filter>
     </ClInclude>
     <ClInclude Include="Src\Game\Camera\Camera.h">
       <Filter>ソース ファイル\カメラ</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Component\IComponent\IComponent.h">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\基底コンポーネント</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\ResultScene.h">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\Scene.h">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\TitleScene.h">
+      <Filter>ソース ファイル\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\Hole1Scene.h">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\Hole2Scene.h">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Scenes\Hole3Scene.h">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

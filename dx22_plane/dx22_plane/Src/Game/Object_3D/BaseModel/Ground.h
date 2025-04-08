@@ -1,7 +1,7 @@
 #pragma once
-#include "Texture.h"
+#include "../../../Framework/Texture/Texture.h"
 #include "Object.h"
-#include "Material.h"
+#include "../../../Framework/Material/Material.h"
 
 //-----------------------------------------------------------------------------
 //GroundƒNƒ‰ƒX

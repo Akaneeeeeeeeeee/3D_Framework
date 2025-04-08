@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Object.h"
-#include "MeshRenderer.h"
-#include "Texture.h"
-#include "Material.h"
+#include "../../../Framework/Renderer/MeshRenderer.h"
+#include "../../../Framework/Texture/Texture.h"
+#include "../../../Framework/Material/Material.h"
 #include <math.h>
 
 #define M_PI 3.14159265358979323846

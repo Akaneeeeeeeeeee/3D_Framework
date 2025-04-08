@@ -3,8 +3,8 @@
 #include	<directxmath.h>
 #include	<d3d11.h>
 #include	<wrl/client.h>
-#include	"dx11helper.h"
-#include	"Renderer.h"
+#include	"../DX11Helper/dx11helper.h"
+#include	"../Renderer/Renderer.h"
 
 class Material {
 

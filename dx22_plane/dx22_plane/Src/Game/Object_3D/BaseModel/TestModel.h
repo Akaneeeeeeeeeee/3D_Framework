@@ -1,10 +1,10 @@
 #pragma once
 #include <SimpleMath.h>
-#include "MeshRenderer.h"
+#include "../../../Framework/Renderer/MeshRenderer.h"
 #include "Object.h"
-#include "StaticMesh.h"
-#include "utility.h"
-#include "Material.h"
+#include "../../../Framework/Mesh/StaticMesh.h"
+#include "../../../Framework/Utility/utility.h"
+#include "../../../Framework/Material/Material.h"
 
 //-----------------------------------------------------------------------------
 //TestModelƒNƒ‰ƒX

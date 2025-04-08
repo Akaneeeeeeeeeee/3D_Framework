@@ -1,10 +1,10 @@
 #pragma once
 #include <SimpleMath.h>
 
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "Shader.h"
-#include "Camera.h"
+#include "../../../Framework/Buffer/VertexBuffer.h"
+#include "../../../Framework/Buffer/IndexBuffer.h"
+#include "../../../Framework/Shader/Shader.h"
+#include "../../Camera/Camera.h"
 
 class Object {
 protected:
