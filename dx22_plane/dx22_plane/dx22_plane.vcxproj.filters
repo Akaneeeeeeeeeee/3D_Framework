@@ -86,50 +86,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp">
-      <Filter>ソース ファイル\Application</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>ソース ファイル\カメラ</Filter>
-    </ClCompile>
     <ClCompile Include="Collision.cpp">
       <Filter>ソース ファイル\Collision</Filter>
     </ClCompile>
-    <ClCompile Include="input.cpp">
-      <Filter>ソース ファイル\Input</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル\Main</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="ResultScene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="TitleScene.cpp">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>ソース ファイル\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture2D.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
-    </ClCompile>
-    <ClCompile Include="utility.cpp">
-      <Filter>ソース ファイル\Utility</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>ソース ファイル\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>ソース ファイル\Shader</Filter>
-    </ClCompile>
-    <ClCompile Include="StaticMesh.cpp">
-      <Filter>ソース ファイル\Mesh</Filter>
     </ClCompile>
     <ClCompile Include="GolfBall.cpp">
       <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
@@ -155,112 +116,106 @@
     <ClCompile Include="TestPlane.cpp">
       <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
     </ClCompile>
-    <ClCompile Include="AssimpPerse.cpp">
-      <Filter>ソース ファイル\Assimp</Filter>
-    </ClCompile>
-    <ClCompile Include="dx11helper.cpp">
-      <Filter>ソース ファイル\DX11Helper</Filter>
-    </ClCompile>
     <ClCompile Include="stb_image.cpp">
       <Filter>ソース ファイル\stb_image</Filter>
-    </ClCompile>
-    <ClCompile Include="Hole1Scene.cpp">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClCompile>
-    <ClCompile Include="Hole2Scene.cpp">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
     <ClCompile Include="Sphere.cpp">
       <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
     </ClCompile>
-    <ClCompile Include="FadeAnimation.cpp">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+    <ClCompile Include="Application\Application.cpp">
+      <Filter>ソース ファイル\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Hole3Scene.cpp">
+    <ClCompile Include="Assimp\AssimpPerse.cpp">
+      <Filter>ソース ファイル\Assimp</Filter>
+    </ClCompile>
+    <ClCompile Include="DX11Helper\dx11helper.cpp">
+      <Filter>ソース ファイル\DX11Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\input.cpp">
+      <Filter>ソース ファイル\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\StaticMesh.cpp">
+      <Filter>ソース ファイル\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Renderer.cpp">
+      <Filter>ソース ファイル\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Shader.cpp">
+      <Filter>ソース ファイル\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\utility.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>ソース ファイル\カメラ</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Hole1Scene.cpp">
       <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClCompile Include="Scenes\Hole2Scene.cpp">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui_demo.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClCompile Include="Scenes\Hole3Scene.cpp">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui_draw.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClCompile Include="Scenes\ResultScene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClCompile Include="Scenes\Scene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClCompile Include="Scenes\TitleScene.cpp">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\imgui_tables.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="ImGui\imgui_widgets.cpp">
-      <Filter>ソース ファイル\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="Singleton_Template\Singleton_Template.cpp">
+    <ClCompile Include="Framework\Singleton_Template\Singleton_Template.cpp">
       <Filter>ソース ファイル\シングルトンテンプレート</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\DebugUI\DebugUI.cpp">
+    <ClCompile Include="Texture\FadeAnimation.cpp">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\Texture.cpp">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\Texture2D.cpp">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
       <Filter>ソース ファイル\ImGui\DebugUI</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
+    <ClCompile Include="Framework\ImGui\DebugUI\DebugUI.cpp">
       <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_demo.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_draw.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_dx11.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_tables.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_widgets.cpp">
+      <Filter>ソース ファイル\ImGui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h">
-      <Filter>ソース ファイル\Application</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>ソース ファイル\カメラ</Filter>
-    </ClInclude>
-    <ClInclude Include="Material.h">
-      <Filter>ソース ファイル\Material</Filter>
-    </ClInclude>
     <ClInclude Include="Collision.h">
       <Filter>ソース ファイル\Collision</Filter>
     </ClInclude>
-    <ClInclude Include="input.h">
-      <Filter>ソース ファイル\Input</Filter>
-    </ClInclude>
     <ClInclude Include="main.h">
       <Filter>ソース ファイル\Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="ResultScene.h">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="TitleScene.h">
-      <Filter>ソース ファイル\シーン</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>ソース ファイル\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture2D.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
-    </ClInclude>
-    <ClInclude Include="utility.h">
-      <Filter>ソース ファイル\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>ソース ファイル\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>ソース ファイル\Shader</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
-      <Filter>ソース ファイル\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="StaticMesh.h">
-      <Filter>ソース ファイル\Mesh</Filter>
     </ClInclude>
     <ClInclude Include="GolfBall.h">
       <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
@@ -270,12 +225,6 @@
     </ClInclude>
     <ClInclude Include="Pole.h">
       <Filter>ソース ファイル\Object_3D\3Dモデル</Filter>
-    </ClInclude>
-    <ClInclude Include="IndexBuffer.h">
-      <Filter>ソース ファイル\Buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexBuffer.h">
-      <Filter>ソース ファイル\Buffer</Filter>
     </ClInclude>
     <ClInclude Include="Ground.h">
       <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
@@ -292,81 +241,132 @@
     <ClInclude Include="TestPlane.h">
       <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
     </ClInclude>
-    <ClInclude Include="AssimpPerse.h">
-      <Filter>ソース ファイル\Assimp</Filter>
-    </ClInclude>
     <ClInclude Include="stb_image.h">
       <Filter>ソース ファイル\stb_image</Filter>
-    </ClInclude>
-    <ClInclude Include="dx11helper.h">
-      <Filter>ソース ファイル\DX11Helper</Filter>
-    </ClInclude>
-    <ClInclude Include="MeshRenderer.h">
-      <Filter>ソース ファイル\Renderer\MeshRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="Hole1Scene.h">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
-    </ClInclude>
-    <ClInclude Include="Hole2Scene.h">
-      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClInclude>
     <ClInclude Include="Sphere.h">
       <Filter>ソース ファイル\Object_3D\基本モデル</Filter>
     </ClInclude>
-    <ClInclude Include="FadeAnimation.h">
-      <Filter>ソース ファイル\テクスチャ</Filter>
+    <ClInclude Include="Application\Application.h">
+      <Filter>ソース ファイル\Application</Filter>
     </ClInclude>
-    <ClInclude Include="Hole3Scene.h">
+    <ClInclude Include="Assimp\AssimpPerse.h">
+      <Filter>ソース ファイル\Assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="DX11Helper\dx11helper.h">
+      <Filter>ソース ファイル\DX11Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\input.h">
+      <Filter>ソース ファイル\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\Mesh.h">
+      <Filter>ソース ファイル\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\StaticMesh.h">
+      <Filter>ソース ファイル\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Material.h">
+      <Filter>ソース ファイル\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Renderer.h">
+      <Filter>ソース ファイル\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\MeshRenderer.h">
+      <Filter>ソース ファイル\Renderer\MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\Shader.h">
+      <Filter>ソース ファイル\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\utility.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\Camera.h">
+      <Filter>ソース ファイル\カメラ</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\Hole1Scene.h">
       <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imconfig.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClInclude Include="Scenes\Hole2Scene.h">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imgui.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClInclude Include="Scenes\Hole3Scene.h">
+      <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imgui_impl_dx11.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClInclude Include="Scenes\ResultScene.h">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imgui_impl_win32.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClInclude Include="Scenes\Scene.h">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imgui_internal.h">
-      <Filter>ソース ファイル\ImGui</Filter>
+    <ClInclude Include="Scenes\TitleScene.h">
+      <Filter>ソース ファイル\シーン</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\imstb_rectpack.h">
-      <Filter>ソース ファイル\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="ImGui\imstb_textedit.h">
-      <Filter>ソース ファイル\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="ImGui\imstb_truetype.h">
-      <Filter>ソース ファイル\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton_Template\Singleton_Template.h">
+    <ClInclude Include="Framework\Singleton_Template\Singleton_Template.h">
       <Filter>ソース ファイル\シングルトンテンプレート</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\DebugUI\DebugUI.h">
+    <ClInclude Include="Texture\FadeAnimation.h">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\Texture.h">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\Texture2D.h">
+      <Filter>ソース ファイル\テクスチャ</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer\IndexBuffer.h">
+      <Filter>ソース ファイル\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer\VertexBuffer.h">
+      <Filter>ソース ファイル\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h">
       <Filter>ソース ファイル\ImGui\DebugUI</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\DebugUI\DebugFunction\DebugFunction.h">
+    <ClInclude Include="Framework\ImGui\DebugUI\DebugUI.h">
       <Filter>ソース ファイル\ImGui\DebugUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imconfig.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_dx11.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_win32.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_internal.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_rectpack.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_textedit.h">
+      <Filter>ソース ファイル\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_truetype.h">
+      <Filter>ソース ファイル\ImGui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="shader\common.hlsl">
+    <FxCompile Include="Resource\common.hlsl">
       <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="shader\unlitTexturePS.hlsl">
+    <FxCompile Include="Resource\litTexturePS.hlsl">
       <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="shader\unlitTextureVS.hlsl">
+    <FxCompile Include="Resource\litTextureVS.hlsl">
       <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="shader\litTexturePS.hlsl">
+    <FxCompile Include="Resource\unlitTexturePS.hlsl">
       <Filter>リソース ファイル</Filter>
     </FxCompile>
-    <FxCompile Include="shader\litTextureVS.hlsl">
+    <FxCompile Include="Resource\unlitTextureVS.hlsl">
       <Filter>リソース ファイル</Filter>
     </FxCompile>
   </ItemGroup>

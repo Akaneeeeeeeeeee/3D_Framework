@@ -140,136 +140,105 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Application\Application.cpp" />
     <ClCompile Include="Arrow.cpp" />
-    <ClCompile Include="AssimpPerse.cpp" />
-    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Assimp\AssimpPerse.cpp" />
+    <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="Collision.cpp" />
-    <ClCompile Include="dx11helper.cpp" />
-    <ClCompile Include="FadeAnimation.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="DX11Helper\dx11helper.cpp" />
+    <ClCompile Include="Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp" />
+    <ClCompile Include="Framework\ImGui\DebugUI\DebugUI.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Framework\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Framework\Singleton_Template\Singleton_Template.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="GolfBall.cpp" />
     <ClCompile Include="Ground.cpp" />
-    <ClCompile Include="Hole2Scene.cpp" />
-    <ClCompile Include="Hole3Scene.cpp" />
-    <ClCompile Include="ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ImGui\DebugUI\DebugUI.cpp" />
-    <ClCompile Include="ImGui\imgui.cpp" />
-    <ClCompile Include="ImGui\imgui_demo.cpp" />
-    <ClCompile Include="ImGui\imgui_draw.cpp" />
-    <ClCompile Include="ImGui\imgui_impl_dx11.cpp" />
-    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
-    <ClCompile Include="ImGui\imgui_tables.cpp" />
-    <ClCompile Include="ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="input.cpp" />
+    <ClCompile Include="Input\input.cpp" />
+    <ClCompile Include="Mesh\StaticMesh.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Pole.cpp" />
-    <ClCompile Include="ResultScene.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Hole1Scene.cpp" />
-    <ClCompile Include="Singleton_Template\Singleton_Template.cpp" />
+    <ClCompile Include="Renderer\Renderer.cpp" />
+    <ClCompile Include="Scenes\Hole1Scene.cpp" />
+    <ClCompile Include="Scenes\Hole2Scene.cpp" />
+    <ClCompile Include="Scenes\Hole3Scene.cpp" />
+    <ClCompile Include="Scenes\ResultScene.cpp" />
+    <ClCompile Include="Scenes\Scene.cpp" />
+    <ClCompile Include="Scenes\TitleScene.cpp" />
+    <ClCompile Include="Shader\Shader.cpp" />
     <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="StaticMesh.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="TestCube.cpp" />
     <ClCompile Include="TestModel.cpp" />
     <ClCompile Include="TestPlane.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Texture2D.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="TitleScene.cpp" />
-    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="Texture\FadeAnimation.cpp" />
+    <ClCompile Include="Texture\Texture.cpp" />
+    <ClCompile Include="Texture\Texture2D.cpp" />
+    <ClCompile Include="Utility\utility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
+    <ClInclude Include="Application\Application.h" />
     <ClInclude Include="Arrow.h" />
-    <ClInclude Include="AssimpPerse.h" />
-    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Assimp\AssimpPerse.h" />
+    <ClInclude Include="Buffer\IndexBuffer.h" />
+    <ClInclude Include="Buffer\VertexBuffer.h" />
+    <ClInclude Include="Camera\Camera.h" />
     <ClInclude Include="Collision.h" />
-    <ClInclude Include="dx11helper.h" />
-    <ClInclude Include="FadeAnimation.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="DX11Helper\dx11helper.h" />
+    <ClInclude Include="Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h" />
+    <ClInclude Include="Framework\ImGui\DebugUI\DebugUI.h" />
+    <ClInclude Include="Framework\ImGui\imconfig.h" />
+    <ClInclude Include="Framework\ImGui\imgui.h" />
+    <ClInclude Include="Framework\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Framework\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Framework\ImGui\imgui_internal.h" />
+    <ClInclude Include="Framework\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Framework\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Framework\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Framework\Singleton_Template\Singleton_Template.h" />
+    <ClInclude Include="Game\Game.h" />
     <ClInclude Include="GolfBall.h" />
     <ClInclude Include="Ground.h" />
-    <ClInclude Include="Hole2Scene.h" />
-    <ClInclude Include="Hole3Scene.h" />
-    <ClInclude Include="ImGui\DebugUI\DebugFunction\DebugFunction.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ImGui\DebugUI\DebugUI.h" />
-    <ClInclude Include="ImGui\imconfig.h" />
-    <ClInclude Include="ImGui\imgui.h" />
-    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
-    <ClInclude Include="ImGui\imgui_impl_win32.h" />
-    <ClInclude Include="ImGui\imgui_internal.h" />
-    <ClInclude Include="ImGui\imstb_rectpack.h" />
-    <ClInclude Include="ImGui\imstb_textedit.h" />
-    <ClInclude Include="ImGui\imstb_truetype.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="Material.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="MeshRenderer.h" />
+    <ClInclude Include="Input\input.h" />
+    <ClInclude Include="Material\Material.h" />
+    <ClInclude Include="Mesh\Mesh.h" />
+    <ClInclude Include="Mesh\StaticMesh.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Pole.h" />
-    <ClInclude Include="ResultScene.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="Hole1Scene.h" />
-    <ClInclude Include="Singleton_Template\Singleton_Template.h" />
+    <ClInclude Include="Renderer\MeshRenderer.h" />
+    <ClInclude Include="Renderer\Renderer.h" />
+    <ClInclude Include="Scenes\Hole1Scene.h" />
+    <ClInclude Include="Scenes\Hole2Scene.h" />
+    <ClInclude Include="Scenes\Hole3Scene.h" />
+    <ClInclude Include="Scenes\ResultScene.h" />
+    <ClInclude Include="Scenes\Scene.h" />
+    <ClInclude Include="Scenes\TitleScene.h" />
+    <ClInclude Include="Shader\Shader.h" />
     <ClInclude Include="Sphere.h" />
-    <ClInclude Include="StaticMesh.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="TestCube.h" />
     <ClInclude Include="TestModel.h" />
     <ClInclude Include="TestPlane.h" />
-    <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Texture2D.h" />
-    <ClInclude Include="TitleScene.h" />
-    <ClInclude Include="utility.h" />
-    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="Texture\FadeAnimation.h" />
+    <ClInclude Include="Texture\Texture.h" />
+    <ClInclude Include="Texture\Texture2D.h" />
+    <ClInclude Include="Utility\utility.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="shader\common.hlsl">
+    <FxCompile Include="Resource\common.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </FxCompile>
-    <FxCompile Include="shader\litTexturePS.hlsl">
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ps_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ps_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
-    </FxCompile>
-    <FxCompile Include="shader\litTextureVS.hlsl">
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vs_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vs_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
-    </FxCompile>
-    <FxCompile Include="shader\unlitTexturePS.hlsl">
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ps_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ps_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
-    </FxCompile>
-    <FxCompile Include="shader\unlitTextureVS.hlsl">
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vs_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vs_main</EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
-    </FxCompile>
+    <FxCompile Include="Resource\litTexturePS.hlsl" />
+    <FxCompile Include="Resource\litTextureVS.hlsl" />
+    <FxCompile Include="Resource\unlitTexturePS.hlsl" />
+    <FxCompile Include="Resource\unlitTextureVS.hlsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
