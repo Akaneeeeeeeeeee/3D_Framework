@@ -141,14 +141,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Collision.cpp" />
-    <ClCompile Include="Mesh\StaticMesh.cpp" />
     <ClCompile Include="Src\Application\Application.cpp" />
     <ClCompile Include="Src\Entry\main.cpp" />
     <ClCompile Include="Src\Framework\Assimp\AssimpPerse.cpp" />
     <ClCompile Include="Src\Framework\Component\IComponent\IComponent.cpp" />
     <ClCompile Include="Src\Framework\DX11Helper\dx11helper.cpp" />
-    <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp" />
-    <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugUI.cpp" />
+    <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugUI.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Src\Framework\ImGui\imgui.cpp" />
     <ClCompile Include="Src\Framework\ImGui\imgui_demo.cpp" />
     <ClCompile Include="Src\Framework\ImGui\imgui_draw.cpp" />
@@ -157,9 +160,11 @@
     <ClCompile Include="Src\Framework\ImGui\imgui_tables.cpp" />
     <ClCompile Include="Src\Framework\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Framework\Input\input.cpp" />
+    <ClCompile Include="Src\Framework\Mesh\StaticMesh.cpp" />
     <ClCompile Include="Src\Framework\Renderer\Renderer.cpp" />
     <ClCompile Include="Src\Framework\Shader\Shader.cpp" />
     <ClCompile Include="Src\Framework\Singleton_Template\Singleton_Template.cpp" />
+    <ClCompile Include="Src\Framework\stb_image\stb_image.cpp" />
     <ClCompile Include="Src\Framework\Texture\FadeAnimation.cpp" />
     <ClCompile Include="Src\Framework\Texture\Texture.cpp" />
     <ClCompile Include="Src\Framework\Texture\Texture2D.cpp" />
@@ -181,12 +186,9 @@
     <ClCompile Include="Src\Game\Scenes\ResultScene.cpp" />
     <ClCompile Include="Src\Game\Scenes\Scene.cpp" />
     <ClCompile Include="Src\Game\Scenes\TitleScene.cpp" />
-    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collision.h" />
-    <ClInclude Include="Mesh\Mesh.h" />
-    <ClInclude Include="Mesh\StaticMesh.h" />
     <ClInclude Include="Src\Application\Application.h" />
     <ClInclude Include="Src\Entry\main.h" />
     <ClInclude Include="Src\Framework\Assimp\AssimpPerse.h" />
@@ -194,8 +196,12 @@
     <ClInclude Include="Src\Framework\Buffer\VertexBuffer.h" />
     <ClInclude Include="Src\Framework\Component\IComponent\IComponent.h" />
     <ClInclude Include="Src\Framework\DX11Helper\dx11helper.h" />
-    <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h" />
-    <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugUI.h" />
+    <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugUI.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Src\Framework\ImGui\imconfig.h" />
     <ClInclude Include="Src\Framework\ImGui\imgui.h" />
     <ClInclude Include="Src\Framework\ImGui\imgui_impl_dx11.h" />
@@ -206,10 +212,13 @@
     <ClInclude Include="Src\Framework\ImGui\imstb_truetype.h" />
     <ClInclude Include="Src\Framework\Input\input.h" />
     <ClInclude Include="Src\Framework\Material\Material.h" />
+    <ClInclude Include="Src\Framework\Mesh\Mesh.h" />
+    <ClInclude Include="Src\Framework\Mesh\StaticMesh.h" />
     <ClInclude Include="Src\Framework\Renderer\MeshRenderer.h" />
     <ClInclude Include="Src\Framework\Renderer\Renderer.h" />
     <ClInclude Include="Src\Framework\Shader\Shader.h" />
     <ClInclude Include="Src\Framework\Singleton_Template\Singleton_Template.h" />
+    <ClInclude Include="Src\Framework\stb_image\stb_image.h" />
     <ClInclude Include="Src\Framework\Texture\FadeAnimation.h" />
     <ClInclude Include="Src\Framework\Texture\Texture.h" />
     <ClInclude Include="Src\Framework\Texture\Texture2D.h" />
@@ -231,16 +240,27 @@
     <ClInclude Include="Src\Game\Scenes\ResultScene.h" />
     <ClInclude Include="Src\Game\Scenes\Scene.h" />
     <ClInclude Include="Src\Game\Scenes\TitleScene.h" />
-    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Src\Game\Resource\common.hlsl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </FxCompile>
-    <FxCompile Include="Src\Game\Resource\litTexturePS.hlsl" />
-    <FxCompile Include="Src\Game\Resource\litTextureVS.hlsl" />
-    <FxCompile Include="Src\Game\Resource\unlitTexturePS.hlsl" />
-    <FxCompile Include="Src\Game\Resource\unlitTextureVS.hlsl" />
+    <FxCompile Include="Src\Game\Resource\litTexturePS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ps_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Game\Resource\litTextureVS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vs_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Game\Resource\unlitTexturePS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ps_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Game\Resource\unlitTextureVS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vs_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,5 @@
 #include "Ground.h"
-#include "stb_image.h"
+#include "../../../Framework/stb_image/stb_image.h"
 #include <iostream>
 
 using namespace DirectX::SimpleMath;
@@ -193,7 +193,7 @@ void Ground::Init()
 
 	// シェーダオブジェクト生成
 	//m_Shader.Create("shader/unlitTextureVS.hlsl", "shader/unlitTexturePS.hlsl");
-	m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/litTextureVS.hlsl", "Src/Game/Resource/litTexturePS.hlsl");
 
 	// テクスチャをロード
 	bool sts = m_Texture.Load("assets/texture/field.jpg");

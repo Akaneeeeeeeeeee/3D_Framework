@@ -1,5 +1,5 @@
 #pragma once
-#include "../../../Game/EntryPoint/main.h"
+#include "../../../Entry/main.h"
 
 /// <summary>
 /// 全てのコンポーネントの元となるクラス

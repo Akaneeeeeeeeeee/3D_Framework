@@ -1,8 +1,8 @@
 #pragma once
-#include "Object.h"
-#include "MeshRenderer.h"
-#include "Texture.h"
-#include "Material.h"
+#include "../BaseModel/Object.h"
+#include "../../../Framework/Renderer/MeshRenderer.h"
+#include "../../../Framework/Texture/Texture.h"
+#include "../../../Framework/Material/Material.h"
 
 class GolfBall :public Object
 {

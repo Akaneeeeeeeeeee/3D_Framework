@@ -1,11 +1,11 @@
 ﻿#include <chrono>
 #include <thread>
 #include "Application.h"
-#include "Renderer.h"
+#include "../Framework/Renderer/Renderer.h"
 
-#include "ImGui/DebugUI/DebugUI.h"
+#include "../Framework/ImGui/DebugUI/DebugUI.h"
 
-#include "Game.h"
+#include "../Game/Game.h"
 
 const auto ClassName = TEXT("就職作品");     //!< ウィンドウクラス名.
 const auto WindowName = TEXT("就職作品");    //!< ウィンドウ名.

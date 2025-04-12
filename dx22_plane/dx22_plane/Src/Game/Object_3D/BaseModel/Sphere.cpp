@@ -1,5 +1,5 @@
 #include "Sphere.h"
-#include "StaticMesh.h"
+#include "../../../Framework/Mesh/StaticMesh.h"
 
 using namespace DirectX::SimpleMath;
 
@@ -26,7 +26,7 @@ void Sphere::Init(void)
 	m_MeshRenderer.Init(staticmesh);
 
 	// シェーダオブジェクト生成
-	m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/litTextureVS.hlsl", "Src/Game/Resource/litTexturePS.hlsl");
 
 	// サブセット情報取得
 	m_subsets = staticmesh.GetSubsets();

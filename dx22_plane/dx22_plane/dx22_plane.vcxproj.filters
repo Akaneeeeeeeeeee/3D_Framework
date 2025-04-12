@@ -104,12 +104,6 @@
     <ClCompile Include="Collision.cpp">
       <Filter>ソース ファイル\Collision</Filter>
     </ClCompile>
-    <ClCompile Include="stb_image.cpp">
-      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh\StaticMesh.cpp">
-      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Application.cpp">
       <Filter>ソース ファイル\Application</Filter>
     </ClCompile>
@@ -227,19 +221,16 @@
     <ClCompile Include="Src\Game\Scenes\Hole3Scene.cpp">
       <Filter>ソース ファイル\シーン\ホール</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Framework\Mesh\StaticMesh.cpp">
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\stb_image\stb_image.cpp">
+      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collision.h">
       <Filter>ソース ファイル\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="stb_image.h">
-      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh\Mesh.h">
-      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh\StaticMesh.h">
-      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Application.h">
       <Filter>ソース ファイル\Application</Filter>
@@ -372,6 +363,15 @@
     </ClInclude>
     <ClInclude Include="Src\Game\Scenes\Hole3Scene.h">
       <Filter>ソース ファイル\シーン\ホール</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Mesh\Mesh.h">
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Mesh\StaticMesh.h">
+      <Filter>ソース ファイル\フレームワーク\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\stb_image\stb_image.h">
+      <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

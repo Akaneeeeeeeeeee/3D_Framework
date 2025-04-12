@@ -1,6 +1,6 @@
 #pragma once
 #include "Scene.h"
-#include "Object.h"
+#include "../Object_3D/BaseModel/Object.h"
 
 // 1ƒz[ƒ‹–Ú
 class Hole1Scene : public Scene

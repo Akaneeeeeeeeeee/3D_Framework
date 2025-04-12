@@ -1,9 +1,9 @@
 #pragma once
-#include "Object.h"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
+#include "../../Game/Object_3D/BaseModel/Object.h"
+#include "../Buffer/VertexBuffer.h"
+#include "../Buffer/IndexBuffer.h"
 #include "Texture.h"
-#include "Material.h"
+#include "../Material/Material.h"
 
 //-----------------------------------------------------------------------------
 // Texture2DƒNƒ‰ƒX

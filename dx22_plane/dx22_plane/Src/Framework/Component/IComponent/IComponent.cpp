@@ -1,4 +1,4 @@
-#include "../../../Game/EntryPoint/main.h"
+#include "../../../Entry/main.h"
 #include "IComponent.h"
 
 

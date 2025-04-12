@@ -1,8 +1,13 @@
 #include "Game.h"
-#include "Renderer.h"
-#include "Texture2D.h"
-#include "FadeAnimation.h"
-#include "ImGui/DebugUI/DebugUI.h"
+#include "../Framework/Renderer/Renderer.h"
+#include "../Framework/Texture/Texture2D.h"
+#include "../Framework/Texture/FadeAnimation.h"
+#include "../Framework/ImGui/DebugUI/DebugUI.h"
+#include "Scenes/TitleScene.h"
+#include "Scenes/Hole1Scene.h"
+#include "Scenes/Hole2Scene.h"
+#include "Scenes/Hole3Scene.h"
+#include "Scenes/ResultScene.h"
 
 Game* Game::m_Instance;
 
@@ -28,7 +33,7 @@ void Game::Init()
 	// 描画初期化
 	Renderer::Init();
 	//! デバッグUI初期化
-	DebugUI::Init(Renderer::GetDevice(), Renderer::GetDeviceContext());
+	//DebugUI::Init(Renderer::GetDevice(), Renderer::GetDeviceContext());
 
 
 	// オブジェクト配列作成
@@ -123,7 +128,7 @@ void Game::Draw()
 	}*/
 	
 	//! デバッグUIの描画
-	DebugUI::Render();
+	//DebugUI::Render();
 
 	// カメラ描画
 	m_Instance->m_Camera->Draw();

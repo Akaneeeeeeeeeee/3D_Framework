@@ -1,10 +1,10 @@
 //#include <memory>
 #include "Pole.h"
-#include "StaticMesh.h"
-#include "utility.h"
-#include "Game.h"
-#include "Ground.h"
-#include "Collision.h"
+#include "../../../Framework/Mesh/StaticMesh.h"
+#include "../../../Framework/Utility/utility.h"
+#include "../../Game.h"
+#include "../BaseModel/Ground.h"
+#include "../../../../Collision.h"
 
 using namespace std;
 using namespace DirectX::SimpleMath;
@@ -42,7 +42,7 @@ void Pole::Init()
 	m_MeshRenderer.Init(staticmesh);
 
 	// シェーダオブジェクト生成
-	m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/litTextureVS.hlsl", "Src/Game/Resource/litTexturePS.hlsl");
 
 	// サブセット情報取得
 	m_subsets = staticmesh.GetSubsets();

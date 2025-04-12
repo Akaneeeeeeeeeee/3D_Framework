@@ -1,6 +1,6 @@
 #pragma once
 #include	<vector>
-#include	"renderer.h"
+#include	"../Renderer/Renderer.h"
 
 class Mesh {
 protected:

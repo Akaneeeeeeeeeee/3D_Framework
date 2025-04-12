@@ -1,13 +1,9 @@
 #pragma once
 #include <iostream>
-#include "FadeAnimation.h"
-#include "Camera.h"
-#include "Input.h"
-#include "TitleScene.h"
-#include "Hole1Scene.h"
-#include "Hole2Scene.h"
-#include "Hole3Scene.h"
-#include "ResultScene.h"
+#include "../Game/Camera/Camera.h"
+#include "../Framework/Input/input.h"
+#include "Scenes/Scene.h"
+#include "Object_3D/BaseModel/Object.h"
 
 enum SceneName {
 	TITLE,

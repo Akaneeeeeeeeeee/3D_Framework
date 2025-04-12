@@ -1,6 +1,6 @@
 #include "TitleScene.h"
-#include "Game.h"
-#include "Texture2D.h"
+#include "../Game.h"
+#include "../../Framework/Texture/Texture2D.h"
 
 // コンストラクタ
 TitleScene::TitleScene()

@@ -1,5 +1,5 @@
 #include	"StaticMesh.h"
-#include	"AssimpPerse.h"
+#include	"../Assimp/AssimpPerse.h"
 
 void StaticMesh::Load(std::string filename, std::string texturedirectory)
 {

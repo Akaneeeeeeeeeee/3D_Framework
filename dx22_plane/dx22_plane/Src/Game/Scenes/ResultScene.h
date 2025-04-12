@@ -1,6 +1,6 @@
 #pragma once
 #include "Scene.h"
-#include "Object.h"
+#include "../Object_3D/BaseModel/Object.h"
 
 // ResultSceneƒNƒ‰ƒX
 class ResultScene : public Scene

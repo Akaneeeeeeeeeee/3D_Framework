@@ -1,11 +1,11 @@
 #include "Hole3Scene.h"
-#include "Game.h"
-#include "GolfBall.h"
-#include "Ground.h"
-#include "Texture2D.h"
-#include "Arrow.h"
-#include "Pole.h"
-#include "Sphere.h"
+#include "../Game.h"
+#include "../Object_3D/3DModel/GolfBall.h"
+#include "../Object_3D/BaseModel/Ground.h"
+#include "../../Framework/Texture/Texture2D.h"
+#include "../Object_3D/3DModel/Arrow.h"
+#include "../Object_3D/3DModel/Pole.h"
+#include "../Object_3D/BaseModel/Sphere.h"
 
 using namespace DirectX::SimpleMath;
 

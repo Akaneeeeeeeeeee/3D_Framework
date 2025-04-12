@@ -4,9 +4,9 @@
 #include	<string>
 #include	<vector>
 #include	<memory>
-#include	"Texture.h"
+#include	"../Texture/Texture.h"
 #include	"Mesh.h"
-#include	"renderer.h"
+#include	"../Renderer/Renderer.h"
 
 class StaticMesh : public Mesh {
 public:

@@ -1,8 +1,8 @@
 #include <memory>
 #include "Arrow.h"
-#include "StaticMesh.h"
-#include "utility.h"
-#include "Game.h"
+#include "../../../Framework/Mesh/StaticMesh.h"
+#include "../../../Framework/Utility/utility.h"
+#include "../../Game.h"
 #include "GolfBall.h"
 
 using namespace std;
@@ -41,7 +41,7 @@ void Arrow::Init()
 	m_MeshRenderer.Init(staticmesh);
 
 	// シェーダオブジェクト生成
-	m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/litTextureVS.hlsl", "Src/Game/Resource/litTexturePS.hlsl");
 
 	// サブセット情報取得
 	m_subsets = staticmesh.GetSubsets();

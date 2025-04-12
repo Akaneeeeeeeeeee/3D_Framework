@@ -56,7 +56,7 @@ void Texture2D::Init()
 	m_IndexBuffer.Create(indices);
 
 	// シェーダオブジェクト生成
-	m_Shader.Create("shader/unlitTextureVS.hlsl", "shader/unlitTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/unlitTextureVS.hlsl", "Src/Game/Resource/unlitTexturePS.hlsl");
 
 	// マテリアル情報取得
 	m_Material = std::make_unique<Material>();

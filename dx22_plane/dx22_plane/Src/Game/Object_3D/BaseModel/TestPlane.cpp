@@ -49,7 +49,7 @@ void TestPlane::Init()
 	m_IndexBuffer.Create(indices);
 
 	// シェーダオブジェクト生成
-	m_Shader.Create("shader/unlitTextureVS.hlsl","shader/unlitTexturePS.hlsl");
+	m_Shader.Create("Src/Game/Resource/unlitTextureVS.hlsl","Src/Game/Resource/unlitTexturePS.hlsl");
 	//m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
 
 	// テクスチャをロード

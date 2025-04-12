@@ -1,7 +1,7 @@
 #pragma once
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "Mesh.h"
+#include "../Buffer/VertexBuffer.h"
+#include "../Buffer/IndexBuffer.h"
+#include "../Mesh/Mesh.h"
 
 class MeshRenderer {
 protected:
