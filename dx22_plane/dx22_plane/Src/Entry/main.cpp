@@ -1,9 +1,16 @@
 #include    "main.h"
 #include    "../Application/Application.h"
+#include    "../Framework/DetectMemoryLeak/mydebugnew.h"
 
 //=======================================
 //エントリーポイント
 //=======================================
+
+#ifdef _DEBUG
+//
+#define new MYDEBUG_NEW
+#endif
+
 int main(void)
 {
 #if defined(DEBUG) || defined(_DEBUG)
@@ -15,4 +22,4 @@ int main(void)
     app.Run();
 
     return 0;
-}   
+}

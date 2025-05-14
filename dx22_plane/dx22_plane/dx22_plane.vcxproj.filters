@@ -99,6 +99,9 @@
     <Filter Include="ソース ファイル\オブジェクト\基本モデル">
       <UniqueIdentifier>{9bb8dd65-af6b-4698-b15b-ff0580ff83fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\メモリリーク検知">
+      <UniqueIdentifier>{3a895341-bcd5-4b6b-88ee-3c752547de4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Collision.cpp">
@@ -372,6 +375,9 @@
     </ClInclude>
     <ClInclude Include="Src\Framework\stb_image\stb_image.h">
       <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\DetectMemoryLeak\mydebugnew.h">
+      <Filter>ソース ファイル\フレームワーク\メモリリーク検知</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

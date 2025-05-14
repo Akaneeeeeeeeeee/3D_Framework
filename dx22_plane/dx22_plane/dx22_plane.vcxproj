@@ -195,6 +195,7 @@
     <ClInclude Include="Src\Framework\Buffer\IndexBuffer.h" />
     <ClInclude Include="Src\Framework\Buffer\VertexBuffer.h" />
     <ClInclude Include="Src\Framework\Component\IComponent\IComponent.h" />
+    <ClInclude Include="Src\Framework\DetectMemoryLeak\mydebugnew.h" />
     <ClInclude Include="Src\Framework\DX11Helper\dx11helper.h" />
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
