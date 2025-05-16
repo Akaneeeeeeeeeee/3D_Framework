@@ -1,7 +1,7 @@
 #include	<iostream>
 #include	"Texture.h"
-#include	"stb_image.h"
-#include	"renderer.h"
+#include	"../stb_image/stb_image.h"
+#include	"../Renderer/Renderer.h"
 
 // テクスチャをロード
 bool Texture::Load(const std::string& filename)
