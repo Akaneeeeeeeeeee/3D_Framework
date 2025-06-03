@@ -258,19 +258,19 @@ void Ground::Draw()
 {
 	// SRT情報作成
 	Matrix r = Matrix::CreateFromYawPitchRoll(
-		m_Rotation.y,
-		m_Rotation.x,
-		m_Rotation.z);
+		this->m_Transform.Rotation.y,
+		this->m_Transform.Rotation.x,
+		this->m_Transform.Rotation.z);
 
 	Matrix t = Matrix::CreateTranslation(
-		m_Position.x,
-		m_Position.y,
-		m_Position.z);
+		this->m_Transform.Position.x,
+		this->m_Transform.Position.y,
+		this->m_Transform.Position.z);
 
 	Matrix s = Matrix::CreateScale(
-		m_Scale.x,
-		m_Scale.y,
-		m_Scale.z);
+		this->m_Transform.Scale.x,
+		this->m_Transform.Scale.y,
+		this->m_Transform.Scale.z);
 
 	Matrix worldmtx;		// WorldMatrix：世界の中の自分の情報を持った行列
 	worldmtx = s * r * t;
@@ -399,25 +399,25 @@ void Ground::SetImage(const char* _Filepath)
 
 
 	// Groundの位置や大きさを調整
-	m_Position.y = -20.0f;
-	m_Scale.x = 20.0f;
-	m_Scale.z = 20.0f;
+	this->m_Transform.Position.y = -20.0f;
+	this->m_Transform.Scale.x = 20.0f;
+	this->m_Transform.Scale.z = 20.0f;
 
 	// 頂点情報を変換
 	Matrix r = Matrix::CreateFromYawPitchRoll(
-		m_Rotation.y,
-		m_Rotation.x,
-		m_Rotation.z);
+		this->m_Transform.Rotation.y,
+		this->m_Transform.Rotation.x,
+		this->m_Transform.Rotation.z);
 
 	Matrix t = Matrix::CreateTranslation(
-		m_Position.x,
-		m_Position.y,
-		m_Position.z);
+		this->m_Transform.Position.x,
+		this->m_Transform.Position.y,
+		this->m_Transform.Position.z);
 
 	Matrix s = Matrix::CreateScale(
-		m_Scale.x,
-		m_Scale.y,
-		m_Scale.z);
+		this->m_Transform.Scale.x,
+		this->m_Transform.Scale.y,
+		this->m_Transform.Scale.z);
 
 	Matrix worldmtx;		// WorldMatrix：世界の中の自分の情報を持った行列
 	worldmtx = s * r * t;

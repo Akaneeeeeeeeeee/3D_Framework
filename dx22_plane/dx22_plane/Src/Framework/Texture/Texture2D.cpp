@@ -81,9 +81,9 @@ void Texture2D::Update()
 void Texture2D::Draw()
 {
 	// SRT情報作成
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.x, m_Rotation.y, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation(m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale(m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.x, this->m_Transform.Rotation.y, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation(this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale(this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;
@@ -144,7 +144,7 @@ void Texture2D::SetPosition(const float& x, const float& y, const float& z)
 }
 void Texture2D::SetPosition(const Vector3& pos)
 {
-	m_Position = pos;
+	this->m_Transform.Position = pos;
 }
 
 // 角度を指定
@@ -155,7 +155,7 @@ void Texture2D::SetRotation(const float& x, const float& y, const float& z)
 }
 void Texture2D::SetRotation(const Vector3& rot)
 {
-	m_Rotation = rot * 3.14f/180; // deg→radに変換
+	this->m_Transform.Rotation = rot * 3.14f/180; // deg→radに変換
 }
 
 // 大きさを指定
@@ -166,7 +166,7 @@ void Texture2D::SetScale(const float& x, const float& y, const float& z)
 }
 void Texture2D::SetScale(const Vector3& scl)
 {
-	m_Scale = scl;
+	this->m_Transform.Scale = scl;
 }
 
 // UV座標を指定

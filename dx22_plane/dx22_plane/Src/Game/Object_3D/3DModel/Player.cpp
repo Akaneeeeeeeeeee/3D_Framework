@@ -1,10 +1,19 @@
-#include "Sphere.h"
+#include "Player.h"
 #include "../../../Framework/Mesh/StaticMesh.h"
+#include "../../../Framework/Input/input.h"
 
 using namespace DirectX::SimpleMath;
 
-void Sphere::Init(void)
+
+Player::Player(Camera* _cam) :Object(_cam)
 {
+}
+
+Player::~Player()
+{
+}
+
+void Player::Init(){
 	// メッシュ読み込み
 	StaticMesh staticmesh;
 
@@ -60,13 +69,18 @@ void Sphere::Init(void)
 }
 
 
-void Sphere::Update(void)
+
+void Player::Update(void)
 {
-	
+	// キー入力による移動
+	if (Input::GetKeyPress(VK_W)) {
+		Vector3 forward = GetForwardFromYaw(m_Transform.Rotation.y);
+		m_Transform.Position += forward * moveSpeed * deltaTime;
+	}
 }
 
 
-void Sphere::Draw(void)
+void Player::Draw(void)
 {
 	// SRT情報作成
 	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
@@ -104,69 +118,23 @@ void Sphere::Draw(void)
 }
 
 
+
 //=======================================
 // 終了処理
 //=======================================
-void Sphere::Uninit()
+void Player::Uninit()
 {
 
 }
 
 
-//void Sphere::Generate(int segments, float radius) {
-//
-//	// 緯度（latitude）と経度（longitude）の角度を計算
-//	for (int lat = 0; lat <= segments; ++lat) {
-//		float theta = lat * M_PI / segments;  // 緯度角
-//		float sinTheta = sin(theta);
-//		float cosTheta = cos(theta);
-//
-//		for (int lon = 0; lon <= segments; ++lon) {
-//			float phi = lon * 2 * M_PI / segments;  // 経度角
-//			float sinPhi = sin(phi);
-//			float cosPhi = cos(phi);
-//
-//			// 球体上の点の座標を計算
-//			float x = radius * cosTheta * cosPhi;
-//			float y = radius * sinTheta;
-//			float z = radius * cosTheta * sinPhi;
-//
-//			// 法線ベクトル（頂点位置と一致）
-//			float nx = x / radius;
-//			float ny = y / radius;
-//			float nz = z / radius;
-//
-//			// UV座標を計算
-//			float u = (float)lon / segments;
-//			float v = (float)lat / segments;
-//
-//			// 頂点データを追加
-//			m_Vertices.push_back(
-//				{ DirectX::SimpleMath::Vector3(x, y, z),  // 位置
-//				DirectX::SimpleMath::Vector3(nx, ny, nz),  // 法線
-//				DirectX::SimpleMath::Color(1.0f, 1.0f, 1.0f, 1.0f),  // 色（白）
-//				DirectX::SimpleMath::Vector2(u, v)  // UV座標
-//				}
-//			);
-//		}
-//	}
-//
-//	// インデックスデータを生成（球体の面を三角形として結ぶ）
-//	for (int lat = 0; lat < segments; ++lat) {
-//		for (int lon = 0; lon < segments; ++lon) {
-//			int first = (lat * (segments + 1)) + lon;
-//			int second = first + segments + 1;
-//
-//			// 2つの三角形を作成
-//			m_Indices.push_back(first);
-//			m_Indices.push_back(second);
-//			m_Indices.push_back(first + 1);
-//
-//			m_Indices.push_back(second);
-//			m_Indices.push_back(second + 1);
-//			m_Indices.push_back(first + 1);
-//		}
-//	}
-//
-//	
-//}
+
+Vector3 Player::GetForwardFromYaw(float yawDegrees)
+{
+	float yawRad = DirectX::XMConvertToRadians(yawDegrees);
+	return Vector3(
+		sinf(yawRad), // X
+		0.0f,         // Y（地面方向無視）
+		cosf(yawRad)  // Z
+	);
+}

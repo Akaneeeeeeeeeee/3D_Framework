@@ -53,18 +53,18 @@ void TestModel::Init()
 
 void TestModel::Update()
 {
-	m_Rotation.y += -0.01f;
-	m_Scale.x = 5;
-	m_Scale.y = 5;
-	m_Scale.z = 5;
+	this->m_Transform.Rotation.y += -0.01f;
+	this->m_Transform.Scale.x = 5;
+	this->m_Transform.Scale.y = 5;
+	this->m_Transform.Scale.z = 5;
 }
 
 void TestModel::Draw()
 {
 	// SRTî•ñì¬
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.y, m_Rotation.x, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation(m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale(m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation(this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale(this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;

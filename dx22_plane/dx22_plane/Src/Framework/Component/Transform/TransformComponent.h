@@ -2,6 +2,7 @@
 #include "Transform.h"
 #include "../IComponent/IComponent.h"
 
+using namespace DirectX::SimpleMath;
 /// <summary>
 /// Transformの各数値の行列変換はTransform側で行い、TransformComponent側では各数値の変更（更新）だけを行う
 /// </summary>

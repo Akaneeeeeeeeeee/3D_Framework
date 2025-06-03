@@ -195,9 +195,9 @@ void TestCube::Init()
 //=======================================
 void TestCube::Update()
 {
-	m_Rotation.x += 0.01f;
-	m_Rotation.y += 0.01f;
-	m_Rotation.z += 0.01f;
+	this->m_Transform.Rotation.x += 0.01f;
+	this->m_Transform.Rotation.y += 0.01f;
+	this->m_Transform.Rotation.z += 0.01f;
 
 }
 
@@ -207,9 +207,9 @@ void TestCube::Update()
 void TestCube::Draw()
 {
 	// SRTî•ñì¬
-	Matrix r = Matrix::CreateFromYawPitchRoll( m_Rotation.y, m_Rotation.x, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation( m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale( m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll( this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation( this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale( this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;

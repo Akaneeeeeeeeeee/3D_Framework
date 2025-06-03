@@ -145,6 +145,10 @@
     <ClCompile Include="Src\Entry\main.cpp" />
     <ClCompile Include="Src\Framework\Assimp\AssimpPerse.cpp" />
     <ClCompile Include="Src\Framework\Component\IComponent\IComponent.cpp" />
+    <ClCompile Include="Src\Framework\Component\Transform\Transform.cpp" />
+    <ClCompile Include="Src\Framework\Component\Transform\TransformComponent.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Src\Framework\DX11Helper\dx11helper.cpp" />
     <ClCompile Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -173,6 +177,7 @@
     <ClCompile Include="Src\Game\Game.cpp" />
     <ClCompile Include="Src\Game\Object_3D\3DModel\Arrow.cpp" />
     <ClCompile Include="Src\Game\Object_3D\3DModel\GolfBall.cpp" />
+    <ClCompile Include="Src\Game\Object_3D\3DModel\Player.cpp" />
     <ClCompile Include="Src\Game\Object_3D\3DModel\Pole.cpp" />
     <ClCompile Include="Src\Game\Object_3D\BaseModel\Ground.cpp" />
     <ClCompile Include="Src\Game\Object_3D\BaseModel\Object.cpp" />
@@ -195,6 +200,10 @@
     <ClInclude Include="Src\Framework\Buffer\IndexBuffer.h" />
     <ClInclude Include="Src\Framework\Buffer\VertexBuffer.h" />
     <ClInclude Include="Src\Framework\Component\IComponent\IComponent.h" />
+    <ClInclude Include="Src\Framework\Component\Transform\Transform.h" />
+    <ClInclude Include="Src\Framework\Component\Transform\TransformComponent.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Src\Framework\DetectMemoryLeak\mydebugnew.h" />
     <ClInclude Include="Src\Framework\DX11Helper\dx11helper.h" />
     <ClInclude Include="Src\Framework\ImGui\DebugUI\DebugFunction\DebugFunction.h">
@@ -228,6 +237,7 @@
     <ClInclude Include="Src\Game\Game.h" />
     <ClInclude Include="Src\Game\Object_3D\3DModel\Arrow.h" />
     <ClInclude Include="Src\Game\Object_3D\3DModel\GolfBall.h" />
+    <ClInclude Include="Src\Game\Object_3D\3DModel\Player.h" />
     <ClInclude Include="Src\Game\Object_3D\3DModel\Pole.h" />
     <ClInclude Include="Src\Game\Object_3D\BaseModel\Ground.h" />
     <ClInclude Include="Src\Game\Object_3D\BaseModel\Object.h" />

@@ -102,6 +102,9 @@
     <Filter Include="ソース ファイル\フレームワーク\メモリリーク検知">
       <UniqueIdentifier>{3a895341-bcd5-4b6b-88ee-3c752547de4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\フレームワーク\コンポーネント\Transform">
+      <UniqueIdentifier>{f13b56d4-5611-43eb-a13e-44bd122bbd8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Collision.cpp">
@@ -229,6 +232,15 @@
     </ClCompile>
     <ClCompile Include="Src\Framework\stb_image\stb_image.cpp">
       <Filter>ソース ファイル\フレームワーク\stb_image</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Object_3D\3DModel\Player.cpp">
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Component\Transform\Transform.cpp">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Component\Transform\TransformComponent.cpp">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\Transform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +390,15 @@
     </ClInclude>
     <ClInclude Include="Src\Framework\DetectMemoryLeak\mydebugnew.h">
       <Filter>ソース ファイル\フレームワーク\メモリリーク検知</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Object_3D\3DModel\Player.h">
+      <Filter>ソース ファイル\オブジェクト\3Dモデル</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Component\Transform\Transform.h">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Component\Transform\TransformComponent.h">
+      <Filter>ソース ファイル\フレームワーク\コンポーネント\Transform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

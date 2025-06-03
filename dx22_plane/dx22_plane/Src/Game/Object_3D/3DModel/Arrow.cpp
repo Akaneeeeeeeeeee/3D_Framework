@@ -66,9 +66,9 @@ void Arrow::Init()
 	}
 
 	// モデルによってスケールを調整
-	m_Scale.x = 3;
-	m_Scale.y = 3;
-	m_Scale.z = 3;
+	this->m_Transform.Scale.x = 3;
+	this->m_Transform.Scale.y = 3;
+	this->m_Transform.Scale.z = 3;
 
 	m_State = 1;
 }
@@ -85,18 +85,18 @@ void Arrow::Update()
 	if (ballpt.size() > 0)
 	{
 		// 矢印の位置を更新
-		m_Position = ballpt[0]->GetPosition();
+		this->m_Transform.Position = ballpt[0]->GetPosition();
 	}
 
 	// 方向選択なら
 	if (m_State == 1)
 	{
-		m_Scale.z = 3; // 長さを固定
+		this->m_Transform.Scale.z = 3; // 長さを固定
 
 		// 向きを回転させる
-		m_Rotation.y += 0.03f;
+		this->m_Transform.Rotation.y += 0.03f;
 
-		if (m_Rotation.y > 6.28)m_Rotation.y = 0;
+		if (this->m_Transform.Rotation.y > 6.28)this->m_Transform.Rotation.y = 0;
 	}
 	// 角度選択なら
 	else if (m_State == 2)
@@ -111,20 +111,20 @@ void Arrow::Update()
 		static bool up = true;
 		if (up)
 		{
-			m_Rotation.x += 0.01f;
+			this->m_Transform.Rotation.x += 0.01f;
 		}
 		else
 		{
-			m_Rotation.x -= 0.01f;
+			this->m_Transform.Rotation.x -= 0.01f;
 		}
 
 		// 地面より上（0ラジアン以上）、直上より下（π/2未満）に制限
-		if (m_Rotation.x > 1.57f) {
-			m_Rotation.x = 1.57f; // 90度未満に制限
+		if (this->m_Transform.Rotation.x > 1.57f) {
+			this->m_Transform.Rotation.x = 1.57f; // 90度未満に制限
 			up = false;
 		}
-		if (m_Rotation.x < 0.0f) {
-			m_Rotation.x = 0.0f;   // 地面以上に制限
+		if (this->m_Transform.Rotation.x < 0.0f) {
+			this->m_Transform.Rotation.x = 0.0f;   // 地面以上に制限
 			up = true;
 		}
 	}
@@ -132,8 +132,8 @@ void Arrow::Update()
 	else if (m_State == 3)
 	{
 		// 大きさを変更させる
-		m_Scale.z += 0.04f;
-		if (m_Scale.z > 4)m_Scale.z = 1;
+		this->m_Transform.Scale.z += 0.04f;
+		if (this->m_Transform.Scale.z > 4)this->m_Transform.Scale.z = 1;
 	}
 }
 
@@ -142,12 +142,12 @@ void Arrow::Update()
 //=======================================
 void Arrow::Draw()
 {
-	if (m_State == 0)return; // 非表示ならreturn
+	if (m_State == 0) return; // 非表示ならreturn
 
 	// SRT情報作成
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.y, m_Rotation.x, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation(m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale(m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation(this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale(this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;
@@ -201,11 +201,11 @@ Vector3 Arrow::GetVector()
 	Vector3 res = { 0, 0, -1 };
 
 	// ベクトルを回転
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.y, m_Rotation.x, m_Rotation.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
 	res = Vector3::Transform(res, r);
 
 	//矢印の長さ(パワー)を掛ける
-	res *= m_Scale.z;
+	res *= this->m_Transform.Scale.z;
 
 	return res;
 }
@@ -213,24 +213,7 @@ Vector3 Arrow::GetVector()
 
 Vector3 Arrow::GetRotation(void)
 {
-	return m_Rotation;
+	return this->m_Transform.Rotation;
 }
 
-//void Arrow::SetVector(const Vector3& _vec)
-//{
-//	// ベクトルがゼロかどうかを確認
-//	if (_vec.LengthSquared() > 0.0f)
-//	{
-//		// ベクトルを正規化（方向ベクトルとして使用）
-//		Vector3 direction = _vec;
-//		direction.Normalize();
-//
-//		// 方向ベクトルから回転（Quaternion）を計算
-//		m_Rotation = Quaternion::CreateFromAxisAngle(Vector3::Cross(defaultForward, direction), acosf(Vector3::Dot(defaultForward, direction)));
-//	}
-//	else
-//	{
-//		// ベクトルがゼロの場合は回転をリセット
-//		m_Rotation = Quaternion::Identity;
-//	}
-//}
+

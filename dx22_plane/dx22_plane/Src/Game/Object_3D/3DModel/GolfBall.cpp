@@ -69,20 +69,20 @@ void GolfBall::Init()
 	}
 
 	//モデルによってスケールを調整
-	m_Scale.x = 1;
-	m_Scale.y = 1;
-	m_Scale.z = 1;
+	this->m_Transform.Scale.x = 1;
+	this->m_Transform.Scale.y = 1;
+	this->m_Transform.Scale.z = 1;
 
 	// 最初に速度を与える(最初の1フレームあたりどれくらいの速度か)
-	//m_Velocity.x = 0.5f;
-	m_Position = { 0.0f,0.0f,0.0f };
+	//this->m_Transform.Velocity.x = 0.5f;
+	this->m_Transform.Position = { 0.0f,0.0f,0.0f };
 }
 
 void GolfBall::Update()
 {
 	if (m_State != 0) return;		// 静止状態ならreturn
 
-	Vector3 oldPos = m_Position;	// 1フレーム前の位置を記憶しておく
+	Vector3 oldPos = this->m_Transform.Position;	// 1フレーム前の位置を記憶しておく
 
 	// 速度が0に近づいたら停止
 	if (m_Velocity.LengthSquared() < 0.03f) {
@@ -112,7 +112,7 @@ void GolfBall::Update()
 	m_Velocity.y -= gravity;
 
 	// 速度を座標に加算
-	m_Position += m_Velocity;
+	this->m_Transform.Position += m_Velocity;
 
 	float radius = 2.0f;
 
@@ -145,7 +145,7 @@ void GolfBall::Update()
 		};
 
 		Vector3 cp;			// 接触点
-		Collision::Segment collisionSegment = { oldPos,m_Position };
+		Collision::Segment collisionSegment = { oldPos,this->m_Transform.Position };
 		if (Collision::CheckHit(collisionSegment, collisionPolygon, cp))
 		{
 			float md = 0;
@@ -153,7 +153,7 @@ void GolfBall::Update()
 			if (moveDistance > md)
 			{
 				moveDistance = md;
-				m_Position = np;
+				this->m_Transform.Position = np;
 				contactPoint = cp;
 				normal = Collision::GetNormal(collisionPolygon);
 			}
@@ -173,7 +173,7 @@ void GolfBall::Update()
 			};
 
 			Vector3 cp;			// 接触点
-			Collision::Sphere collisionSphere = { m_Position,radius };
+			Collision::Sphere collisionSphere = { this->m_Transform.Position,radius };
 			if (Collision::CheckHit(collisionSphere, collisionPolygon, cp))
 			{
 				float md = 0;
@@ -182,7 +182,7 @@ void GolfBall::Update()
 				if (moveDistance > md)
 				{
 					moveDistance = md;
-					m_Position = np;
+					this->m_Transform.Position = np;
 					contactPoint = cp;
 					normal = Collision::GetNormal(collisionPolygon);
 				}
@@ -211,9 +211,9 @@ void GolfBall::Update()
 	}
 
 	// 下に落ちた時はリスポーン
-	if (m_Position.y < -100)
+	if (this->m_Transform.Position.y < -100)
 	{
-		m_Position = Vector3(0.0f, 50.0f, 0.0f);
+		this->m_Transform.Position = Vector3(0.0f, 50.0f, 0.0f);
 		m_Velocity = Vector3(0.0f, 0.0f, 0.0f);
 	}
 
@@ -221,7 +221,7 @@ void GolfBall::Update()
 	vector<Pole*> pole = Game::GetInstance()->GetObjects<Pole>();
 	if (pole.size() > 0) {
 		Vector3 polePos = pole[0]->GetPosition();
-		Collision::Sphere ballCollision = { m_Position,radius };	// ゴルフボールの当たり判定
+		Collision::Sphere ballCollision = { this->m_Transform.Position,radius };	// ゴルフボールの当たり判定
 		Collision::Sphere poleCollision = { polePos,0.5f };			// ポールの当たり判定
 		if (Collision::CheckHit(ballCollision, poleCollision))
 		{
@@ -233,9 +233,9 @@ void GolfBall::Update()
 void GolfBall::Draw()
 {
 	// SRT情報作成
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.y, m_Rotation.x, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation(m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale(m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation(this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale(this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;

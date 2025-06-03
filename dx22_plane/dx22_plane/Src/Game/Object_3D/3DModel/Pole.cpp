@@ -67,9 +67,9 @@ void Pole::Init()
 	}
 
 	// モデルによってスケールを調整
-	m_Scale.x = 3;
-	m_Scale.y = 3;
-	m_Scale.z = 3;
+	this->m_Transform.Scale.x = 3;
+	this->m_Transform.Scale.y = 3;
+	this->m_Transform.Scale.z = 3;
 }
 
 //=======================================
@@ -86,9 +86,9 @@ void Pole::Update()
 void Pole::Draw()
 {
 	// SRT情報作成
-	Matrix r = Matrix::CreateFromYawPitchRoll(m_Rotation.y, m_Rotation.x, m_Rotation.z);
-	Matrix t = Matrix::CreateTranslation(m_Position.x, m_Position.y, m_Position.z);
-	Matrix s = Matrix::CreateScale(m_Scale.x, m_Scale.y, m_Scale.z);
+	Matrix r = Matrix::CreateFromYawPitchRoll(this->m_Transform.Rotation.y, this->m_Transform.Rotation.x, this->m_Transform.Rotation.z);
+	Matrix t = Matrix::CreateTranslation(this->m_Transform.Position.x, this->m_Transform.Position.y, this->m_Transform.Position.z);
+	Matrix s = Matrix::CreateScale(this->m_Transform.Scale.x, this->m_Transform.Scale.y, this->m_Transform.Scale.z);
 
 	Matrix worldmtx;
 	worldmtx = s * r * t;
@@ -137,7 +137,7 @@ void Pole::SetPosition(float x, float y, float z)
 }
 void Pole::SetPosition(Vector3 pos)
 {
-	m_Position = pos;
+	this->m_Transform.Position = pos;
 
 	// Y座標を地形に合わせて変更
 
@@ -176,10 +176,10 @@ void Pole::SetPosition(Vector3 pos)
 //			int a = 4;
 //		}
 
-		Collision::Line line = { m_Position , Vector3(0,1,0) };
+		Collision::Line line = { this->m_Transform.Position , Vector3(0,1,0) };
 		if (Collision::CheckHit(line, collisionPolygon, cp))
 		{
-			m_Position.y = cp.y; // 接触点のちょっとだけ上をPoleのY座標とする
+			this->m_Transform.Position.y = cp.y; // 接触点のちょっとだけ上をPoleのY座標とする
 		}
 
 

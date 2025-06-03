@@ -19,9 +19,9 @@ Object::~Object() {
 
 // Positionセッター
 void Object::SetPosition(const Vector3& _pos) {
-	m_Position.x = _pos.x;
-	m_Position.y = _pos.y;
-	m_Position.z = _pos.z;
+	this->m_Transform.Position.x = _pos.x;
+	this->m_Transform.Position.y = _pos.y;
+	this->m_Transform.Position.z = _pos.z;
 }
 
 /*
@@ -30,7 +30,7 @@ void Object::SetPosition(const Vector3& _pos) {
 */
 // Positionゲッター
 Vector3 Object::GetPosition(void) const {
-	return m_Position;
+	return this->m_Transform.Position;
 }
 
 //今のところ記述内容は無し
