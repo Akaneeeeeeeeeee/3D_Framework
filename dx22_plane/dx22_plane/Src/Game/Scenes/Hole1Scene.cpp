@@ -6,6 +6,7 @@
 #include "../Object_3D/3DModel/Arrow.h"
 #include "../Object_3D/3DModel/Pole.h"
 #include "../Object_3D/BaseModel/Sphere.h"
+#include "../Object_3D/3DModel/Player.h"
 
 using namespace DirectX::SimpleMath;
 
@@ -34,7 +35,7 @@ void Hole1Scene::Init()
 	m_MySceneObjects.emplace_back(ground);					// 地面
 
 
-	m_MySceneObjects.emplace_back(Game::GetInstance()->AddObject<GolfBall>());	// ゴルフボール
+	m_MySceneObjects.emplace_back(Game::GetInstance()->AddObject<Player>());	// ゴルフボール
 	m_MySceneObjects.emplace_back(Game::GetInstance()->AddObject<Arrow>());		// 矢印
 	m_MySceneObjects.emplace_back(Game::GetInstance()->AddObject<Pole>());		// ポール
 
@@ -112,11 +113,11 @@ void Hole1Scene::Init()
 
 
 
-	GolfBall* ball = dynamic_cast<GolfBall*>(m_MySceneObjects[1]);		// ゴルフボール
+	Player* ball = dynamic_cast<Player*>(m_MySceneObjects[1]);		// プレイヤー
 	Arrow* arrow = dynamic_cast<Arrow*>(m_MySceneObjects[2]);			// 矢印
 	Pole* pole = dynamic_cast<Pole*>(m_MySceneObjects[3]);				// ポール
 
-	ball->SetState(0);		// ボールを物理挙動させる
+	//ball->SetState(0);		// ボールを物理挙動させる
 	arrow->SetState(0);		// 矢印を非表示
 	pole->SetPosition(20.0f, 0.0f, -40.0f);		// ポールの場所を設定
 
@@ -142,90 +143,96 @@ void Hole1Scene::Update()
 	//}
 	
 
-	GolfBall* ball = dynamic_cast<GolfBall*>(m_MySceneObjects[1]);	// ゴルフボール
+	//GolfBall* ball = dynamic_cast<GolfBall*>(m_MySceneObjects[1]);	// ゴルフボール
 	Arrow* arrow = dynamic_cast<Arrow*>(m_MySceneObjects[2]);		// 矢印
 
 	// 状態ごとに処理
-	switch (m_State)
+	//switch (m_State)
+	//{
+	//	// ボール移動中
+	//case 0:
+	//	// ボールが静止したら
+	//	if (ball->GetState() == 1)
+	//	{
+	//		m_State = 1;
+	//		arrow->SetState(m_State);
+
+	//		// 打数を更新
+	//		Texture2D* count[2];
+	//		count[0] = dynamic_cast<Texture2D*>(m_MySceneObjects[8]);
+	//		count[1] = dynamic_cast<Texture2D*>(m_MySceneObjects[9]);
+
+	//		m_StrokeCount++;	// 現在打数をカウントアップ
+
+	//		// 各桁を後ろから取得していく
+	//		for (int i = 0; i < 2; i++)
+	//		{
+	//			// 一桁取り出す
+	//			int cnt = m_StrokeCount % (int)pow(10, i + 1) / (int)pow(10, i);
+
+	//			// UVを設定
+	//			count[i]->SetUV(cnt + 1, 1, 10, 1);
+	//		}
+	//	}
+	//	// ボールがカップインしたらリザルトへ
+	//	if (ball->GetState() == 2)
+	//	{
+	//		Game::GetInstance()->ChangeScene(HOLE2);
+	//	}
+	//	break;
+	//	// 方向選択中
+	//case 1:
+	//	// スペースキーでパワー選択へ
+	//	if (Input::GetKeyTrigger(VK_SPACE))
+	//	{
+	//		m_State = 2;
+	//		arrow->SetState(m_State);
+	//	}
+	//	break;
+	//	// 角度選択中
+	//case 2:
+	//	if (Input::GetKeyTrigger(VK_SPACE))
+	//	{
+	//		m_State = 3;
+	//		//ball->SetState(m_State);
+
+	//		// 状態遷移
+	//		arrow->SetState(m_State);
+
+
+	//	}
+	//	break;
+	//	// パワー選択中
+	//case 3:
+	//	if (Input::GetKeyTrigger(VK_SPACE))
+	//	{
+	//		m_State = 0;
+	//		ball->SetState(m_State);
+	//		arrow->SetState(m_State);
+
+	//		// 強さを設定
+	//		Vector3 v = arrow->GetVector();
+	//		v *= 1.25f;
+	//		// 発射
+	//		ball->Shot(v);
+
+	//		// 次の方向選択用に矢印のx軸回転をリセット
+	//		// 矢印の角度リセット
+	//		//Vector3 vec = arrow->GetVector();
+	//		//// 縦回転してるのでx軸だけリセット
+	//		//vec.x = 0.0f;
+	//		//arrow->SetVector(vec);
+	//	}
+	//	break;
+	//default:
+	//	break;
+	//}
+	 
+	for (auto& obj : m_MySceneObjects)
 	{
-		// ボール移動中
-	case 0:
-		// ボールが静止したら
-		if (ball->GetState() == 1)
-		{
-			m_State = 1;
-			arrow->SetState(m_State);
-
-			// 打数を更新
-			Texture2D* count[2];
-			count[0] = dynamic_cast<Texture2D*>(m_MySceneObjects[8]);
-			count[1] = dynamic_cast<Texture2D*>(m_MySceneObjects[9]);
-
-			m_StrokeCount++;	// 現在打数をカウントアップ
-
-			// 各桁を後ろから取得していく
-			for (int i = 0; i < 2; i++)
-			{
-				// 一桁取り出す
-				int cnt = m_StrokeCount % (int)pow(10, i + 1) / (int)pow(10, i);
-
-				// UVを設定
-				count[i]->SetUV(cnt + 1, 1, 10, 1);
-			}
-		}
-		// ボールがカップインしたらリザルトへ
-		if (ball->GetState() == 2)
-		{
-			Game::GetInstance()->ChangeScene(HOLE2);
-		}
-		break;
-		// 方向選択中
-	case 1:
-		// スペースキーでパワー選択へ
-		if (Input::GetKeyTrigger(VK_SPACE))
-		{
-			m_State = 2;
-			arrow->SetState(m_State);
-		}
-		break;
-		// 角度選択中
-	case 2:
-		if (Input::GetKeyTrigger(VK_SPACE))
-		{
-			m_State = 3;
-			//ball->SetState(m_State);
-
-			// 状態遷移
-			arrow->SetState(m_State);
-
-
-		}
-		break;
-		// パワー選択中
-	case 3:
-		if (Input::GetKeyTrigger(VK_SPACE))
-		{
-			m_State = 0;
-			ball->SetState(m_State);
-			arrow->SetState(m_State);
-
-			// 強さを設定
-			Vector3 v = arrow->GetVector();
-			v *= 1.25f;
-			// 発射
-			ball->Shot(v);
-
-			// 次の方向選択用に矢印のx軸回転をリセット
-			// 矢印の角度リセット
-			//Vector3 vec = arrow->GetVector();
-			//// 縦回転してるのでx軸だけリセット
-			//vec.x = 0.0f;
-			//arrow->SetVector(vec);
-		}
-		break;
-	default:
-		break;
+		obj->Update();
 	}
+
 	// エンターキーを押してタイトルへ
 	if (Input::GetKeyTrigger(VK_RETURN))
 	{
