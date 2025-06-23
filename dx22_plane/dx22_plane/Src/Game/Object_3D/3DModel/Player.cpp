@@ -13,7 +13,7 @@ Player::~Player()
 {
 }
 
-void Player::Init(){
+void Player::Init() {
 	// ƒƒbƒVƒ…“Ç‚İ‚İ
 	StaticMesh staticmesh;
 
