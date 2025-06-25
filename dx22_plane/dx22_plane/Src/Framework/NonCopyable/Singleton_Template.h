@@ -4,7 +4,7 @@
 /**
  * @brief テンプレート化したシングルトンクラス
  * @tparam T シングルトンにしたいクラスの型
- * 
+ *
  * このクラスを継承することで派生クラスが全てシングルトンのつくりになる
 */
 template <class T>
@@ -23,4 +23,3 @@ private:
 	Singleton(const Singleton&) = delete;				// コピーコンストラクタを削除
 	Singleton& operator=(const Singleton&) = delete;	// 代入演算子を削除
 };
-

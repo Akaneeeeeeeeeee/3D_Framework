@@ -165,9 +165,9 @@
     <ClCompile Include="Src\Framework\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Framework\Input\input.cpp" />
     <ClCompile Include="Src\Framework\Mesh\StaticMesh.cpp" />
+    <ClCompile Include="Src\Framework\NonCopyable\Singleton_Template.cpp" />
     <ClCompile Include="Src\Framework\Renderer\Renderer.cpp" />
     <ClCompile Include="Src\Framework\Shader\Shader.cpp" />
-    <ClCompile Include="Src\Framework\Singleton_Template\Singleton_Template.cpp" />
     <ClCompile Include="Src\Framework\stb_image\stb_image.cpp" />
     <ClCompile Include="Src\Framework\Texture\FadeAnimation.cpp" />
     <ClCompile Include="Src\Framework\Texture\Texture.cpp" />
@@ -224,10 +224,11 @@
     <ClInclude Include="Src\Framework\Material\Material.h" />
     <ClInclude Include="Src\Framework\Mesh\Mesh.h" />
     <ClInclude Include="Src\Framework\Mesh\StaticMesh.h" />
+    <ClInclude Include="Src\Framework\NonCopyable\noncopyable.h" />
+    <ClInclude Include="Src\Framework\NonCopyable\Singleton_Template.h" />
     <ClInclude Include="Src\Framework\Renderer\MeshRenderer.h" />
     <ClInclude Include="Src\Framework\Renderer\Renderer.h" />
     <ClInclude Include="Src\Framework\Shader\Shader.h" />
-    <ClInclude Include="Src\Framework\Singleton_Template\Singleton_Template.h" />
     <ClInclude Include="Src\Framework\stb_image\stb_image.h" />
     <ClInclude Include="Src\Framework\Texture\FadeAnimation.h" />
     <ClInclude Include="Src\Framework\Texture\Texture.h" />
